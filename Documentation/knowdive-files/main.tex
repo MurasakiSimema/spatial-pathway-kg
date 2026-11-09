@@ -1,0 +1,115 @@
+\documentclass{knowdive}
+\usepackage{color,soul}
+\usepackage{subcaption}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{textcomp}
+\usepackage{lscape}
+\usepackage{rotating}
+\usepackage{multirow}
+\usepackage{listings}
+\usepackage[table,xcdraw]{xcolor}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{enumerate}
+\usepackage{hyperref}
+\usepackage{rotating}
+\graphicspath{ {images/} }
+
+% to have your notes copy one of these two with your favourite color
+%\newcommand{\LE}[1]{\textcolor{green}{{\bf [LE: #1]}}}
+%\newcommand{\AP}[1]{\textcolor{red}{{\bf [AP: #1]}}}
+\newcommand{\fausto}[1]{\textcolor{blue}{{\bf [fausto: #1]}}}
+
+\usepackage{titlesec}
+\titleformat{\section}{\LARGE\bfseries}{\thesection}{1em}{}
+
+\usepackage{array, makecell}
+\providecommand{\citeauthoryear}[2]{#1 (#2)}
+\providecommand{\noident}{\noindent}
+%\hypersetup{
+	%pdfauthor={Author1, \and Author2},
+	%pdftitle={Collectives.State of the Art},
+       %pdfkeywords = {},
+      %pdfsubject={}
+      %}
+%\usepackage{hyperref}
+
+
+\graphicspath{ {images/} }
+\usepackage{comment}
+
+\title{DataScientia KG Report Template}
+
+\author{Author1, ..., AuthorN}
+
+\revisionhistory{
+    \revision{0.1}{20.04.2020}{Fausto Giunchiglia}{Document created}
+    \revision{0.2}{12.01.2022}{Fausto Giunchiglia}{Document template simplified a lot with less and simpler guidelines}
+    \revision{0.3}{30.10.2026}{Mayukh Bagchi}{KG - 2026 - Project Report Template}
+}
+\newpage
+
+\fancypagestyle{plain}{
+  \fancyhf{}
+  \fancyfoot[C]{%
+    \includegraphics[width=\linewidth,height=25pt]{DataScientia_DataStrip-01}\\[5pt]
+    Page \thepage\ / \pageref{LastPage}
+  }
+}
+
+\pagestyle{plain}
+%\makeglossaries
+%input{glossaries}
+\begin{document}
+\maketitle
+\begin{sloppypar}
+\large
+\begin{spacing}{1.05}
+%\gls{latex}
+%\gls{batex}
+%\gls{eType}
+%\printglossary
+
+\section*{Abstract}
+
+\input{section/S1}
+
+\input{section/S2}
+
+
+%\input{ProjectReport/section/3-resources}
+
+\input{section/S3}
+
+% \input{ProjectReport/section/5-informationGathering}
+
+\input{section/S4}
+
+\input{section/S5}
+
+\input{section/S6}
+
+\input{section/S7}
+
+\input{section/S8}
+
+\input{section/S9}
+
+
+%% The file knowdive.bst is a bibliography style file for BibTeX 0.99c
+\bibliographystyle{knowdive}
+\bibliography{KnowDivePubs}
+
+\newpage
+\appendix
+
+\section{Appendix A}
+\input{section/secA-Appendix}
+
+\section{Appendix B}
+\input{section/secB-Appendix}
+
+\end{spacing}
+\end{sloppypar}
+\end{document} 

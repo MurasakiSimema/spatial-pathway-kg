@@ -1,0 +1,45 @@
+\begin{thebibliography}{}
+
+\bibitem[\protect\citeauthoryear{Bagchi}{2025}]{p4}
+Bagchi, M.
+\newblock 2025.
+\newblock Language and knowledge representation: A stratified approach.
+\newblock {\em PhD Thesis (also available as arXiv preprint) - arXiv preprint
+  arXiv:2504.11492}.
+
+\bibitem[\protect\citeauthoryear{Bocca}{2025}]{p5}
+Bocca, S.
+\newblock 2025.
+\newblock About me and you-itelos-a cooperative methodology for diversity-aware
+  knowledge graphs.
+
+\bibitem[\protect\citeauthoryear{Giunchiglia and Bagchi}{2022}]{p6}
+Giunchiglia, F., and Bagchi, M.
+\newblock 2022.
+\newblock Representation heterogeneity.
+\newblock {\em arXiv preprint arXiv:2207.01091}.
+
+\bibitem[\protect\citeauthoryear{Giunchiglia \bgroup et al\mbox.\egroup
+  }{2021a}]{p3}
+Giunchiglia, F.; Bocca, S.; Fumagalli, M.; Bagchi, M.; and Zamboni, A.
+\newblock 2021a.
+\newblock itelos--purpose driven knowledge graph generation.
+\newblock {\em arXiv preprint arXiv:2105.09418}.
+
+\bibitem[\protect\citeauthoryear{Giunchiglia \bgroup et al\mbox.\egroup
+  }{2021b}]{p1}
+Giunchiglia, F.; Zamboni, A.; Bagchi, M.; and Bocca, S.
+\newblock 2021b.
+\newblock Stratified data integration.
+\newblock {\em arXiv preprint arXiv:2105.09432}.
+
+\bibitem[\protect\citeauthoryear{Giunchiglia \bgroup et al\mbox.\egroup
+  }{2022}]{p2}
+Giunchiglia, F.; Bocca, S.; Fumagalli, M.; Bagchi, M.; and Zamboni, A.
+\newblock 2022.
+\newblock Popularity driven data integration.
+\newblock In {\em Iberoamerican Knowledge Graphs and Semantic Web Conference},
+  277--284.
+\newblock Springer.
+
+\end{thebibliography}
