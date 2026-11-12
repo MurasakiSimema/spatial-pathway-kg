@@ -68,7 +68,8 @@ def check_main_tex(knowdive_dir):
         warnings.append("main.tex contains placeholder authors 'Author1, ..., AuthorN'")
     if "\\title{DataScientia KG Report Template}" in content:
         warnings.append("main.tex contains placeholder title 'DataScientia KG Report Template'")
-    if "\\revision{0.3}{30.10.2026}{Mayukh Bagchi}{KG - 2026 - Project Report Template}" in content and "\\revision{1.0}" not in content:
+    # The template ships with three revision rows (0.1-0.3); the project adds one row per completed phase.
+    if content.count("\\revision{") <= 3:
         warnings.append("main.tex has not added a new revision entry for this project")
 
     return errors, warnings

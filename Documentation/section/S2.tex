@@ -1,9 +1,41 @@
 \section{Project Design}
 
-This section has to report and describe:
-\begin{itemize}
-    \item The \textbf{broad definition} of the KG project's Domain of Interest, by defining its boundaries in space and time. The definition of the domain of interest is crucial to set the space and time boundaries of the project purpose. The domain of interest description informs the reader about the geographical space, as well as the period of time, in which the project purpose is considered. 
+\subsection{Domain of Interest}
 
-    \item The \textbf{broad definition} of the KG project's general purpose, by reporting the main purpose as expressed by the final user. The description of the purpose in this section is an "informal" description, meaning by this that it is expressed by using a natural language paragraph, which need to be exploited, have not yet been identified. 
+The domain of interest is molecular and cellular biology, restricted to two kinds of knowledge: the membership of human genes in biological pathways, and the annotation of human genes as markers of cell types. Both are used in the interpretation of spatial transcriptomics results. The KG is placed \emph{after} the spatial analysis: it holds no spatial data itself, but provides biological context for questions raised by spatial results, for example a pathway that scores high on one side of a tissue frontier and low on the other.
 
-\end{itemize}
+\noindent Following iTelos, the context of the domain is defined along three dimensions.
+
+\medskip\noindent\textbf{Space.} The organism is \emph{Homo sapiens} only. The Hallmark gene sets come from the human MSigDB collection, gene identity from HGNC (human genes only), and cell-type markers from the human CellMarker file, where all records are labelled as human. The biological space is given by the tissues and cell types annotated in CellMarker; tissue and disease information is kept as context of the cell types and is not modelled as separate entities. The KG does \textbf{not} store or analyse spatial coordinates, tissue images, spots, regions, or expression matrices.
+
+\medskip\noindent\textbf{Time.} The temporal scope is the knowledge published \textbf{from 1978 to 2026}, as captured by the 2026 releases of the three sources and frozen at their download date, 2026-11-05 (Table~\ref{tab:time-scope}).
+
+\begin{table}[htbp]
+\centering
+\small
+\begin{tabularx}{\linewidth}{|l|X|X|}
+\hline
+\textbf{Source} & \textbf{Temporal reference} & \textbf{Basis} \\ \hline
+MSigDB Hallmark & Collection defined in 2015 \cite{liberzon2015molecular}; file release v2026.2 & Release taken from the file name (\texttt{h.all.v2026.2.Hs.symbols.gmt}); the file has no internal version field \\ \hline
+HGNC & Gene nomenclature as of 2026-11-05 \cite{seal2026genenames} & Download date; the latest \texttt{date\_modified} value in the file is 2026-11-05 \\ \hline
+CellMarker 3.0 & Marker evidence from studies published 1978--2026; resource released in 2026 \cite{hu2026cellmarker} & \texttt{year} column of the human marker file \\ \hline
+\end{tabularx}
+\caption{Temporal boundaries of the domain of interest}
+\label{tab:time-scope}
+\end{table}
+
+\noindent In CellMarker, about 99.7\% of the records with a publication year come from studies published in 2016--2026; 88,351 records (about 5.0\%) have no year and are kept. The KG is therefore a \emph{snapshot}: it reflects what the sources state at their 2026 releases, and it is updated by rebuilding it on newer releases. Time is not modelled as an entity or a relation.
+
+\medskip\noindent\textbf{Domain boundaries.} The KG includes three entity types (\emph{Gene}, \emph{Pathway}, \emph{CellType}) and two biological relations (a gene \emph{participates in} a pathway; a gene \emph{is marker for} a cell type). HGNC information (identifier, approved symbol, approved name) is stored as attributes of genes, and only for genes that occur in MSigDB Hallmark or CellMarker: HGNC is used as a reference for identifying and normalizing genes, not as a content dataset. The following are out of scope: cell states and diseases as entities; causal relations; pathway or Gene Ontology enrichment; statistical inference of pathway--cell-type associations; pathway--pathway crosstalk; machine-learning models; other pathway collections and datasets; and the decision of which pathways are activated or suppressed, which is an external input supplied by the user at query time.
+
+\subsection{General Purpose}
+
+The informal purpose, as expressed in the project proposal, is to support the interpretation of spatial transcriptomics data by integrating information about human genes, biological pathways, and cell types into a unified, queryable KG. The KG connects the 50 gene sets of the MSigDB Hallmark collection with the human cell-type markers of CellMarker, using HGNC as the source of gene identity. It exposes the overlap between pathway genes and cell-type marker genes as biological context for pathways observed in different tissue regions or at tissue frontiers, without assuming pathway activity in a cell type. It also supports the comparison of pathways identified as activated and as suppressed by an upstream spatial transcriptomics analysis, by finding the genes the two groups share.
+
+\noindent Refined during Phase 1, the purpose reads:
+
+\begin{quote}
+\emph{Build a reproducible Knowledge Graph that links human genes (identified through HGNC) to the 50 MSigDB Hallmark pathways they belong to and to the human cell types for which CellMarker reports them as markers, so that a researcher who has already run a spatial transcriptomics analysis can look up which genes make up a pathway, which pathways a gene belongs to, which cell types share marker genes with a pathway, and which genes are shared between a set of activated and a set of suppressed pathways.}
+\end{quote}
+
+\noindent The KG is descriptive and exploratory. A gene overlap between a pathway and a cell type is context for interpretation: it does not show pathway activity in that cell type, does not establish cell identity, is not a statistical enrichment result, and does not imply causality.

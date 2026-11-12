@@ -63,7 +63,9 @@ def main():
     # Setup environment paths so XeLaTeX and BibTeX find all files seamlessly
     env = os.environ.copy()
     sep = ";" if os.name == "nt" else ":"
-    env["TEXINPUTS"] = f"{knowdive_dir}{sep}{doc_dir}{sep}{sep}"
+    # doc_dir first: the fresh main.aux written in doc_dir must win over the stale
+    # knowdive-files/main.aux shipped with the template.
+    env["TEXINPUTS"] = f"{doc_dir}{sep}{knowdive_dir}{sep}{sep}"
     env["BIBINPUTS"] = f"{knowdive_dir}{sep}{sep}"
     env["BSTINPUTS"] = f"{knowdive_dir}{sep}{sep}"
 

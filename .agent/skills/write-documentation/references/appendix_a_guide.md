@@ -4,7 +4,7 @@
 
 This guide explains the Common Frequency Scale (CFS), lists the questions and subtasks per phase, and shows the LaTeX layout.
 
-> **The ratings are the authors' answers about their own LLM use.** The agent must ask the user for each rating and comment and must not pick them. The "Rating" values in Section 3 are only indicative of what such a project often reports; never copy them into the appendix as answers.
+> **The ratings are the authors' answers about their own LLM use.** The agent must ask the user for each rating and comment and must not pick them. This guide deliberately gives no suggested ratings.
 
 ---
 
@@ -34,122 +34,122 @@ For each phase, the following 5 standard questions must be addressed:
 
 ---
 
-## 3. Phase-by-Phase Task Breakdown ("Rating" values are indicative only, not answers)
+## 3. Phase-by-Phase Task Breakdown
 
 ### Phase 1: Purpose Definition
 - **Q2 Part 1 (Purpose & Requirements)**:
-  - `a. Clarifying the informal purpose`: Rating D/E. LLM refines user prompts into structured objectives.
-  - `b. Defining the domain of interest, space, and time`: Rating D. Formulates spatial/temporal bounds.
-  - `c. Generating scenarios`: Rating D/E. Drafts realistic biological usage scenarios.
-  - `d. Generating personas`: Rating D/E. Constructs profiles of computational biologists and bioinformaticians.
-  - `e. Drafting competency questions`: Rating D/E. Formulates CQ1–CQ4 in precise terms.
-  - `f. Identifying concepts, ETypes, attributes, and relationships`: Rating D. Extracts Gene, Pathway, CellType.
-  - `g. Drafting or refining the ER diagram`: Rating C/D. Specifies entity cardinalities and attributes.
-  - `h. Qualitative evaluation and refinement of the purpose`: Rating C/D. Tabulates initial vs final counts.
-  - `i. Other`: N/A or Rating A.
+  - `a. Clarifying the informal purpose`
+  - `b. Defining the domain of interest, space, and time`
+  - `c. Generating scenarios`
+  - `d. Generating personas`
+  - `e. Drafting competency questions`
+  - `f. Identifying concepts, ETypes, attributes, and relationships`
+  - `g. Drafting or refining the ER diagram`
+  - `h. Qualitative evaluation and refinement of the purpose`
+  - `i. Other`
 - **Q2 Part 2 (Data Source Exploration)**:
-  - `a. Identifying data sources`: Rating C. Locating MSigDB, CellMarker, and HGNC.
-  - `b. Writing Python scripts for extraction, merging, or cleaning`: Rating D/E. Writing parsers.
-  - `c. Handling missing fields and duplicate records`: Rating D. Parsing audits and summary logic.
-  - `d. Cross-referencing identifiers`: Rating D. Designing HGNC resolution logic.
-  - `e. Producing cleaned datasets`: Rating D.
-  - `f. Qualitative evaluation of data sources and preprocessing`: Rating C/D.
-  - `g. Other`: Rating A.
+  - `a. Identifying data sources`
+  - `b. Writing Python scripts for extraction, merging, or cleaning`
+  - `c. Handling missing fields and duplicate records`
+  - `d. Cross-referencing identifiers`
+  - `e. Producing cleaned datasets`
+  - `f. Qualitative evaluation of data sources and preprocessing`
+  - `g. Other`
 - **Q2 Part 3 (Schema & Ontology Exploration)**:
-  - `a. Searching schemas and ontologies to reuse`: Rating C/D. Identifying OBO Cell Ontology, Dublin Core, VoID.
-  - `b. Aligning ETypes with external ontologies`: Rating C/D.
-  - `c. Defining attributes and data types`: Rating D.
-  - `d. Resolving schema conflicts or ambiguities`: Rating C/D.
-  - `e. Deciding when to use original dataset schema instead of external ontology terms`: Rating D.
-  - `f. Other`: Rating A.
+  - `a. Searching schemas and ontologies to reuse`
+  - `b. Aligning ETypes with external ontologies`
+  - `c. Defining attributes and data types`
+  - `d. Resolving schema conflicts or ambiguities`
+  - `e. Deciding when to use original dataset schema instead of external ontology terms`
+  - `f. Other`
 
 ### Phase 2: Language Definition
 - **Q2 Task List**:
-  - `a. Identifying concepts, relationships, and attributes`: Rating D.
-  - `b. Searching the Universal Knowledge Core`: Rating C.
-  - `c. Searching external ontologies for definitions and IDs`: Rating C/D.
-  - `d. Writing glosses and definitions for the Language Resource Table`: Rating D/E. Writing unambiguous biological definitions.
-  - `e. Creating custom identifiers per KnowDive Identifier format`: Rating C.
-  - `f. Building the language teleontology in Protégé`: Rating B/C.
-  - `g. Defining object and data property terms`: Rating D.
-  - `h. Qualitative evaluation of the language definition`: Rating C/D.
-  - `i. Other`: Rating A.
+  - `a. Identifying concepts, relationships, and attributes`
+  - `b. Searching the Universal Knowledge Core`
+  - `c. Searching external ontologies for definitions and IDs`
+  - `d. Writing glosses and definitions for the Language Resource Table`
+  - `e. Creating custom identifiers per KnowDive Identifier format`
+  - `f. Building the language teleontology in Protégé`
+  - `g. Defining object and data property terms`
+  - `h. Qualitative evaluation of the language definition`
+  - `i. Other`
 
 ### Phase 3: Knowledge Definition
 - **Q2 Task List**:
-  - `a. Creating the seed set of ETypes`: Rating D. Formalizing Gene, Pathway, CellType.
-  - `b. Formalising ETypes as subclasses`: Rating C/D. Structuring OWL classes and hierarchy.
-  - `c. Setting IRIs and annotations`: Rating D. Assigning labels, comments, and domains/ranges.
+  - `a. Creating the seed set of ETypes`
+  - `b. Formalising ETypes as subclasses`
+  - `c. Setting IRIs and annotations`
 
 ### Phase 4: Entity Definition
 - **Q2 Task List**:
-  - `a. Entity matching across datasets`: Rating D/E. Matching gene symbols to HGNC approved symbols.
-  - `b. Entity identification and unique identifier selection`: Rating D. Enforcing HGNC ID stability.
-  - `c. Mapping datasets to the teleontology in Karma`: Rating C/D. Designing R2RML mappings.
-  - `d. Generating RDF Turtle files and R2RML models`: Rating D/E. Writing RDFLib serialization code.
-  - `e. Importing data and mapping to form RDF`: Rating D. Running batch graph population.
-  - `f. Knowledge Graph visualisation`: Rating B/C.
-  - `g. Fixing mapping issues such as hasAnnotation or path prefix problems`: Rating D. Resolving URI minting bugs.
-  - `h. Qualitative evaluation of entity definition`: Rating C/D.
-  - `i. Other`: Rating A.
+  - `a. Entity matching across datasets`
+  - `b. Entity identification and unique identifier selection`
+  - `c. Mapping datasets to the teleontology in Karma`
+  - `d. Generating RDF Turtle files and R2RML models`
+  - `e. Importing data and mapping to form RDF`
+  - `f. Knowledge Graph visualisation`
+  - `g. Fixing mapping issues such as hasAnnotation or path prefix problems`
+  - `h. Qualitative evaluation of entity definition`
+  - `i. Other`
 
 ### Phase 5: Evaluation & Metadata
 - **Q2 Part 1 (Evaluation & Queries)**:
-  - `a. Writing SPARQL queries for the competency questions`: Rating E. Drafting Q1–Q4 templates.
-  - `b. Running SPARQL queries`: Rating D. Executing RDFLib queries.
-  - `c. Interpreting query results`: Rating D. Analyzing pathway overlaps and shared genes.
-  - `d. Calculating CQs vs dataset coverage`: Rating D.
-  - `e. Calculating dataset vs CQs coverage`: Rating D.
-  - `f. Calculating language definition coverage`: Rating C/D.
-  - `g. Calculating knowledge definition coverage`: Rating C/D.
-  - `h. Calculating connectivity and sparsity`: Rating D/E. Computing metric formulas.
-  - `i. Writing the evaluation section`: Rating D/E. Synthesizing results in LaTeX.
-  - `j. Other`: Rating A.
+  - `a. Writing SPARQL queries for the competency questions`
+  - `b. Running SPARQL queries`
+  - `c. Interpreting query results`
+  - `d. Calculating CQs vs dataset coverage`
+  - `e. Calculating dataset vs CQs coverage`
+  - `f. Calculating language definition coverage`
+  - `g. Calculating knowledge definition coverage`
+  - `h. Calculating connectivity and sparsity`
+  - `i. Writing the evaluation section`
+  - `j. Other`
 - **Q2 Part 2 (Metadata & Packaging)**:
-  - `a. Creating project metadata`: Rating D. Formulating Dublin Core and VoID blocks.
-  - `b. Creating language metadata`: Rating C/D.
-  - `c. Creating knowledge metadata`: Rating C/D.
-  - `d. Packaging metadata as Excel files`: Rating C.
-  - `e. Ensuring compatibility with LiveKnowledge`: Rating C.
-  - `f. Other`: Rating A.
+  - `a. Creating project metadata`
+  - `b. Creating language metadata`
+  - `c. Creating knowledge metadata`
+  - `d. Packaging metadata as Excel files`
+  - `e. Ensuring compatibility with LiveKnowledge`
+  - `f. Other`
 
 ### Phase 6: Open Problems & Conclusion
 - **Q2 Task List**:
-  - `a. Summarising the project`: Rating E. Synthesizing achievements against objectives.
-  - `b. Identifying open problems`: Rating D. Articulating alias resolution and CL mapping limits.
-  - `c. Discussing limitations`: Rating D. Explaining absence of raw spatial coordinates.
-  - `d. Proposing future work`: Rating D. Recommending spatial neighborhood graph integrations.
-  - `e. Writing the conclusion`: Rating E. Authoring final concluding narrative.
-  - `f. Other`: Rating A.
+  - `a. Summarising the project`
+  - `b. Identifying open problems`
+  - `c. Discussing limitations`
+  - `d. Proposing future work`
+  - `e. Writing the conclusion`
+  - `f. Other`
 
 ---
 
 ## 4. Required LaTeX Formatting in `secA-Appendix.tex`
 
-To ensure clean formatting in LaTeX, format each phase with an enumerated list specifying both the letter and CFS label (the ratings and comments below are placeholders for the user's answers):
+To ensure clean formatting in LaTeX, format each phase with an enumerated list specifying both the letter and CFS label (every `<...>` is filled with the user's own answer):
 
 ```latex
 \section*{Phase 1: Purpose Definition}
 \begin{enumerate}
-  \item[\textbf{Q1.}] \textbf{D. Often} -- The LLM was employed frequently to draft scenarios, personas, and formulate competency questions.
+  \item[\textbf{Q1.}] \textbf{<rating given by the user>} -- <user's comment>
   \item[\textbf{Q2.}] \textbf{Phase-Specific Tasks}:
   \begin{enumerate}
     \item[\textbf{Part 1:}]
     \begin{itemize}
-      \item[a.] \textbf{E. Always} -- Clarifying the informal purpose.
-      \item[b.] \textbf{D. Often} -- Defining domain of interest in space and time.
-      \item[c.] \textbf{E. Always} -- Generating realistic biological scenarios.
-      \item[d.] \textbf{E. Always} -- Formulating detailed researcher personas.
-      \item[e.] \textbf{E. Always} -- Drafting formal competency questions CQ1--CQ4.
-      \item[f.] \textbf{D. Often} -- Identifying Core, Common, and Contextual eTypes.
-      \item[g.] \textbf{D. Often} -- Specifying the Purpose ER model relationships.
-      \item[h.] \textbf{C. Sometimes} -- Tabulating initial vs final purpose metrics.
-      \item[i.] \textbf{A. Never} -- Other.
+      \item[a.] \textbf{<rating given by the user>} -- <user's comment>
+      \item[b.] \textbf{<rating given by the user>} -- <user's comment>
+      \item[c.] \textbf{<rating given by the user>} -- <user's comment>
+      \item[d.] \textbf{<rating given by the user>} -- <user's comment>
+      \item[e.] \textbf{<rating given by the user>} -- <user's comment>
+      \item[f.] \textbf{<rating given by the user>} -- <user's comment>
+      \item[g.] \textbf{<rating given by the user>} -- <user's comment>
+      \item[h.] \textbf{<rating given by the user>} -- <user's comment>
+      \item[i.] \textbf{<rating given by the user>} -- <user's comment>
     \end{itemize}
     ...
   \end{enumerate}
-  \item[\textbf{Q3.}] \textbf{E. Always} -- All LLM-generated definitions and questions were strictly audited against biological literature and AGENT.md.
-  \item[\textbf{Q4.}] \textbf{C. Sometimes} -- Initial suggestions included non-human entities and unsupported causal relations, which were eliminated.
-  \item[\textbf{Q5.}] \textbf{E. Always} -- Crucial for rapid requirement formalization and structural alignment.
+  \item[\textbf{Q3.}] \textbf{<rating given by the user>} -- <user's comment>
+  \item[\textbf{Q4.}] \textbf{<rating given by the user>} -- <user's comment>
+  \item[\textbf{Q5.}] \textbf{<rating given by the user>} -- <user's comment>
 \end{enumerate}
 ```

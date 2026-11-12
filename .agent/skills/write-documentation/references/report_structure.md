@@ -3,6 +3,8 @@
 This guide specifies the exact structure, mandatory subsections, LaTeX table structures, and required content for each section of the DataScientia KG Report, based on `Documentation/Template_KG2026_report-pdf.pdf` and `AGENT.md`.
 
 > **All concrete values below (scenario texts, persona profiles, versions, URIs, counts, dates, pass rates) are format examples.** Replace them with what the phase deliverables and evaluation outputs actually contain; if something is not available, write a TODO marker (SKILL.md, Ground Rule 2).
+>
+> For structure and level of detail, compare with the previous-year report `docs/5_example.pdf` (see SKILL.md, "Example report"); its content and metrics are not to be reused.
 
 ---
 
@@ -23,6 +25,7 @@ This guide specifies the exact structure, mandatory subsections, LaTeX table str
       \revision{<version>}{<DD.MM.YYYY>}{<author(s) given by the user>}{<what changed>}
   }
   ```
+  Add one row per completed phase (e.g. "Phase 1 Completed"), as in the example report.
 - **Abstract** (`\section*{Abstract}`):
   - 200–250 words summarizing:
     1. Purpose: providing biological context for spatial transcriptomics interpretation by linking human genes to MSigDB Hallmark pathways and CellMarker cell-type markers.
@@ -83,17 +86,12 @@ Formalize user needs through scenarios, personas, competency questions, and the 
   - *Persona 1*: a computational biologist working on cancer spatial transcriptomics. Goal: functional annotation of spot-derived gene lists.
   - *Persona 2*: a spatial bioinformatics pipeline developer. Goal: automated querying of gene-pathway-cell-marker relationships via SPARQL.
 - **Competency Questions (CQs)**:
-  - **CQ1**: Which human genes participate in Hallmark pathway $X$?
-  - **CQ2**: Which Hallmark pathways contain human gene $Y$?
-  - **CQ3**: Which cell types have marker genes overlapping with selected pathway $X$, and what are those shared genes?
-  - **CQ4**: Which human genes are shared between an externally supplied activated pathway group and a suppressed pathway group?
+  - Copy CQ1–CQ4 and the approved sub-CQs verbatim from `Phase 1 - Purpose Definition/03_competency_questions.md`.
+  - Use a table with one row per CQ and columns for the persona(s) and scenario(s) it serves (the example report has a "Person" column; the template asks for CQs "created considering the personas in the scenarios").
 - **Informal Labels & Popularity Categories**:
-  - Group informal labels into Core, Common, Contextual:
-    - *Core Entity Types*: `Gene`, `Pathway`
-    - *Contextual Entity Type*: `CellType`
-    - *Core Object Properties*: `participates_in` (`Gene` $\rightarrow$ `Pathway`)
-    - *Contextual Object Property*: `is_marker_for` (`Gene` $\rightarrow$ `CellType`)
-    - *Data Properties*: `hgnc_id`, `approved_symbol`, `approved_name`, `original_source_symbol`, `resolution_status`, `pathway_id`, `pathway_name`, `cell_type_name`, `cell_ontology_id`, `tissue_context`.
+  - Take the labels and their Core / Common / Contextual classification from `pf_sheet.csv` and `05_concept_identification.md`; do not reclassify them in the report.
+  - Report, per eType, the identifying attributes (from the datasets) and the descriptive attributes (from the CQs), and, per relation, domain, range, cardinality and any relation attributes.
+  - State the main design choices with their strong and weak points (template requirement).
 - **Purpose ER Model**:
   - Formal entity-relationship diagram and narrative specifying cardinalities:
     - `Gene` (1..*) `participates_in` (1..*) `Pathway`
@@ -101,13 +99,18 @@ Formalize user needs through scenarios, personas, competency questions, and the 
   - Cardinality notes, primary keys, and attributes.
 
 #### 3.2 Information Gathering
-- **KG / KnowDive Data Sources**:
-  - Existing formal ontologies and vocabularies used as reference: OBO Foundry (Cell Ontology), schema.org, Dublin Core Terms, VoID.
-- **External Data Sources**:
-  - Detail the 3 input resources:
+The 2026 template requires this two-level structure (one subsubsection per source group, a paragraph or table per layer):
+- **KG / KnowDive Data Sources** (already available, quality resources from KG/KnowDive):
+  - Knowledge layer: sources description, collection, Common / Core / Contextual classification.
+  - Data layer: sources description, collection, Common / Core / Contextual classification.
+  - If no KnowDive resource was collected in Phase 1, say so explicitly for both layers.
+- **External Data Sources** (informal, heterogeneous resources):
+  - Knowledge layer: external ontologies and vocabularies considered (e.g. Cell Ontology from the OBO Foundry), which were adopted and why; classification.
+  - Data layer: detail the 3 input resources:
     1. *MSigDB Hallmark Gene Sets* (GMT format, 50 gene sets, human gene symbols).
     2. *CellMarker 3.0* (Tabular TSV, human cell markers, Cell Ontology IDs, tissue context).
     3. *HGNC Complete Set* (`hgnc_complete_set.txt`, authoritative reference resource for gene symbols, approved names, and HGNC IDs; strictly not a content dataset).
+  - For each data source, list the key columns actually used, with type and meaning, as the example report does ("Key attributes in the dataset are: ...").
   - Classification of data sources into Common, Core, and Contextual layers.
 
 #### 3.3 Qualitative Evaluation
@@ -127,7 +130,7 @@ Must include the following LaTeX tables:
    \end{table}
    ```
 2. **Personas Table**: Initial vs Final Personas.
-3. **Competency Questions Table**: Initial vs Final CQs with mapping to Scenarios.
+3. **Competency Questions Table**: Initial vs Final CQs with mapping to Scenarios. For each CQ that was changed or discarded, give old wording, new wording (if any) and the reason, as the example report does ("Old / New / Change").
 4. **Dataset-level Formatting & Transformations**: Summary of format inspection and pre-filtering (e.g. GMT parsing, human-only row filtering).
 5. **Remarks on LLM Usage**: Summary of LLM support during Phase 1 (referencing Appendix A).
 
@@ -150,6 +153,7 @@ Establish lexical terms, words, and concepts for entity types, object properties
      - Validation of Cell Ontology CURIE formats (`CL:0000000`).
      - Validation of HGNC ID formatting (`HGNC:\d+`).
 3. **Qualitative Evaluation**:
+   - For eTypes, object properties and data properties: first the three counts (initially considered / finally considered / aligned), then the per-term table.
    - Table: eType terms considered vs finalized vs aligned.
    - Table: Object property terms considered vs finalized vs aligned.
    - Table: Data property terms considered vs finalized vs aligned.
@@ -240,6 +244,7 @@ Provide comprehensive quantitative, ontological, data-quality, and query-based e
 2. **Knowledge Layer Evaluation**:
    - Structural consistency: class hierarchy, domain/range adherence, absence of dangling references.
    - Competency Question coverage: which CQs are answerable by the implemented queries (as measured).
+   - Coverage metrics listed in the Phase 5 questionnaire (CQs vs dataset, dataset vs CQs, language-definition and knowledge-definition coverage), only if computed in `Evaluation/`, each with its formula written out (the example report uses ratios such as $|E_{CQ} \cap E_{DS}| / |E_{CQ}|$).
 3. **Data Layer Evaluation**:
    - **Source-data completeness / missing-value rates**:
      $$\text{Missing-value rate} = \frac{\text{Missing values in column}}{\text{Total records parsed}} \times 100\%$$
@@ -275,6 +280,7 @@ Describe metadata for all intermediate and final project assets, ensuring FAIR c
      - `dcterms:creator` (Agent resource), `dcterms:license`.
      - `owl:versionInfo`.
      - VoID properties: `void:triples`, `void:entities`, `void:classes`, `void:properties`, `void:distinctSubjects`, `void:distinctObjects`.
+   - Present each group as a Field / Value table (the example report has "Project Metadata", "Language Metadata", "Knowledge Metadata" tables). Leave out or mark TODO any field whose value is not in `Metadata/` or given by the user.
 2. **Catalog Distribution Plan**:
    - Target repositories: DataScientia LiveKnowledge catalog, Zenodo, GitHub.
    - Packaging of metadata tables as Excel/CSV for LiveKnowledge compatibility.

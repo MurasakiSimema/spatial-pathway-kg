@@ -2,3 +2,15 @@ AGENT.md
 Phase 4 - Entity Definition/data/raw/*
 !Phase 4 - Entity Definition/data/raw/SOURCES.md
 !Phase 4 - Entity Definition/data/raw/cites.bib
+
+# LaTeX build files (Documentation)
+Documentation/**/*.aux
+Documentation/**/*.bbl
+Documentation/**/*.blg
+Documentation/**/*.log
+Documentation/**/*.out
+Documentation/**/*.toc
+Documentation/**/*.synctex.gz
+Documentation/**/*.fdb_latexmk
+Documentation/**/*.fls
+Documentation/**/main.pdf

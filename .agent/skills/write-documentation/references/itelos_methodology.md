@@ -22,9 +22,10 @@ Traditional ontology and KG engineering often suffers from scope creep, semantic
 
 3. **Popularity-Driven Integration**:
    - Resources, terms, and schema elements are classified into three popularity categories based on frequency of occurrence and centrality to the purpose:
-     - **Core**: Essential elements without which the purpose cannot be satisfied (e.g. `Gene`, `Pathway`, `participates_in`).
-     - **Common**: Elements shared across multiple sources or standard domains (e.g. standard identifiers, common synonyms).
-     - **Contextual**: Elements that provide specific experimental, anatomical, or clinical context (e.g. `CellType`, tissue origin, disease status).
+     - **Core**: Elements that are specific to the purpose and without which it cannot be satisfied.
+     - **Common**: General elements, shared across sources and domains and already modelled by reference resources.
+     - **Contextual**: Elements that provide specific context (e.g. experimental, anatomical or clinical details).
+   - The classification of this project's elements is a Phase 1 decision: take it from `pf_sheet.csv` and `05_concept_identification.md`, never from this guide.
 
 4. **Producer vs. Consumer Processes**:
    - *Producer Process*: Models and cleans each dataset individually against its own local schema.
@@ -64,9 +65,9 @@ Traditional ontology and KG engineering often suffers from scope creep, semantic
 
 ### Phase 1: Purpose Definition
 - **Step 1.1**: Clarify the informal user need into a concise statement.
-- **Step 1.2**: Define 3 concrete usage scenarios that span the operational space of the KG.
-- **Step 1.3**: Characterize 2 distinct Personas acting within the scenarios.
-- **Step 1.4**: Define the 4 Competency Questions (CQ1 to CQ4).
+- **Step 1.2**: Define a set of usage scenarios covering the different aspects of the purpose (as many as needed; the number is a project decision).
+- **Step 1.3**: Characterize the Personas acting within the scenarios.
+- **Step 1.4**: Define the Competency Questions (CQ1 to CQ4 from the proposal, plus any approved sub-CQs).
 - **Step 1.5**: Extract informal labels for entity types, object properties, and data properties; classify by popularity.
 - **Step 1.6**: Construct the Purpose ER model (entities, relationships, attributes, cardinalities).
 - **Step 1.7**: Conduct Information Gathering: identify formal KnowDive sources and external sources (MSigDB, CellMarker, HGNC).
@@ -77,7 +78,7 @@ Traditional ontology and KG engineering often suffers from scope creep, semantic
   - Finalize language terms for `Gene`, `Pathway`, `CellType`, `participates_in`, `is_marker_for`, and data properties.
   - Align terms to lexical concepts in UKC / WordNet (identifying synsets, hypernyms, definitions).
 - **Data Layer**:
-  - Filter and clean raw input datasets: trim whitespace, convert gene symbols to uppercase, validate format of identifiers.
+  - Filter and clean raw input datasets: trim whitespace, uppercase gene symbols for comparison only (AGENT.md §5.1; the original strings are kept for audit), validate format of identifiers.
 - **Evaluation**: Report initial vs final term counts and teleontology alignments.
 
 ### Phase 3: Knowledge Definition

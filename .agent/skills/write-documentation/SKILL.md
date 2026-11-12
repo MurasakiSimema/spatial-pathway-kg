@@ -18,6 +18,11 @@ The documentation follows the **iTelos methodology** developed by the KnowDive /
 2. The project scope, technical rules, and scientific boundaries established in [AGENT.md](../../../AGENT.md).
 3. The LaTeX document structure in [Documentation/knowdive-files/main.tex](../../../Documentation/knowdive-files/main.tex) and [Documentation/section/](../../../Documentation/section/).
 
+**Example report.** [docs/5_example.pdf](../../../docs/5_example.pdf) is a report from the previous year (KG 2025, *Territory and Health Facilities*), written on the 2025 version of the template. Use it as a reference for **structure, level of detail and tone** (one subsection per activity, a table for every "how many initially / finally" question, an explicit reason for every change). Do **not** take content, values, namespaces, tools or metric definitions from it. Where it differs from the 2026 template, the 2026 template wins:
+- the 2025 example closes each phase with a "Report" subsection; the 2026 template calls it **Qualitative Evaluation** and adds the LLM remarks and the pointer to Appendix A;
+- the 2025 example has no Appendix A (LLM questionnaire); the 2026 template requires it;
+- the 2025 example splits Information Gathering only into knowledge/data layer; the 2026 template first splits it into **KG/KnowDive** and **External** sources, each with a knowledge layer and a data layer.
+
 ---
 
 ## Ground Rules (read first)
@@ -88,7 +93,7 @@ Edit [Documentation/knowdive-files/main.tex](../../../Documentation/knowdive-fil
    `\title{Spatial Transcriptomics Knowledge Graph: iTelos Purpose-Driven Knowledge Graph Report}`
 2. **Authors & Reference Persons**: Fill in the author names in `\author{...}`.
 3. **Document Identifier / Date**: Update `\docdata{\today}` or the designated release date.
-4. **Revision History**: Add a new `\revision{...}` row recording the documentation generation.
+4. **Revision History**: Add one `\revision{...}` row per completed phase (as in the example report: "Phase 1 Completed", "Phase 2 Completed", ...), with the date and authors given by the user.
 5. **Abstract**: Write a self-contained 200–250 word abstract summarizing:
    - Motivation: Providing biological context (pathways, marker genes, cell types) for interpreting spatial transcriptomics data.
    - Methodology: The iTelos methodology (stratified approach: language, knowledge, data layers).
@@ -122,14 +127,15 @@ Replace the template guidelines in [Documentation/section/](../../../Documentati
 - **Purpose Formalization**:
   - *Scenarios*: Usage scenarios (e.g., spot-cluster pathway contextualization, cell-type boundary marker overlap, dual-pathway state comparisons).
   - *Personas*: The personas defined in `Phase 1 - Purpose Definition/` (illustrative user profiles, e.g. a translational cancer biologist or a spatial genomics bioinformatician).
-  - *Competency Questions (CQs)*: Formulate CQ1 to CQ4 in natural language and formal terms.
-  - *Informal Labels & Popularity Categories*: Classify eTypes (`Gene`, `Pathway`, `CellType`) and properties into Core, Common, and Contextual categories.
+  - *Competency Questions (CQs)*: Report every CQ and sub-CQ exactly as in `03_competency_questions.md`, in a table that links each CQ to its persona(s) and scenario(s).
+  - *Informal Labels & Popularity Categories*: Report the Core / Common / Contextual classification of eTypes and properties exactly as recorded in `pf_sheet.csv` and `05_concept_identification.md` (do not reclassify).
   - *ER Model Definition*: Describe the Purpose ER Model, cardinalities, and attributes. Include an ER diagram figure or structural description.
-- **Information Gathering**:
-  - *KnowDive / Existing Resources*: Formal vocabularies, reference schemas.
-  - *External Resources*: MSigDB Hallmark (GMT), CellMarker 3.0 (human markers TSV), HGNC complete set (`hgnc_complete_set.txt`). Classify into Core, Common, Contextual.
+- **Information Gathering** (structure required by the 2026 template):
+  - *KG/KnowDive Data Sources*: already available, quality KG/KnowDive resources. Knowledge layer and data layer, each with: sources description, resources collection, classification over Common / Core / Contextual. If none were used, say so explicitly for both layers.
+  - *External Data Sources*: informal, heterogeneous resources. Knowledge layer (external ontologies/vocabularies considered, e.g. Cell Ontology) and data layer (MSigDB Hallmark GMT, CellMarker 3.0 TSV, HGNC `hgnc_complete_set.txt`), each with: sources description, collection, classification over Common / Core / Contextual.
+  - For each data-layer source, describe the key columns actually used, as the example report does (name, type, meaning), with the counts from `04_input_inspection.md`.
 - **Qualitative Evaluation**:
-  - Include the required evaluation tables: Scenarios (initial vs final), Personas (initial vs final), CQs (initial vs final), Dataset Transformations, and Remarks on LLM Usage.
+  - Include the required evaluation tables: Scenarios (initial vs final), Personas (initial vs final), CQs (initial vs final), Dataset Transformations, and Remarks on LLM Usage. For every element that changed or was discarded, state old version, new version (if any) and the reason, as the example report does for its CQs.
 
 #### Section 4: Language Definition (`S4.tex`)
 - **Knowledge Layer**:
@@ -139,6 +145,8 @@ Replace the template guidelines in [Documentation/section/](../../../Documentati
   - Dataset filtering, cleaning, and formatting (whitespace trimming, uppercase normalization, human-only filtering, HGNC approved status matching).
 - **Qualitative Evaluation**:
   - Include tables for eTypes term alignment, object property alignment, data property alignment, teleontology enrichment, backtracking notes, and LLM remarks.
+  - For each of eTypes, object properties and data properties, first give the three counts the template asks for (initially considered / finally considered / aligned to the teleontology), then the per-term table (term, initially?, finally?, alignment or "new").
+  - Describe the data-layer work one dataset at a time: source file(s), script used, and the operations applied.
 
 #### Section 5: Knowledge Definition (`S5.tex`)
 - **Knowledge Layer**:
@@ -163,10 +171,10 @@ Replace the template guidelines in [Documentation/section/](../../../Documentati
 
 #### Section 7: Evaluation (`S7.tex`)
 1. **Final KG Statistics**: Triple count, instances per eType (`Gene`, `Pathway`, `CellType`), assertions per relation (`participates_in`, `is_marker_for`), shared genes, HGNC resolution rate.
-2. **Knowledge Layer Evaluation**: Ontological consistency, CQ coverage, schema validation.
+2. **Knowledge Layer Evaluation**: Ontological consistency, CQ coverage, schema validation. The Phase 5 questionnaire also lists coverage metrics (CQs vs dataset, dataset vs CQs, language-definition coverage, knowledge-definition coverage); the example report shows them as ratios such as |ETypes in CQs ∩ ETypes in datasets| / |ETypes in CQs|. Report them only if they were actually computed in `Evaluation/`, with their formula written out.
 3. **Data Layer Evaluation**:
    - Missing-value rate / source completeness table for raw vs processed datasets.
-   - Entity connectivity: Formula $\frac{\text{Connected Entities}}{\text{Total Entities}} \times 100\%$, reported overall and per eType.
+   - Entity connectivity: Formula $\frac{\text{Connected Entities}}{\text{Total Entities}} \times 100\%$, reported overall and per eType. This is the project's operational definition (AGENT.md §10.3); it differs from the entity connectivity of the example report and must not be presented as the same metric.
 4. **Query Execution**:
    - Formal evaluation of SPARQL implementations for CQ1–CQ4.
    - Synthetic test graph results (positive, no-match, empty list handling) vs real-data smoke test results.
@@ -179,6 +187,7 @@ Replace the template guidelines in [Documentation/section/](../../../Documentati
    - Knowledge resources metadata (teleology ontology, atoms).
    - Data resources metadata (raw files, sources, retrieval dates, licenses).
    - KG metadata (Dublin Core Terms: title, description, created, source, creator, license; VoID statistics: `void:triples`, `void:entities`, `void:classes`, `void:properties`).
+   - Present each group as a two-column Field / Value table, as in the example report (project, language, knowledge metadata). Only fill fields whose value is in `Metadata/` or given by the user.
 2. **Catalog Distribution Plan**: Publication via DataScientia LiveKnowledge catalog, institutional repositories, and open data portals.
 3. **Qualitative Evaluation**: Notes on LLM usage and metadata integrity.
 
