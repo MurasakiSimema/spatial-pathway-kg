@@ -65,7 +65,7 @@ Documentation/
       \revision{0.1}{20.04.2020}{Fausto Giunchiglia}{Document created}
       \revision{0.2}{12.01.2022}{Fausto Giunchiglia}{Document template simplified}
       \revision{0.3}{30.10.2026}{Mayukh Bagchi}{KG - 2026 - Project Report Template}
-      \revision{1.0}{09.11.2026}{Implementation Team}{Final project report}
+      \revision{<version>}{<DD.MM.YYYY>}{<author(s) given by the user>}{<what changed>}
   }
   ```
 - **Title Page Generation**:
@@ -82,7 +82,7 @@ Documentation/
 ## 3. Formatting Guidelines
 
 ### 3.1 Tables
-Use `tabularx` with `X` columns for wrapped text:
+Use `tabularx` with `X` columns for wrapped text (the values below are layout examples, not project results):
 ```latex
 \begin{table}[htbp]
 \centering
@@ -99,7 +99,7 @@ Resolution Rate & Resolved symbols / valid distinct source symbols & 96.4\% \\ \
 ```
 
 ### 3.2 Code Listings (SPARQL & Turtle)
-Use the `listings` package:
+Use the `listings` package. Copy queries verbatim from `Evaluation/queries/*.rq`; the prefix and property names below are only an example (use the namespace actually configured in the project):
 ```latex
 \begin{lstlisting}[language=SPARQL, caption={Query 1: Retrieving genes in a Hallmark pathway}, label={lst:q1}]
 PREFIX : <https://w3id.org/spatial-kg/>
@@ -141,18 +141,13 @@ Always use standard math environments (`equation`, `align*`, or `\[ ... \]`):
 
 Because `main.tex` is located in `Documentation/knowdive-files/` while section files are located in `Documentation/section/`:
 
-### Recommended Compilation from Project Root:
+### Recommended Compilation (from the project root):
 ```powershell
-cd Documentation
-# Ensure XeLaTeX has access to both knowdive-files and section:
-xelatex -output-directory=knowdive-files knowdive-files/main.tex
-bibtex knowdive-files/main
-xelatex -output-directory=knowdive-files knowdive-files/main.tex
-xelatex -output-directory=knowdive-files knowdive-files/main.tex
+python .agent/skills/write-documentation/scripts/compile_report.py
 ```
+The script runs XeLaTeX with `Documentation/` as working directory and `TEXINPUTS`/`BIBINPUTS`/`BSTINPUTS` pointing at `knowdive-files/`, so that `\input{section/...}` and the class/bib files resolve. The PDF is written to `Documentation/main.pdf`.
 
-Alternatively, use the helper script:
+To check syntax, environment balance, and citation keys without compiling:
 ```powershell
-python .agents/skills/write-documentation/scripts/check_compilation.py
+python .agent/skills/write-documentation/scripts/check_compilation.py
 ```
-This script audits LaTeX syntax, validates environments, verifies BibTeX keys, and runs the compiler if available.

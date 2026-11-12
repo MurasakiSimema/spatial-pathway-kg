@@ -14,9 +14,29 @@ description: >-
 This skill provides the end-to-end runbook, guidelines, and automated verification tools to write the complete academic and technical project report for the **Spatial Transcriptomics Knowledge Graph** project.
 
 The documentation follows the **iTelos methodology** developed by the KnowDive / DataScientia group (University of Trento) and must strictly comply with:
-1. The **DataScientia KG Report Template** specification defined in [Template_KG2026_report-pdf.pdf](../../Documentation/Template_KG2026_report-pdf.pdf).
-2. The project scope, technical rules, and scientific boundaries established in [AGENT.md](../../AGENT.md).
-3. The LaTeX document structure in [Documentation/knowdive-files/main.tex](../../Documentation/knowdive-files/main.tex) and [Documentation/section/](../../Documentation/section/).
+1. The **DataScientia KG Report Template** specification defined in [Template_KG2026_report-pdf.pdf](../../../Documentation/Template_KG2026_report-pdf.pdf).
+2. The project scope, technical rules, and scientific boundaries established in [AGENT.md](../../../AGENT.md).
+3. The LaTeX document structure in [Documentation/knowdive-files/main.tex](../../../Documentation/knowdive-files/main.tex) and [Documentation/section/](../../../Documentation/section/).
+
+---
+
+## Ground Rules (read first)
+
+1. **One phase at a time.** The project is built one iTelos phase at a time (AGENT.md, Sections 1 and 12). Document only the phase(s) the user names, and only once that phase's deliverables exist in the repository. Do not draft sections for phases that have not been carried out yet.
+
+   | Completed phase | Sections to write |
+   |---|---|
+   | Phase 1 — Purpose Definition | `S2.tex`, `S3.tex` (and `S1.tex` the first time) |
+   | Phase 2 — Language Definition | `S4.tex` |
+   | Phase 3 — Knowledge Definition | `S5.tex` |
+   | Phase 4 — Entity Definition | `S6.tex` |
+   | Phase 5 — Evaluation & Metadata | `S7.tex`, `S8.tex` |
+   | Phase 6 — Wrap-up | `S9.tex`, `secB-Appendix.tex`, abstract in `main.tex` |
+
+   `secA-Appendix.tex` is updated for a phase only with answers the user gives (see rule 3).
+2. **Evidence only.** Every number, count, version, date, file name, identifier, namespace, and test outcome must come from a file in the repository (phase folders, `Evaluation/`, `Metadata/`, `TECHNICAL_HANDOVER.md`) or from the user. If a value is missing, write a visible `\textbf{TODO: ...}` marker and report it; never fill in a plausible-looking value. The example values in `references/` (table rows, URIs, versions, personas) are illustrations of format, not project facts.
+3. **Appendix A is the user's answer.** The LLM-usage questionnaire describes how the authors used LLMs. Ask the user for each rating; do not choose ratings yourself. `references/appendix_a_guide.md` only explains the scale and the layout.
+4. **Write each section by hand from the evidence.** There is no draft generator: section prose is written from the phase deliverables, never from prewritten text.
 
 ---
 
@@ -29,8 +49,7 @@ The documentation follows the **iTelos methodology** developed by the KnowDive /
 - **Appendix A Questionnaire Rubric**: [appendix_a_guide.md](./references/appendix_a_guide.md) — Scoring guide for the Common Frequency Scale (CFS) across all 6 phases.
 - **Helper Scripts**:
   - [compile_report.py](./scripts/compile_report.py) — Automates the multi-pass XeLaTeX + BibTeX build pipeline with environment path resolution.
-  - [generate_report_draft.py](./scripts/generate_report_draft.py) — Scaffolds a complete report draft in `Documentation/` strictly following AGENT.md.
-  - [extract_metrics_to_latex.py](./scripts/extract_metrics_to_latex.py) — Extracts graph metrics, resolution counts, and query outcomes into formatted LaTeX tables.
+  - [extract_metrics_to_latex.py](./scripts/extract_metrics_to_latex.py) — Converts `Evaluation/graph_statistics.json` into LaTeX tables; missing values are emitted as TODO markers.
   - [validate_documentation.py](./scripts/validate_documentation.py) — Audits LaTeX files for unreplaced placeholders, missing tables, forbidden claims, and incomplete survey answers.
   - [check_compilation.py](./scripts/check_compilation.py) — Checks LaTeX syntax, citation keys, and environment balancing.
 
@@ -38,7 +57,7 @@ The documentation follows the **iTelos methodology** developed by the KnowDive /
 
 ## End-to-End Documentation Runbook
 
-Follow this 6-stage workflow when writing or updating the documentation:
+The stages below describe the full report. In practice, run Stage 1 (evidence) and then only the stage(s) covering the sections of the phase being documented (Ground Rule 1), followed by Stage 6 (audit) on the files you changed.
 
 ```mermaid
 flowchart TD
@@ -52,7 +71,7 @@ flowchart TD
 ### Stage 1: Evidence Gathering & Discovery
 
 Before writing any text, inspect the actual artifacts produced in the project repository:
-1. **Inputs & Identifiers**: Confirm versions of MSigDB Hallmark (GMT), CellMarker 3.0 (human markers), and HGNC (`hgnc_complete_set.txt`).
+1. **Inputs & Identifiers**: Take the versions of MSigDB Hallmark (GMT), CellMarker (human markers), and HGNC (`hgnc_complete_set.txt`) from the Phase 1 input inspection summary or the technical handover. If a version is not recorded there, mark it TODO.
 2. **Phase Deliverables**:
    - `Phase 1 - Purpose Definition`: Informal purpose, scenarios, personas, competency questions (CQs), informal eTypes/properties, ER diagram.
    - `Phase 2 - Language Definition`: Language Resource Table, Language Teleontology alignment (Universal Knowledge Core / WordNet), data cleaning notes.
@@ -60,11 +79,11 @@ Before writing any text, inspect the actual artifacts produced in the project re
    - `Phase 4 - Entity Definition`: Single-dataset and multi-dataset Karma/RDFLib mappings, deterministic URI policy, resolution audit (`gene_symbol_resolution.csv`).
    - `Evaluation`: Basic graph statistics (`graph_statistics.json`), validation checks (`validation_summary.json`), entity connectivity, SPARQL query results (Q1–Q4).
    - `Metadata`: DC Terms, VoID statistics, resource catalog definitions.
-3. If the pipeline has run, use `./scripts/extract_metrics_to_latex.py` to auto-generate the LaTeX tables for evaluation.
+3. If Phase 5 has run, generate the evaluation tables with `python .agent/skills/write-documentation/scripts/extract_metrics_to_latex.py --json-path Evaluation/graph_statistics.json`.
 
 ### Stage 2: Master Document Setup (`main.tex`)
 
-Edit [Documentation/knowdive-files/main.tex](../../Documentation/knowdive-files/main.tex):
+Edit [Documentation/knowdive-files/main.tex](../../../Documentation/knowdive-files/main.tex):
 1. **Title**: Set to a formal descriptive title, e.g.:
    `\title{Spatial Transcriptomics Knowledge Graph: iTelos Purpose-Driven Knowledge Graph Report}`
 2. **Authors & Reference Persons**: Fill in the author names in `\author{...}`.
@@ -78,7 +97,7 @@ Edit [Documentation/knowdive-files/main.tex](../../Documentation/knowdive-files/
 
 ### Stage 3: Draft Narrative Sections (`S1.tex` to `S6.tex`)
 
-Replace the template guidelines in [Documentation/section/](../../Documentation/section/) with comprehensive technical prose:
+Replace the template guidelines in [Documentation/section/](../../../Documentation/section/) with comprehensive technical prose:
 
 #### Section 1: Introduction (`S1.tex`)
 - Present the principle of reusability in heterogeneity-aware KGs.
@@ -95,14 +114,14 @@ Replace the template guidelines in [Documentation/section/](../../Documentation/
 #### Section 2: Project Design (`S2.tex`)
 - **Domain of Interest (DoI)**:
   - Space boundaries: Molecular biology of *Homo sapiens* (human transcriptomics). Explicitly state that the KG provides biological context without directly analyzing raw 2D/3D spatial coordinates, histology images, or spatial spot grids.
-  - Time boundaries: Contemporary post-genomic molecular biology, bounded by current curated releases of HGNC, MSigDB Hallmark (v2023.2), and CellMarker (v3.0).
+  - Time boundaries: Contemporary post-genomic molecular biology, bounded by the releases of HGNC, MSigDB Hallmark, and CellMarker actually used (versions from the input inspection, not assumed from file names).
 - **General Purpose**:
   - The informal natural-language purpose expressed by domain scientists: integrating human genes, hallmark functional pathways, and curated cell-type markers to support interpretation of spatial transcriptomics spot clusters and tissue frontiers.
 
 #### Section 3: Purpose Definition (`S3.tex`)
 - **Purpose Formalization**:
   - *Scenarios*: Usage scenarios (e.g., spot-cluster pathway contextualization, cell-type boundary marker overlap, dual-pathway state comparisons).
-  - *Personas*: Real users (e.g., Translational Cancer Biologist, Spatial Genomics Bioinformatician).
+  - *Personas*: The personas defined in `Phase 1 - Purpose Definition/` (illustrative user profiles, e.g. a translational cancer biologist or a spatial genomics bioinformatician).
   - *Competency Questions (CQs)*: Formulate CQ1 to CQ4 in natural language and formal terms.
   - *Informal Labels & Popularity Categories*: Classify eTypes (`Gene`, `Pathway`, `CellType`) and properties into Core, Common, and Contextual categories.
   - *ER Model Definition*: Describe the Purpose ER Model, cardinalities, and attributes. Include an ER diagram figure or structural description.
@@ -136,7 +155,7 @@ Replace the template guidelines in [Documentation/section/](../../Documentation/
   - *Multi-Dataset Composition*: Integrating datasets into the teleontology; resolving shared genes strictly via HGNC IDs.
   - *Karma / Ingestion Pipeline*: Generation of RDF Turtle (`.ttl`), URI minting policies (HGNC ID for resolved genes, local path for unresolved genes, Hallmark IDs, Cell Ontology CL IDs, preserved context literals).
 - **Qualitative Evaluation**:
-  - Initial vs final entities table, Karma/pipeline iteration table, difficulties encountered (e.g., alias ambiguities, hasAnnotation issues), backtracking notes, and LLM remarks.
+  - Initial vs final entities table, Karma/pipeline iteration table, difficulties actually encountered (from the handover/phase notes), backtracking notes, and LLM remarks.
 
 ---
 
@@ -173,7 +192,7 @@ Replace the template guidelines in [Documentation/section/](../../Documentation/
 - Remaining open problems: Handling unapproved gene aliases, non-standard cell types without CL IDs, lack of spatial spot coordinates in current graph scope, future directions.
 
 #### Appendix A: LLM Usage Questionnaire (`secA-Appendix.tex`)
-- Complete every question (Q1, Q2 subtasks, Q3, Q4, Q5) for all 6 phases:
+- Record the user's answers to every question (Q1, Q2 subtasks, Q3, Q4, Q5) for each completed phase (Ground Rule 3):
   - Phase 1: Purpose Definition (Tasks part 1, part 2, part 3)
   - Phase 2: Language Definition (Tasks a–i)
   - Phase 3: Knowledge Definition (Tasks a–c)
@@ -197,14 +216,14 @@ Replace the template guidelines in [Documentation/section/](../../Documentation/
    - Confirm HGNC is presented as an *identifier normalization reference*, not a biological dataset.
 2. **Run Validation Script**:
    ```powershell
-   python .agents/skills/write-documentation/scripts/validate_documentation.py
+   python .agent/skills/write-documentation/scripts/validate_documentation.py
    ```
 3. **Verify LaTeX Syntax**:
    ```powershell
-   python .agents/skills/write-documentation/scripts/check_compilation.py
+   python .agent/skills/write-documentation/scripts/check_compilation.py
    ```
 4. **Compile to PDF**:
    ```powershell
-   python .agents/skills/write-documentation/scripts/compile_report.py
+   python .agent/skills/write-documentation/scripts/compile_report.py
    ```
-5. Confirm no template prompt instructions remain in `S1.tex` through `S9.tex`.
+5. Confirm no template prompt instructions remain in the sections written for the documented phase(s). Sections of phases not yet carried out keep the template text; report the expected validator warnings for them instead of filling them.

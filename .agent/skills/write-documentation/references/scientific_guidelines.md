@@ -1,6 +1,6 @@
 # Scientific Guidelines, Scope Boundaries & Phrasing Rules
 
-When authoring the project documentation report, the agent must strictly enforce the scientific boundaries, negative constraints, and precise biological terminology established in [AGENT.md](../../AGENT.md).
+When authoring the project documentation report, the agent must strictly enforce the scientific boundaries, negative constraints, and precise biological terminology established in [AGENT.md](../../../../AGENT.md).
 
 ---
 
@@ -66,10 +66,10 @@ Every source gene symbol must be classified into exactly one of five explicit ca
 *Policy for Unresolved Genes*: Unresolved genes must **not** be silently dropped. They are instantiated as `Gene` resources under a separate local URI namespace (e.g. `.../gene/local/<symbol>`), retaining their literal resolution status for transparent filtering.
 
 ### 3.2 CellMarker Context Handling
-- CellMarker contains context columns such as `tissue_type`, `cancer_type`, and `cell_type`.
+- CellMarker may contain context columns (for example tissue, cancer/disease status, cell name). Use the column names actually found in the supplied file, as recorded in the input inspection.
 - If identical cell-type names have distinct marker profiles in different tissue contexts, do not pool them into a single context-free entity without documenting the policy.
 - Retain tissue context as literal datatype properties on the `CellType` entity.
-- If a valid Cell Ontology CURIE is present (`CL:\d{7}`), link to OBO PURL `http://purl.obolibrary.org/obo/CL_\d{7}` using `rdfs:seeAlso`.
+- If a valid Cell Ontology CURIE is present (`CL:\d{7}`), link to OBO PURL `http://purl.obolibrary.org/obo/CL_\d{7}` using `rdfs:seeAlso`; describe it as a reference to the canonical concept, not as identity with a context-qualified CellType.
 
 ---
 

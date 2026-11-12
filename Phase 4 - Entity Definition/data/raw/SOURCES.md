@@ -1,0 +1,7 @@
+# Sources of datasets and ontologies
+
+| Name | Filename | DownloadDate | DownloadURL | SiteURL | License / Terms | Cite | Notes |
+|---|---|---|---|---|---|---|---|
+|MSigDB Hallmark|[h.all.v2026.2.Hs.symbols.gmt](./h.all.v2026.2.Hs.symbols.gmt)|2026-11-05|https://www.gsea-msigdb.org/gsea/msigdb/human/collections.jsp|https://www.gsea-msigdb.org/gsea/index.jsp|CC-BY-4.0 — "Creative Commons Attribution 4.0 International License" (applies to MSigDB v2022.1 and above; listed exceptions are KEGG and BioCarta sets, not Hallmark) — https://www.gsea-msigdb.org/gsea/msigdb_license_terms.jsp (checked 2026-11-12)|liberzon2015molecular||
+|HGNC|[hgnc_complete_set.txt](./hgnc_complete_set.txt)|2026-11-05|https://www.genenames.org/download/statistics-and-files/|https://www.genenames.org/|CC0-1.0 — "all data is released under the Creative Commons Public Domain (CC0) License"; citation requested but not mandatory — https://www.genenames.org/about/license/ (checked 2026-11-12)|seal2026genenames||
+|CellMarker 3.0|[human_cell_marker.txt](./human_cell_marker.txt)|2026-11-05|https://bio-bigdata.hrbmu.edu.cn/CellMarker/#/download|https://bio-bigdata.hrbmu.edu.cn/CellMarker/#/home|not stated — no licence or terms page found on https://bio-bigdata.hrbmu.edu.cn/CellMarker/ (checked manually by the user; the site is JavaScript-only and could not be checked automatically)|hu2026cellmarker||

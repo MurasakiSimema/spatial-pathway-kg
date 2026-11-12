@@ -2,6 +2,8 @@
 
 This guide specifies the exact structure, mandatory subsections, LaTeX table structures, and required content for each section of the DataScientia KG Report, based on `Documentation/Template_KG2026_report-pdf.pdf` and `AGENT.md`.
 
+> **All concrete values below (scenario texts, persona profiles, versions, URIs, counts, dates, pass rates) are format examples.** Replace them with what the phase deliverables and evaluation outputs actually contain; if something is not available, write a TODO marker (SKILL.md, Ground Rule 2).
+
 ---
 
 ## 1. Document Preamble & Frontmatter (`main.tex`)
@@ -18,7 +20,7 @@ This guide specifies the exact structure, mandatory subsections, LaTeX table str
       \revision{0.1}{20.04.2020}{Fausto Giunchiglia}{Document created}
       \revision{0.2}{12.01.2022}{Fausto Giunchiglia}{Document template simplified a lot with less and simpler guidelines}
       \revision{0.3}{30.10.2026}{Mayukh Bagchi}{KG - 2026 - Project Report Template}
-      \revision{1.0}{09.11.2026}{Implementation Team}{Final report on Spatial Transcriptomics Knowledge Graph}
+      \revision{<version>}{<DD.MM.YYYY>}{<author(s) given by the user>}{<what changed>}
   }
   ```
 - **Abstract** (`\section*{Abstract}`):
@@ -26,7 +28,7 @@ This guide specifies the exact structure, mandatory subsections, LaTeX table str
     1. Purpose: providing biological context for spatial transcriptomics interpretation by linking human genes to MSigDB Hallmark pathways and CellMarker cell-type markers.
     2. Methodology: iTelos purpose-driven, stratified engineering (language, knowledge, data layers).
     3. Technical architecture: RDF/OWL, RDFLib ingestion, SPARQL 1.1 query interface.
-    4. Key results: HGNC gene normalization, 100% CQ query pass rate, graph connectivity and completeness.
+    4. Key results: HGNC gene normalization, query test success rate, graph connectivity and completeness, using the values in `Evaluation/`.
 
 ---
 
@@ -58,7 +60,7 @@ Define the high-level boundaries of the Knowledge Graph project before formalizi
 1. **Domain of Interest (DoI) Boundaries**:
    - **Space Boundaries**: Human molecular and cellular biology (*Homo sapiens*), transcriptomics, and spatial transcriptomics contextualization.
      > **Critical Scope Restriction**: The KG does *not* directly process or store 2D/3D physical spatial coordinates, tissue image pixel matrices, slide geometries, or spot expression grids. It provides the structured biological context needed by downstream spatial transcriptomics tools.
-   - **Time Boundaries**: Contemporary post-genomic molecular biology, bounded by the specific snapshot releases: HGNC Complete Set, MSigDB Hallmark collection (v2023.2), and CellMarker database (v3.0).
+   - **Time Boundaries**: Contemporary post-genomic molecular biology, bounded by the specific snapshot releases actually used: HGNC Complete Set, MSigDB Hallmark collection, and CellMarker (versions/dates as recorded in the Phase 1 input inspection).
 2. **General Purpose (Informal Definition)**:
    - Provide a natural language description as expressed by domain researchers.
    - State the core objective: integrate human genes (identified via HGNC) with 50 MSigDB Hallmark pathways and curated human cell-type markers from CellMarker to enable query-driven biological interpretation of spatial spot clusters, cell-type pathway overlaps, and functional pathway state contrasts.
@@ -77,9 +79,9 @@ Formalize user needs through scenarios, personas, competency questions, and the 
   - *Scenario 1 (Pathway Annotation of Spatial Spot Clusters)*: A bioinformatician analyzes spatial transcriptomics data from a human tissue sample. After clustering spots with similar expression profiles, they need to identify which functional Hallmark pathways are represented by the marker genes characterizing each spot cluster.
   - *Scenario 2 (Cell-Type Marker & Pathway Overlap)*: A researcher exploring tissue frontiers wants to know which cell types share marker genes with specific pathways (e.g., Epithelial-Mesenchymal Transition, Hypoxia) to propose candidate cell identities without claiming causality or in situ activation.
   - *Scenario 3 (Dual-State Pathway Analysis)*: A scientist analyzing perturbed spatial tissue sections identifies externally defined activated and suppressed pathway lists and requires all human genes bridging both functional states.
-- **Personas**:
-  - *Persona 1*: Dr. Elena Rossi, Senior Computational Biologist specializing in cancer spatial transcriptomics. Goal: Rapid functional annotation of spot-derived gene lists.
-  - *Persona 2*: Marcus Chen, Spatial Bioinformatics Pipeline Developer. Goal: Automated semantic querying of gene-pathway-cell marker relationships via standard SPARQL endpoints.
+- **Personas** (take them from `Phase 1 - Purpose Definition/`; state that they are illustrative profiles). Example shape:
+  - *Persona 1*: a computational biologist working on cancer spatial transcriptomics. Goal: functional annotation of spot-derived gene lists.
+  - *Persona 2*: a spatial bioinformatics pipeline developer. Goal: automated querying of gene-pathway-cell-marker relationships via SPARQL.
 - **Competency Questions (CQs)**:
   - **CQ1**: Which human genes participate in Hallmark pathway $X$?
   - **CQ2**: Which Hallmark pathways contain human gene $Y$?
@@ -226,7 +228,7 @@ Provide comprehensive quantitative, ontological, data-quality, and query-based e
 
 ### Mandatory Content
 1. **Final KG Information Statistics**:
-   - Summary table generated from `output/graph_statistics.json`:
+   - Summary table generated from `Evaluation/graph_statistics.json`:
      - Total RDF Triples.
      - Distinct Subjects and Objects.
      - Entity instance counts: `Gene`, `Pathway`, `CellType`.
@@ -237,7 +239,7 @@ Provide comprehensive quantitative, ontological, data-quality, and query-based e
        $$\text{Resolution Rate} = \frac{\text{Distinct Valid Symbols Resolved to HGNC}}{\text{Total Distinct Valid Source Symbols}} \times 100\%$$
 2. **Knowledge Layer Evaluation**:
    - Structural consistency: class hierarchy, domain/range adherence, absence of dangling references.
-   - Competency Question coverage: 100% of CQs modeled.
+   - Competency Question coverage: which CQs are answerable by the implemented queries (as measured).
 3. **Data Layer Evaluation**:
    - **Source-data completeness / missing-value rates**:
      $$\text{Missing-value rate} = \frac{\text{Missing values in column}}{\text{Total records parsed}} \times 100\%$$
@@ -245,7 +247,7 @@ Provide comprehensive quantitative, ontological, data-quality, and query-based e
      Reported for required columns vs optional columns (e.g., Cell Ontology ID).
    - **Entity Connectivity**:
      $$\text{Entity Connectivity} = \frac{\text{Distinct Connected Entities (Gene, Pathway, CellType)}}{\text{Total Entities (Gene, Pathway, CellType)}} \times 100\%$$
-     Reported overall and per entity type. List of isolated entities (should be 0).
+     Reported overall and per entity type, with the number of isolated entities per type as measured.
 4. **Query Execution & Competency Validation**:
    - Evaluation of CQ1, CQ2, CQ3, CQ4.
    - Execution over:
@@ -288,14 +290,14 @@ Synthesize project achievements, evaluate schedule and scope adherence, and docu
 
 ### Mandatory Content
 1. **Schedule Adherence**:
-   - Comparison of planned timeline vs actual completion of the 8 stages.
+   - Comparison of planned timeline vs actual completion of the phases (dates supplied by the user).
 2. **Satisfaction of Initial Purpose**:
    - Detailed review showing how CQ1–CQ4 fulfill the domain researchers' requirements.
-3. **Open Issues and Limitations**:
+3. **Open Issues and Limitations** (from the handover's known limitations; examples):
    - Handling unapproved alias symbols without risking incorrect biological inferences.
    - CellMarker records lacking Cell Ontology (CL) mappings.
    - Boundary condition: The current KG provides biological context but does not embed 2D/3D spatial coordinate graphs or cell-cell neighborhood graphs.
-4. **Future Extensions**:
+4. **Future Extensions** (clearly labelled as outside the current scope; examples):
    - Incorporating ligand-receptor interactions.
    - Integration with spatial transcriptomics libraries (e.g. Squidpy, Seurat).
 5. **Remarks on LLM Usage in Phase 6**.
@@ -304,7 +306,7 @@ Synthesize project achievements, evaluate schedule and scope adherence, and docu
 
 ## 11. Appendix A: LLM Usage Questionnaire (`secA-Appendix.tex`)
 
-Must provide complete CFS ratings (A–E) and qualitative explanations for all 6 phases:
+Must record the user's CFS ratings (A–E) and their explanations for each completed phase (never chosen by the agent):
 - Phase 1: Purpose Definition (Q1, Q2 part 1 a–i, Q2 part 2 a–g, Q2 part 3 a–f, Q3, Q4, Q5).
 - Phase 2: Language Definition (Q1, Q2 a–i, Q3, Q4, Q5).
 - Phase 3: Knowledge Definition (Q1, Q2 a–c, Q3, Q4, Q5).

@@ -2,7 +2,9 @@
 
 `secA-Appendix.tex` contains the standardized **LLM Usage Questionnaire** defined by the KnowDive / DataScientia group to evaluate the degree, nature, and reliability of Large Language Model assistance throughout each phase of the iTelos engineering lifecycle.
 
-This guide provides the scoring rubric, interpretation of the Common Frequency Scale (CFS), and guidelines for completing every question across all 6 phases.
+This guide explains the Common Frequency Scale (CFS), lists the questions and subtasks per phase, and shows the LaTeX layout.
+
+> **The ratings are the authors' answers about their own LLM use.** The agent must ask the user for each rating and comment and must not pick them. The "Rating" values in Section 3 are only indicative of what such a project often reports; never copy them into the appendix as answers.
 
 ---
 
@@ -26,13 +28,13 @@ For each phase, the following 5 standard questions must be addressed:
 |:---|:---|:---|
 | **Q1** | Overall Usage Frequency | Overall proportion of phase effort that involved LLM prompting or generation. |
 | **Q2** | Task-Specific Frequency | Detailed rating (A–E) for each subtask in the phase list. |
-| **Q3** | Output Verification | How frequently the generated outputs were checked against ground-truth source files or unit tests. In rigorous agentic pipelines, this should be **E. Always**. |
+| **Q3** | Output Verification | How frequently the generated outputs were checked against ground-truth source files or unit tests. |
 | **Q4** | Hallucinations / Errors Found | How frequently errors, invented identifiers, malformed URIs, or hallucinated biological links were identified. |
 | **Q5** | Completion Assistance | How helpful LLM assistance was in successfully reaching the phase milestones. |
 
 ---
 
-## 3. Phase-by-Phase Task Breakdown & Scoring Guidance
+## 3. Phase-by-Phase Task Breakdown ("Rating" values are indicative only, not answers)
 
 ### Phase 1: Purpose Definition
 - **Q2 Part 1 (Purpose & Requirements)**:
@@ -124,7 +126,7 @@ For each phase, the following 5 standard questions must be addressed:
 
 ## 4. Required LaTeX Formatting in `secA-Appendix.tex`
 
-To ensure clean formatting in LaTeX, format each phase with an enumerated list specifying both the letter and CFS label:
+To ensure clean formatting in LaTeX, format each phase with an enumerated list specifying both the letter and CFS label (the ratings and comments below are placeholders for the user's answers):
 
 ```latex
 \section*{Phase 1: Purpose Definition}
