@@ -105,7 +105,7 @@ def connectivity_table(conn):
     w = "connectivity"
     body = ""
     for label, p in (("Gene", "gene"), ("Pathway", "pathway"), ("CellType", "cell_type"),
-                     (r"\textbf{Overall}", "overall")):
+                     ("Disease", "disease"), (r"\textbf{Overall}", "overall")):
         body += (f"{label} & {fmt(conn, p + '_total', w)} & {fmt(conn, p + '_connected', w)} & "
                  f"{fmt(conn, p + '_connectivity_percent', w, True)} \\\\ \\hline\n")
     return ("\\begin{table}[htbp]\n\\centering\n\\begin{tabularx}{\\linewidth}{|X|r|r|r|}\n\\hline\n"

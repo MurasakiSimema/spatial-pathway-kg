@@ -6,9 +6,9 @@ The domain of interest is molecular and cellular biology, restricted to two kind
 
 \noindent Following iTelos, the context of the domain is defined along three dimensions.
 
-\medskip\noindent\textbf{Space.} The organism is \emph{Homo sapiens} only. The Hallmark gene sets come from the human MSigDB collection, gene identity from HGNC (human genes only), and cell-type markers from the human CellMarker file, where all records are labelled as human. The biological space is given by the tissues and cell types annotated in CellMarker; tissue and disease information is kept as context of the cell types and is not modelled as separate entities. The KG does \textbf{not} store or analyse spatial coordinates, tissue images, spots, regions, or expression matrices.
+\medskip\noindent\textbf{Space.} The organism is \emph{Homo sapiens} only. The Hallmark gene sets come from the human MSigDB collection, gene identity from HGNC (human genes only), and cell-type markers from the human CellMarker file, where all records are labelled as human. The biological space is given by the tissues, diseases, and cell types annotated in CellMarker. Tissue information is kept as context of the cell types; diseases are a separate entity type, grounded in the Mondo Disease Ontology (MONDO) when an exact match exists. The KG does \textbf{not} store or analyse spatial coordinates, tissue images, spots, regions, or expression matrices.
 
-\medskip\noindent\textbf{Time.} The temporal scope is the knowledge published \textbf{from 1978 to 2026}, as captured by the 2026 releases of the three sources and frozen at their download date, 2026-11-05 (Table~\ref{tab:time-scope}).
+\medskip\noindent\textbf{Time.} The temporal scope is the knowledge published \textbf{from 1978 to 2026}, as captured by the 2026 releases of the sources and frozen at their download dates: 2026-11-05 for MSigDB Hallmark, HGNC, and CellMarker, and 2026-11-13 for MONDO (Table~\ref{tab:time-scope}).
 
 \begin{table}[htbp]
 \centering
@@ -19,6 +19,7 @@ The domain of interest is molecular and cellular biology, restricted to two kind
 MSigDB Hallmark & Collection defined in 2015 \cite{liberzon2015molecular}; file release v2026.2 & Release taken from the file name (\texttt{h.all.v2026.2.Hs.symbols.gmt}); the file has no internal version field \\ \hline
 HGNC & Gene nomenclature as of 2026-11-05 \cite{seal2026genenames} & Download date; the latest \texttt{date\_modified} value in the file is 2026-11-05 \\ \hline
 CellMarker 3.0 & Marker evidence from studies published 1978--2026; resource released in 2026 \cite{hu2026cellmarker} & \texttt{year} column of the human marker file \\ \hline
+MONDO & Disease ontology, release 2026-11-03 \cite{vasilevsky2026mondo} & \texttt{owl:versionIRI} in the header of \texttt{mondo.owl} \\ \hline
 \end{tabularx}
 \caption{Temporal boundaries of the domain of interest}
 \label{tab:time-scope}
@@ -26,7 +27,7 @@ CellMarker 3.0 & Marker evidence from studies published 1978--2026; resource rel
 
 \noindent In CellMarker, about 99.7\% of the records with a publication year come from studies published in 2016--2026; 88,351 records (about 5.0\%) have no year and are kept. The KG is therefore a \emph{snapshot}: it reflects what the sources state at their 2026 releases, and it is updated by rebuilding it on newer releases. Time is not modelled as an entity or a relation.
 
-\medskip\noindent\textbf{Domain boundaries.} The KG includes three entity types (\emph{Gene}, \emph{Pathway}, \emph{CellType}) and two biological relations (a gene \emph{participates in} a pathway; a gene \emph{is marker for} a cell type). HGNC information (identifier, approved symbol, approved name) is stored as attributes of genes, and only for genes that occur in MSigDB Hallmark or CellMarker: HGNC is used as a reference for identifying and normalizing genes, not as a content dataset. The following are out of scope: cell states and diseases as entities; causal relations; pathway or Gene Ontology enrichment; statistical inference of pathway--cell-type associations; pathway--pathway crosstalk; machine-learning models; other pathway collections and datasets; and the decision of which pathways are activated or suppressed, which is an external input supplied by the user at query time.
+\medskip\noindent\textbf{Domain boundaries.} The KG includes four entity types (\emph{Gene}, \emph{Pathway}, \emph{CellType}, \emph{Disease}) and three relations (a gene \emph{participates in} a pathway; a gene \emph{is marker for} a cell type; a cell type is \emph{observed in} a disease). HGNC information (identifier, approved symbol, approved name) is stored as attributes of genes, and only for genes that occur in MSigDB Hallmark or CellMarker: HGNC is used as a reference for identifying and normalizing genes, not as a content dataset. In the same way, MONDO is used only to identify the diseases that occur in CellMarker. The following are out of scope: cell states and tissues as entities; disease mechanisms and disease--gene associations; MONDO terms that do not occur in CellMarker; causal relations; pathway or Gene Ontology enrichment; statistical inference of pathway--cell-type associations; pathway--pathway crosstalk; machine-learning models; other pathway collections and datasets; and the decision of which pathways are activated or suppressed, which is an external input supplied by the user at query time.
 
 \subsection{General Purpose}
 
@@ -35,7 +36,7 @@ The informal purpose, as expressed in the project proposal, is to support the in
 \noindent Refined during Phase 1, the purpose reads:
 
 \begin{quote}
-\emph{Build a reproducible Knowledge Graph that links human genes (identified through HGNC) to the 50 MSigDB Hallmark pathways they belong to and to the human cell types for which CellMarker reports them as markers, so that a researcher who has already run a spatial transcriptomics analysis can look up which genes make up a pathway, which pathways a gene belongs to, which cell types share marker genes with a pathway, and which genes are shared between a set of activated and a set of suppressed pathways.}
+\emph{Build a reproducible Knowledge Graph that links human genes (identified through HGNC) to the 50 MSigDB Hallmark pathways they belong to and to the human cell types for which CellMarker reports them as markers, with the cell types linked to the diseases in which CellMarker reports them (grounded in MONDO when possible), so that a researcher who has already run a spatial transcriptomics analysis can look up which genes make up a pathway, which pathways a gene belongs to, which cell types share marker genes with a pathway (optionally only cell types reported in a given disease), and which genes are shared between a set of activated and a set of suppressed pathways.}
 \end{quote}
 
 \noindent The KG is descriptive and exploratory. A gene overlap between a pathway and a cell type is context for interpretation: it does not show pathway activity in that cell type, does not establish cell identity, is not a statistical enrichment result, and does not imply causality.

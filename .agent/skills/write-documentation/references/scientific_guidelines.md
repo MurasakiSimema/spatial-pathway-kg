@@ -7,17 +7,21 @@ When authoring the project documentation report, the agent must strictly enforce
 ## 1. Strict Scope Boundaries
 
 ### 1.1 Principal Entity Types
-The Knowledge Graph models **exactly three** principal entity classes:
+The Knowledge Graph models **exactly four** principal entity classes (Disease was added with the scope change of 2026-11-13):
 1. `Gene`: Human genetic entities normalized through HGNC.
 2. `Pathway`: Biological pathways represented by the 50 gene sets in the MSigDB Hallmark collection.
 3. `CellType`: Human cell types characterized by marker genes in CellMarker 3.0.
+4. `Disease`: Diseases in which CellMarker reports a cell type, grounded in MONDO when an exact match exists.
 
-*Negative Rule*: Do **not** introduce additional entity classes such as `CellState`, `Disease`, `Tissue`, `Protein`, or `SpatialSpot`. Contextual attributes (e.g. tissue source or disease context from CellMarker) are retained as literal properties or context qualifiers of `CellType`, never as separate entity nodes.
+*Negative Rule*: Do **not** introduce additional entity classes such as `CellState`, `Tissue`, `Protein`, or `SpatialSpot`. Tissue context from CellMarker is retained as literal properties or context qualifiers of `CellType`, never as separate entity nodes. CellMarker `disease` values that are not diseases (e.g. `Undefined`, vaccines, viruses) are not `Disease` instances.
 
 ### 1.2 Main Biological Object Properties
-The Knowledge Graph asserts **only two** main biological relationships:
+The Knowledge Graph asserts **only three** main biological relationships:
 1. `participates_in` — Domain: `Gene`, Range: `Pathway`.
 2. `is_marker_for` — Domain: `Gene`, Range: `CellType`.
+3. `observed_in` — Domain: `CellType`, Range: `Disease`.
+
+*Phrasing rule for `observed_in`*: it means that CellMarker has at least one record of the cell type in that disease. It is attached to the CellType, not to single markers: never write that the overlapping marker genes were observed in the disease, and never present it as a disease mechanism or a disease–gene association.
 
 *Negative Rule*: Do **not** declare causal or regulatory relations such as `promotes`, `suppresses`, `activates`, `inhibits`, or `regulates`.
 
@@ -25,7 +29,8 @@ The Knowledge Graph asserts **only two** main biological relationships:
 - HGNC (`hgnc_complete_set.txt`) is exclusively an **authority reference for identifier resolution and symbol normalization**.
 - It is **not** a content dataset.
 - Never import genes from HGNC into the KG unless they already occur in MSigDB Hallmark or CellMarker.
-- Never model HGNC records as a separate fourth entity class.
+- Never model HGNC records as a separate entity class.
+- In the same way, MONDO is a reference for disease identity: import only the MONDO terms matched by CellMarker diseases, and never model MONDO records as a separate class.
 
 ### 1.4 Spatial Transcriptomics Boundary
 - The KG provides **biological contextualization** to assist researchers interpreting spatial transcriptomics data.

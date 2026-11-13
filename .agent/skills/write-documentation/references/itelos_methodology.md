@@ -37,7 +37,7 @@ Traditional ontology and KG engineering often suffers from scope creep, semantic
 
 - **Teleology**: The purpose-specific knowledge structure designed to satisfy the project's CQs, constructed by composing ontology atoms.
 - **Teleontology**: The overarching background or foundational ontology against which teleology elements are aligned and anchored.
-- **eType (Entity Type)**: A formal class representing a category of entities (e.g., `Gene`, `Pathway`, `CellType`).
+- **eType (Entity Type)**: A formal class representing a category of entities (e.g., `Gene`, `Pathway`, `CellType`, `Disease`).
 - **Atom**: A minimal, self-contained ontology fragment representing a single concept and its immediate attributes/relations.
 - **Competency Question (CQ)**: A natural language question that the KG must be able to answer, later operationalized as a SPARQL query.
 - **Common Frequency Scale (CFS)**: Standard 5-point scale (A: Never, B: Rarely, C: Sometimes, D: Often, E: Always) used to measure human/LLM activity.
@@ -75,7 +75,7 @@ Traditional ontology and KG engineering often suffers from scope creep, semantic
 
 ### Phase 2: Language Definition
 - **Knowledge Layer**:
-  - Finalize language terms for `Gene`, `Pathway`, `CellType`, `participates_in`, `is_marker_for`, and data properties.
+  - Finalize language terms for `Gene`, `Pathway`, `CellType`, `Disease`, `participates_in`, `is_marker_for`, `observed_in`, and data properties.
   - Align terms to lexical concepts in UKC / WordNet (identifying synsets, hypernyms, definitions).
 - **Data Layer**:
   - Filter and clean raw input datasets: trim whitespace, uppercase gene symbols for comparison only (AGENT.md §5.1; the original strings are kept for audit), validate format of identifiers.
@@ -83,7 +83,7 @@ Traditional ontology and KG engineering often suffers from scope creep, semantic
 
 ### Phase 3: Knowledge Definition
 - **Knowledge Layer**:
-  - Construct the teleology by composing ontology atoms for Gene, Pathway, and CellType.
+  - Construct the teleology by composing ontology atoms for Gene, Pathway, CellType, and Disease.
   - Define domains and ranges:
     - $\text{domain}(\text{participates\_in}) = \text{Gene}$, $\text{range}(\text{participates\_in}) = \text{Pathway}$
     - $\text{domain}(\text{is\_marker\_for}) = \text{Gene}$, $\text{range}(\text{is\_marker\_for}) = \text{CellType}$

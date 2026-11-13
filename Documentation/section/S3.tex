@@ -16,7 +16,7 @@ Six usage scenarios describe how the KG is used after a spatial transcriptomics 
 \textbf{ID} & \textbf{Persona} & \textbf{Scenario} & \textbf{CQs} \\ \hline
 S1 & P1 & \textbf{Reading a tissue frontier.} At the frontier between a tumour cluster and the surrounding stroma, \emph{Epithelial--mesenchymal transition} and \emph{Hypoxia} score high on the tumour side; the analyst wants to see the genes of the two pathways before interpreting them. & CQ1 \\ \hline
 S2 & P3 & \textbf{Learning the Hallmark collection.} A student wants the list of the 50 pathways with their genes and official names, to understand what a pathway score measures. & CQ1, CQ1.2 \\ \hline
-S3 & P2 & \textbf{From a pathway to candidate cell types.} \emph{Interferon gamma response} increases along an invasive border; the immunologist wants the cell types whose markers overlap with the pathway genes, ideally limited to markers reported in the relevant tissue, to choose which populations to stain for. & CQ3, CQ3.1, CQ3.3 \\ \hline
+S3 & P2 & \textbf{From a pathway to candidate cell types.} \emph{Interferon gamma response} increases along an invasive border; the immunologist wants the cell types whose markers overlap with the pathway genes, ideally limited to markers reported in the relevant tissue, or to cell types reported in the same kind of tumour, to choose which populations to stain for. & CQ3, CQ3.1, CQ3.3, CQ3.4 \\ \hline
 S4 & P1 & \textbf{Activated versus suppressed pathways.} Across a frontier there are three activated and two suppressed pathways; the analyst wants the genes that belong to at least one pathway of each group. & CQ4, CQ4.1, CQ4.2 \\ \hline
 S5 & P3 & \textbf{A single gene, many pathways.} \emph{MYC} appears among the differentially expressed genes; the student wants every Hallmark pathway that contains it. & CQ2, CQ2.1 \\ \hline
 S6 & P4 & \textbf{Checking a panel gene.} In an image-based panel, \emph{CD74} lights up in one region; the pathologist wants its approved HGNC identity, the cell types it marks in that tissue, and its pathways. & CQ2, CQ2.2 \\ \hline
@@ -46,7 +46,7 @@ P4 & Dr.\ Chiara Bassi, 47 & Molecular pathologist reviewing targeted, image-bas
 
 \subsubsection{Competency Questions}
 
-CQ1--CQ4 come from the project proposal. To make the requirement list more varied, nine sub-questions refining them were proposed; seven were approved and two were discarded (Section~\ref{sec:qual-eval}). Sub-question identifiers were kept unchanged after the discard, for traceability. All CQs use only the three entity types and the two relations of the scope.
+CQ1--CQ4 come from the project proposal. To make the requirement list more varied, nine sub-questions refining them were proposed; seven were approved and two were discarded (Section~\ref{sec:qual-eval}). A tenth sub-question, CQ3.4, was added with the Disease scope change described below. Sub-question identifiers were kept unchanged after the discard, for traceability. All CQs use only the four entity types and the three relations of the scope.
 
 \begin{table}[htbp]
 \centering
@@ -62,6 +62,7 @@ CQ2.2 & For which cell types is a given gene reported as a marker, optionally wi
 CQ3 & Which cell types have marker genes in common with the genes of a selected pathway? & P2 & S3 \\ \hline
 CQ3.1 & Which cell types share marker genes with a selected pathway, considering only markers reported in a given tissue class? & P2 & S3 \\ \hline
 CQ3.3 & Which specific genes make up the overlap between a given pathway and a given cell type? & P2 & S3 \\ \hline
+CQ3.4 & Which cell types, for which CellMarker reports at least one record in a given disease (optionally including its MONDO subclasses), have marker genes in common with a selected pathway? & P2 & S3 \\ \hline
 CQ4 & Which genes are shared between pathways identified as activated and pathways identified as suppressed in an upstream spatial transcriptomics analysis? & P1 & S4 \\ \hline
 CQ4.1 & For each gene shared by the two groups, which activated and which suppressed pathways contain it? & P1 & S4 \\ \hline
 CQ4.2 & Which of the genes shared by the two groups are also markers of at least one cell type, and of which ones? & P1 & S4 \\ \hline
@@ -70,15 +71,15 @@ CQ4.2 & Which of the genes shared by the two groups are also markers of at least
 \label{tab:cqs}
 \end{table}
 
-\noindent Two semantic constraints apply. The answer to CQ3 is a descriptive gene overlap, not evidence of pathway activity in the cell type. CQ4 takes the activated and suppressed pathway lists as query inputs: a gene answers CQ4 if it belongs to at least one activated \emph{and} at least one suppressed pathway; the KG does not decide which pathways are activated or suppressed.
+\noindent Three semantic constraints apply. The answer to CQ3 is a descriptive gene overlap, not evidence of pathway activity in the cell type. CQ4 takes the activated and suppressed pathway lists as query inputs: a gene answers CQ4 if it belongs to at least one activated \emph{and} at least one suppressed pathway; the KG does not decide which pathways are activated or suppressed. In CQ3.4 the disease filter selects \emph{cell types}, not markers: the KG records that a cell type is reported in a disease, not in which disease each marker was reported. For example, \emph{Macrophage -- Lung -- Cancer} is reported in 9 diseases, among them \emph{Osteosarcoma} (6 records); it shares 24 marker genes with \texttt{HALLMARK\_COMPLEMENT}, but only one of them comes from an osteosarcoma record.
 
 \subsubsection{Informal labels and popularity categories}
 
 The concepts were collected in a Purpose Formalization sheet (\texttt{pf\_sheet.csv}), which links each concept to the scenarios, personas, and CQs that require it. Each concept was classified with the Focus parameter:
 \begin{itemize}
-    \item \textbf{Core}: \emph{Pathway} and \emph{CellType}, and the two relations. The purpose is built around linking pathways and cell types through genes.
-    \item \textbf{Common}: \emph{Gene}. It is a general entity, widely modelled by reference resources (HGNC), and it is the bridge between pathways and cell types.
-    \item \textbf{Contextual}: the descriptive context of cell types (specific disease, tissue type, broader cell class) and the evidence attached to marker links.
+    \item \textbf{Core}: \emph{Pathway} and \emph{CellType}, and the relations \emph{participates in} and \emph{is marker for}. The purpose is built around linking pathways and cell types through genes.
+    \item \textbf{Common}: \emph{Gene} and \emph{Disease}, and the relation \emph{observed in}. Gene and Disease are general entities, already modelled by reference resources (HGNC and MONDO); Gene is the bridge between pathways and cell types.
+    \item \textbf{Contextual}: the descriptive context of cell types (tissue type, broader cell class), the evidence attached to marker links, and the provenance attributes of diseases (source strings, resolution status).
 \end{itemize}
 
 \begin{table}[htbp]
@@ -89,7 +90,8 @@ The concepts were collected in a Purpose Formalization sheet (\texttt{pf\_sheet.
 \textbf{EType} & \textbf{Focus} & \textbf{Identifying attributes (from datasets)} & \textbf{Descriptive attributes (from CQs)} \\ \hline
 Gene & Common & HGNC ID (e.g.\ \texttt{HGNC:1697}); approved symbol as secondary & approved symbol, approved name (CQ1.2); source symbol(s) and resolution status (Contextual, audit) \\ \hline
 Pathway & Core & Hallmark gene-set identifier (e.g.\ \texttt{HALLMARK\_HYPOXIA}); MSigDB URL as secondary & label (e.g.\ \emph{Hypoxia}), source URL \\ \hline
-CellType & Core & (cell name, tissue class, disease category), e.g.\ \emph{Macrophage -- Lung -- Cancer}; Cell Ontology ID(s) as secondary & cell name, tissue class (CQ2.2, CQ3.1), disease category; disease, tissue type, cell name class (Contextual, multi-valued where needed); Cell Ontology ID (Common) \\ \hline
+CellType & Core & (cell name, tissue class, disease category), e.g.\ \emph{Macrophage -- Lung -- Cancer}; Cell Ontology ID(s) as secondary & cell name, tissue class (CQ2.2, CQ3.1), disease category; tissue type, cell name class (Contextual, multi-valued where needed); Cell Ontology ID (Common) \\ \hline
+Disease & Common & MONDO ID (e.g.\ \texttt{MONDO:0007256}) when the match is reliable; otherwise the normalized CellMarker string & label (CQ3.4); source strings, resolution status, primary MONDO ID for metastases (Contextual) \\ \hline
 \end{tabularx}
 \caption{Entity types, Focus, and attributes}
 \label{tab:etypes}
@@ -103,6 +105,7 @@ CellType & Core & (cell name, tissue class, disease category), e.g.\ \emph{Macro
 \textbf{Relation} & \textbf{Domain $\rightarrow$ Range} & \textbf{Focus} & \textbf{Relation attributes} \\ \hline
 participates in & Gene $\rightarrow$ Pathway (N:M) & Core & none (membership as stated by MSigDB) \\ \hline
 is marker for & Gene $\rightarrow$ CellType (N:M) & Core & marker source, method details, PubMed ID, publication year (Contextual) \\ \hline
+observed in & CellType $\rightarrow$ Disease (N:M) & Common & none (CellMarker has at least one record of the cell type in the disease) \\ \hline
 \end{tabularx}
 \caption{Relations}
 \label{tab:relations}
@@ -112,13 +115,13 @@ is marker for & Gene $\rightarrow$ CellType (N:M) & Core & marker source, method
 \begin{itemize}
     \item \textbf{Cell type naming.} A cell type is named by the CellMarker cell name rather than by its Cell Ontology (CL) identifier. Names and CL identifiers are not one-to-one in the source (\emph{Macrophage} occurs with 24 different CL identifiers), and the name is what users search for. The CL identifiers are kept as a multi-valued attribute for linking to the Cell Ontology. Weak point: two names for the same biological concept remain separate.
     \item \textbf{Context-qualified cell types.} The same cell type is reported in different tissues and disease contexts (\emph{Macrophage} appears in 98 tissue classes). Pooling all of them into one context-free marker profile would lose this distinction and would prevent the tissue filter of CQ2.2 and CQ3.1. The identity of a CellType is therefore the triple (cell name, tissue class, disease category), which gives 12,632 CellTypes; with the cell name alone there would be 3,190. The three parts remain separate literals, so all CellTypes with a given base name can still be retrieved. Tissue class and disease category were chosen because they are always present and have few, clean values (138 tissue classes; disease category is one of \emph{Normal}, \emph{Cancer}, \emph{Disease}); no mapping to external tissue or disease ontologies is needed. Weak point: the number of CellTypes grows about fourfold.
-    \item \textbf{Specific disease as a descriptive attribute.} The specific disease is free text with 1,067 values (e.g.\ \emph{Lung adenocarcinoma (LUAD)}); using it in the identity would require normalization. It is kept as a multi-valued attribute: 2,126 of the 12,632 CellTypes have more than one disease value (at most 93).
+    \item \textbf{Disease as an entity type.} The specific disease is free text with 1,067 values (e.g.\ \emph{Lung adenocarcinoma (LUAD)}), and 2,126 of the 12,632 CellTypes have more than one (at most 93). It was first kept as a multi-valued literal of CellType; linked to CellType through \emph{observed in} and grounded in MONDO. A Disease is identified by its MONDO ID only when the normalized string equals the label or an EXACT synonym of exactly one non-obsolete MONDO term (also after removing a final parenthesised part, e.g.\ \emph{Lung adenocarcinoma (LUAD)}); otherwise by the normalized string. Matching on an abbreviation alone was rejected because it produced a serious false positive. Metastases are not merged into the primary disease, and values that are not diseases (e.g.\ \emph{Undefined}, \emph{SARS-CoV-2 vaccine}) get no Disease and no link; they are logged. Strong points: one identity per disease concept (e.g.\ \emph{Glioblastoma} and \emph{Glioblastoma multiforme}), queries through the MONDO hierarchy, links to other resources. Weak points: according to a first prototype about a quarter of the non-normal records do not match MONDO; the link is attached to the cell type and not to single markers.
     \item \textbf{All marker evidence kept, with its source.} 91.9\% of the CellMarker records are computationally predicted markers; the rest are manually curated. All of them are kept, and the marker source is recorded on the \emph{is marker for} relation, so that queries can be restricted to curated markers. How to encode relation attributes in RDF without adding a fourth entity type is left to Phase 3.
 \end{itemize}
 
 \subsubsection{Purpose ER model}
 
-Figure~\ref{fig:er} shows the Purpose ER model. Both relations are many-to-many: a gene can belong to several pathways (e.g.\ \emph{MYC} belongs to 10) and mark several cell types, and a pathway contains between 32 and 200 genes. Pathways and cell types are never linked directly: their connection (CQ3) is always computed through shared genes, so the model does not assert pathway activity in any cell type. The activated and suppressed pathway groups of CQ4 are not part of the model, since they are passed to the query.
+Figure~\ref{fig:er} shows the Purpose ER model. All three relations are many-to-many: a gene can belong to several pathways (e.g.\ \emph{MYC} belongs to 10) and mark several cell types, a pathway contains between 32 and 200 genes, and a cell type can be reported in several diseases (up to 93). Pathways and cell types are never linked directly: their connection (CQ3) is always computed through shared genes, so the model does not assert pathway activity in any cell type. Diseases are reached from a pathway only through genes and cell types; cell types with disease category \emph{Normal} have no \emph{observed in} link. The activated and suppressed pathway groups of CQ4 are not part of the model, since they are passed to the query.
 
 \begin{figure}[htbp]
 \centering
@@ -134,10 +137,14 @@ Figure~\ref{fig:er} shows the Purpose ER model. Both relations are many-to-many:
     $\ast$\,hallmark\_id\\ label\\ source\_url};
   \node[rel, right=of gene] (marker) {is marker\\for};
   \node[entity, fill=green!15, right=of marker, text width=3.4cm] (cell) {\textbf{CELLTYPE} \hfill \textit{Core}\\[2pt]
-    $\ast$\,cell\_name\\ $\ast$\,tissue\_class\\ $\ast$\,disease\_category\\ disease [multi]\\ tissue\_type [multi]\\ cell\_name\_class\\ cell\_ontology\_id [multi]};
+    $\ast$\,cell\_name\\ $\ast$\,tissue\_class\\ $\ast$\,disease\_category\\ tissue\_type [multi]\\ cell\_name\_class\\ cell\_ontology\_id [multi]};
   \node[entity, fill=red!12, below=0.6cm of marker, text width=3.3cm] (ev) {\textit{relation attributes (Contextual)}\\ marker\_source, method\_details,\\ pmid [multi], year [multi]};
+  \node[rel, fill=blue!12, below=0.6cm of cell] (obs) {observed\\in};
+  \node[entity, fill=blue!12, below=0.6cm of obs, text width=3.4cm] (dis) {\textbf{DISEASE} \hfill \textit{Common}\\[2pt]
+    $\ast$\,disease\_key\\ mondo\_id\\ label\\ source\_strings [multi]\\ resolution\_status\\ primary\_mondo\_id};
   \draw[thick] (gene) -- node[above]{N} (part) -- node[above]{M} (pathway);
   \draw[thick] (gene) -- node[above]{N} (marker) -- node[above]{M} (cell);
+  \draw[thick] (cell) -- node[right]{N} (obs) -- node[right]{M} (dis);
   \draw[dashed] (marker) -- (ev);
 \end{tikzpicture}
 \caption{Purpose ER model. Attributes marked with $\ast$ form the identity of the entity type; [multi] marks multi-valued attributes; colours show the Focus (blue: Common, green: Core, red: Contextual).}
@@ -155,9 +162,9 @@ Figure~\ref{fig:er} shows the Purpose ER model. Both relations are many-to-many:
 
 \subsubsection{External data sources}
 
-\medskip\noindent\textbf{Knowledge layer.} The reference ontologies named in the project proposal (Gene Ontology, Cell Ontology, Pathway Ontology, Human Disease Ontology, NCI Thesaurus, through the OBO Foundry and NCBO BioPortal) were considered. Of these, only the Cell Ontology is directly relevant to the agreed scope, because CellMarker already provides CL identifiers for its cell types; it is kept as a \emph{Common} resource, used for the Cell Ontology ID attribute of CellType. Tissue and disease ontologies (UBERON, DOID) were not adopted, since tissue and disease are kept as literal context; the other ontologies concern concepts that are outside the scope (Section~2).
+\medskip\noindent\textbf{Knowledge layer.} The reference ontologies named in the project proposal (Gene Ontology, Cell Ontology, Pathway Ontology, Human Disease Ontology, NCI Thesaurus, through the OBO Foundry and NCBO BioPortal) were considered. Of these, only the Cell Ontology is directly relevant to the agreed scope, because CellMarker already provides CL identifiers for its cell types; it is kept as a \emph{Common} resource, used for the Cell Ontology ID attribute of CellType. The tissue ontology UBERON was not adopted, since tissue is kept as literal context. For diseases, the Mondo Disease Ontology (MONDO) \cite{vasilevsky2026mondo} was adopted with the scope change: it is a \emph{Common} resource, used only to identify the diseases that occur in CellMarker. Disease ontologies such as DOID and NCIt were not adopted separately. The other ontologies concern concepts that are outside the scope.
 
-\medskip\noindent\textbf{Data layer.} The data layer consists of three external resources, downloaded on 2026-11-05 and inspected read-only on 2026-11-12. Their provenance and licences are recorded in the repository (\texttt{SOURCES.md}).
+\medskip\noindent\textbf{Data layer.} The data layer consists of three external datasets, downloaded on 2026-11-05 and inspected read-only on 2026-11-12, plus the MONDO ontology file, added on 2026-11-13 and used as a reference for disease identity. Their provenance and licences are recorded in the repository (\texttt{Phase 4 - Entity Definition/data/raw/SOURCES.md}).
 
 \begin{table}[htbp]
 \centering
@@ -168,6 +175,7 @@ Figure~\ref{fig:er} shows the Purpose ER model. Both relations are many-to-many:
 MSigDB Hallmark \cite{liberzon2015molecular} (\texttt{h.all.v2026.2.Hs.symbols.gmt}) & content: Pathway, participates in & GMT & 50 gene sets & CC BY 4.0 \\ \hline
 CellMarker 3.0 \cite{hu2026cellmarker} (\texttt{human\_cell\_marker.txt}) & content: CellType, is marker for & TSV, 23 columns & 1,779,944 & not stated \\ \hline
 HGNC \cite{seal2026genenames} (\texttt{hgnc\_complete\_set.txt}) & reference: gene identity & TSV, 53 columns & 45,326 genes & CC0 \\ \hline
+MONDO \cite{vasilevsky2026mondo} (\texttt{mondo.owl}) & reference: disease identity & OWL & 36,168 classes & CC BY 4.0 \\ \hline
 \end{tabularx}
 \caption{External data sources}
 \label{tab:sources}
@@ -178,6 +186,8 @@ HGNC \cite{seal2026genenames} (\texttt{hgnc\_complete\_set.txt}) & reference: ge
 \medskip\noindent\textbf{HGNC.} All 45,326 records have unique HGNC IDs and symbols. The columns needed for identification (\texttt{hgnc\_id}, \texttt{symbol}, \texttt{name}, and, for diagnostics, \texttt{prev\_symbol} and \texttt{alias\_symbol}) are all present. Previous symbols and aliases are pipe-separated lists in double quotes. The other 44 columns are out of scope.
 
 \medskip\noindent\textbf{CellMarker 3.0.} All records are human. Tissue class, tissue type, disease category, disease, cell name, and marker are never empty; the Cell Ontology identifier is missing in 0.2\% of the records, and the standardized gene symbol in 9.1\%. 91.9\% of the records come from computational marker-detection methods (e.g.\ COSG, CelliD, FindAllMarker), the rest from single-cell sequencing studies, experiments, reviews, and companies. Several data-quality issues were found and are left to Phase 2: 3,725 distinct symbols differ from an HGNC approved symbol only by letter case; 26,181 distinct markers without a standardized symbol match nothing in HGNC (e.g.\ clone names such as \texttt{RP11-1143G9.4}); a few CL identifiers use the colon form or contain UBERON identifiers; and 70,731 distinct record contents occur more than once.
+
+\medskip\noindent\textbf{MONDO.} The diseases to match are the 1,066 (disease category, disease) pairs whose category is not Normal, accounting for 825,639 records and 1,065 distinct strings. A first prototype of the matching rule, run while the scope change was being evaluated, found a label or exact synonym match with a single candidate for 569 pairs (covering 74.7\% of these records), while 20 had only a broader synonym match and 477 had none. The unmatched values are mostly metastases, qualified diseases or stages not represented in MONDO, typos, and non-disease entries. These match counts come from the prototype and will be recomputed in Phase 2.
 
 \noindent Table~\ref{tab:key-columns} lists the columns of each source that the model uses; the other columns are not imported.
 
@@ -193,15 +203,17 @@ MSigDB Hallmark & fields 3+ (gene symbols) & \emph{participates in} (after HGNC 
 HGNC & \texttt{hgnc\_id}, \texttt{symbol}, \texttt{name} & Gene identity, approved symbol, approved name \\ \hline
 HGNC & \texttt{prev\_symbol}, \texttt{alias\_symbol} & diagnostics for symbol resolution (Phase 2); not imported \\ \hline
 CellMarker 3.0 & \texttt{cell\_name}, \texttt{tissue\_class}, \texttt{disease\_category} & CellType identity \\ \hline
-CellMarker 3.0 & \texttt{disease}, \texttt{tissue\_type}, \texttt{cell\_name\_class}, \texttt{cellontology\_id} & CellType descriptive attributes \\ \hline
+CellMarker 3.0 & \texttt{tissue\_type}, \texttt{cell\_name\_class}, \texttt{cellontology\_id} & CellType descriptive attributes \\ \hline
+CellMarker 3.0 & \texttt{disease} (when \texttt{disease\_category} is not \emph{Normal}) & Disease instances and \emph{observed in} \\ \hline
 CellMarker 3.0 & \texttt{symbol} (or \texttt{marker} when \texttt{symbol} is empty) & gene of \emph{is marker for} (after HGNC resolution) \\ \hline
 CellMarker 3.0 & \texttt{marker\_source}, \texttt{method\_details}, \texttt{pmid}, \texttt{year} & attributes of \emph{is marker for} \\ \hline
+MONDO & class IRI, \texttt{rdfs:label}, EXACT synonyms, \texttt{rdfs:subClassOf}, \texttt{owl:deprecated} & Disease identity and label, hierarchy for CQ3.4; obsolete terms excluded \\ \hline
 \end{tabularx}
 \caption{Source columns used by the Purpose ER model}
 \label{tab:key-columns}
 \end{table}
 
-\medskip\noindent\textbf{Classification.} MSigDB Hallmark is the source of the Core \emph{Pathway} type and its relation; CellMarker is the source of the Core \emph{CellType} type, its Contextual attributes, and the \emph{is marker for} relation; HGNC is the source of the Common \emph{Gene} identity. The collected resources cover all approved CQs (Table~\ref{tab:coverage}), so no further source identification was needed.
+\medskip\noindent\textbf{Classification.} MSigDB Hallmark is the source of the Core \emph{Pathway} type and its relation; CellMarker is the source of the Core \emph{CellType} type, its Contextual attributes, and the \emph{is marker for} relation; HGNC is the source of the Common \emph{Gene} identity; CellMarker and MONDO together are the source of the Common \emph{Disease} type and of the \emph{observed in} relation. The collected resources cover all approved CQs (Table~\ref{tab:coverage}), so no further source identification was needed.
 
 \begin{table}[htbp]
 \centering
@@ -214,6 +226,7 @@ CQ2, CQ2.1 & gene $\rightarrow$ pathways & MSigDB \\ \hline
 CQ2.2, CQ3.1 & gene $\rightarrow$ cell types; tissue filter & CellMarker (cell name, tissue class) \\ \hline
 CQ3, CQ3.3 & pathway genes $\cap$ cell-type marker genes & MSigDB and CellMarker, joined through HGNC \\ \hline
 CQ4, CQ4.1, CQ4.2 & pathway groups (query input) $\rightarrow$ shared genes and their markers & MSigDB (and CellMarker) \\ \hline
+CQ3.4 & cell type $\rightarrow$ diseases; disease hierarchy & CellMarker (disease); MONDO, for the diseases that match it \\ \hline
 \end{tabularx}
 \caption{Coverage of the competency questions by the collected sources}
 \label{tab:coverage}
@@ -222,7 +235,7 @@ CQ4, CQ4.1, CQ4.2 & pathway groups (query input) $\rightarrow$ shared genes and 
 \subsection{Qualitative Evaluation}
 \label{sec:qual-eval}
 
-\medskip\noindent\textbf{Scenarios.} Six scenarios were initially considered and six were finally kept. One was revised: the example gene of S6 was changed from \emph{CD68} to \emph{CD74}, because \emph{CD68} is a CellMarker marker but belongs to no Hallmark pathway, so the pathway part of the scenario would have had an empty answer.
+\medskip\noindent\textbf{Scenarios.} Six scenarios were initially considered and six were finally kept. S3 was extended with the disease filter of CQ3.4 after the scope change. One more was revised: the example gene of S6 was changed from \emph{CD68} to \emph{CD74}, because \emph{CD68} is a CellMarker marker but belongs to no Hallmark pathway, so the pathway part of the scenario would have had an empty answer.
 
 \begin{table}[htbp]
 \centering
@@ -232,10 +245,10 @@ CQ4, CQ4.1, CQ4.2 & pathway groups (query input) $\rightarrow$ shared genes and 
 \textbf{ID} & \textbf{Scenario} & \textbf{Status} \\ \hline
 S1 & Reading a tissue frontier & Retained \\ \hline
 S2 & Learning the Hallmark collection & Retained \\ \hline
-S3 & From a pathway to candidate cell types & Retained \\ \hline
+S3 & From a pathway to candidate cell types & Revised (disease filter added) \\ \hline
 S4 & Activated versus suppressed pathways & Retained \\ \hline
 S5 & A single gene, many pathways & Retained \\ \hline
-S6 & Checking a panel gene & Revised (example gene \emph{CD68} $\rightarrow$ \emph{CD74}) \\ \hline
+S6 & Checking a panel gene & Retained \\ \hline
 \end{tabularx}
 \caption{Scenarios: initial vs final (6 initial, 6 final)}
 \end{table}
@@ -256,7 +269,7 @@ P4 & Dr.\ Chiara Bassi, molecular pathologist & Retained \\ \hline
 \caption{Personas: initial vs final (4 initial, 4 final)}
 \end{table}
 
-\medskip\noindent\textbf{Competency questions.} Thirteen CQs were initially considered: the four of the project proposal and nine proposed sub-questions. Eleven were finally kept. CQ1.1 (number of genes per pathway) and CQ3.2 (number of shared genes per overlapping cell type) were discarded because they were deemed not relevant to the project's goals.
+\medskip\noindent\textbf{Competency questions.} Fourteen CQs were considered in total: the four of the project proposal, nine sub-questions proposed at first, and CQ3.4, added with the Disease scope change. Twelve were finally kept. CQ3.4 was reworded before approval, so that it says that the disease filter selects cell types and not markers. CQ1.1 (number of genes per pathway) and CQ3.2 (number of shared genes per overlapping cell type) were discarded because they were deemed not relevant to the project's goals.
 
 \begin{table}[htbp]
 \centering
@@ -274,16 +287,17 @@ CQ3 & Cell types sharing marker genes with a pathway & Retained \\ \hline
 CQ3.1 & CQ3 restricted to a tissue class & Retained \\ \hline
 CQ3.2 & Number of shared genes per overlapping cell type & Discarded \\ \hline
 CQ3.3 & Genes forming a pathway--cell-type overlap & Retained \\ \hline
+CQ3.4 & CQ3 restricted to cell types reported in a disease & Added (scope change) \\ \hline
 CQ4 & Genes shared by activated and suppressed pathways & Retained \\ \hline
 CQ4.1 & Pathways of each group containing a shared gene & Retained \\ \hline
 CQ4.2 & Shared genes that are also cell-type markers & Retained \\ \hline
 \end{tabularx}
-\caption{Competency questions: initial vs final (13 initial, 11 final)}
+\caption{Competency questions: considered vs final (14 considered, 12 final)}
 \end{table}
 
-\medskip\noindent\textbf{Purpose refinement.} The informal purpose did not change in substance. The temporal boundary was made explicit (1978--2026) from the publication years in CellMarker, and the ER model was adjusted after information gathering: the inspection of the data showed that cell names and CL identifiers are not one-to-one and that the same cell type occurs in many tissue and disease contexts, which led to the context-qualified \emph{CellType} described above.
+\medskip\noindent\textbf{Purpose refinement.} The informal purpose did not change in substance. The temporal boundary was made explicit (1978--2026) from the publication years in CellMarker, and the ER model was adjusted after information gathering: the inspection of the data showed that cell names and CL identifiers are not one-to-one and that the same cell type occurs in many tissue and disease contexts, which led to the context-qualified \emph{CellType} described above. Finally, after the phase had been written, the scope was extended with the \emph{Disease} entity type and the \emph{observed in} relation (approved by the user on 2026-11-13). This reversed two earlier decisions: diseases had been listed as out of scope, and the parsing rules said not to map diseases to disease ontologies. The scenarios, CQs, concepts, and ER model were updated accordingly.
 
-\medskip\noindent\textbf{Dataset-level formatting and transformations.} None. In this phase the raw files were only inspected, in read-only mode; no file was modified, filtered, or converted. The parsing rules proposed for Phase 2 are: select columns by name; strip the double quotes of HGNC multi-valued fields before splitting them; use the CellMarker standardized symbol when present and the original marker otherwise, keeping the original string for audit; normalize CL identifiers of the form \texttt{CL:nnnnnnn} to \texttt{CL\_nnnnnnn} and treat non-CL identifiers as missing; and never drop records silently.
+\medskip\noindent\textbf{Dataset-level formatting and transformations.} None. In this phase the raw files were only inspected, in read-only mode; no file was modified, filtered, or converted. The parsing rules proposed for Phase 2 are: select columns by name; strip the double quotes of HGNC multi-valued fields before splitting them; use the CellMarker standardized symbol when present and the original marker otherwise, keeping the original string for audit; normalize CL identifiers of the form \texttt{CL:nnnnnnn} to \texttt{CL\_nnnnnnn} and treat non-CL identifiers as missing; match diseases to MONDO only through a label or EXACT synonym with a single candidate, logging every merge; and never drop records silently.
 
 \medskip\noindent\textbf{Remarks on LLM usage.} LLMs were used often in this phase (Appendix A). The Claude Code agent was used for brainstorming, for refining the Markdown design files in the phase folder, and for writing this documentation; Gemini was used earlier, while writing the project proposal, to identify possible data sources. Among the phase tasks, LLM support was occasional for generating scenarios and personas, for the qualitative evaluation of the purpose and of the data sources, for identifying data sources, and for resolving schema ambiguities. Every textual output was checked by hand, and numerical outputs were checked at least for consistency. Few errors were found, mostly errors of context; they were addressed at the root by providing the agent with the course guides and with a project instruction file (\texttt{AGENT.md}).
 

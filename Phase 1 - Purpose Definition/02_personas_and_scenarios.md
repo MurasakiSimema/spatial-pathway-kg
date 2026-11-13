@@ -84,8 +84,9 @@ is actually measuring."
 
 "The bioinformatician tells me *Interferon gamma response* goes up along the invasive border.
 I need to know which cell types have markers among the genes of this pathway, ideally only
-markers reported in the right tissue. Then I can choose which cell populations to stain for. I
-know an overlap does not mean those cells are the source of the signal."
+markers reported in the right tissue, or only cell types that have been reported in the same
+kind of tumour. Then I can choose which cell populations to stain for. I know an overlap does
+not mean those cells are the source of the signal."
 
 ### S4 — Activated versus suppressed pathways (P1)
 
@@ -113,7 +114,7 @@ This table links each scenario to the competency questions it needs (the CQs are
 |---|---|---|
 | S1 | P1 | CQ1 |
 | S2 | P3 | CQ1, CQ1.2 |
-| S3 | P2 | CQ3, CQ3.1, CQ3.3 |
+| S3 | P2 | CQ3, CQ3.1, CQ3.3, CQ3.4 |
 | S4 | P1 | CQ4, CQ4.1, CQ4.2 |
 | S5 | P3 | CQ2, CQ2.1 |
 | S6 | P4 | CQ2, CQ2.2 |

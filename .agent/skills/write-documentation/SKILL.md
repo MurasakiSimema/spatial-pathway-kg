@@ -97,7 +97,7 @@ Edit [Documentation/knowdive-files/main.tex](../../../Documentation/knowdive-fil
 5. **Abstract**: Write a self-contained 200–250 word abstract summarizing:
    - Motivation: Providing biological context (pathways, marker genes, cell types) for interpreting spatial transcriptomics data.
    - Methodology: The iTelos methodology (stratified approach: language, knowledge, data layers).
-   - Scope: Three entity types (`Gene`, `Pathway`, `CellType`), two biological object properties (`participates_in`, `is_marker_for`).
+   - Scope: Four entity types (`Gene`, `Pathway`, `CellType`, `Disease`), three biological object properties (`participates_in`, `is_marker_for`, `observed_in`).
    - Key Results: HGNC-grounded normalization, SPARQL competency query satisfaction, and graph connectivity.
 
 ### Stage 3: Draft Narrative Sections (`S1.tex` to `S6.tex`)
@@ -150,7 +150,7 @@ Replace the template guidelines in [Documentation/section/](../../../Documentati
 
 #### Section 5: Knowledge Definition (`S5.tex`)
 - **Knowledge Layer**:
-  - *Teleology Definition*: Compose ontology fragments/atoms (Gene, Pathway, CellType).
+  - *Teleology Definition*: Compose ontology fragments/atoms (Gene, Pathway, CellType, Disease).
   - *Knowledge Teleontology Alignment*: Subclass/subproperty alignment against foundational knowledge teleontology.
 - **Data Layer**:
   - Structuring dataset shape to mirror knowledge schema (domain/range constraints, URI formatting).
@@ -170,7 +170,7 @@ Replace the template guidelines in [Documentation/section/](../../../Documentati
 ### Stage 4: Evaluation & Metadata (`S7.tex` and `S8.tex`)
 
 #### Section 7: Evaluation (`S7.tex`)
-1. **Final KG Statistics**: Triple count, instances per eType (`Gene`, `Pathway`, `CellType`), assertions per relation (`participates_in`, `is_marker_for`), shared genes, HGNC resolution rate.
+1. **Final KG Statistics**: Triple count, instances per eType (`Gene`, `Pathway`, `CellType`, `Disease`), assertions per relation (`participates_in`, `is_marker_for`, `observed_in`), MONDO resolution rate, shared genes, HGNC resolution rate.
 2. **Knowledge Layer Evaluation**: Ontological consistency, CQ coverage, schema validation. The Phase 5 questionnaire also lists coverage metrics (CQs vs dataset, dataset vs CQs, language-definition coverage, knowledge-definition coverage); the example report shows them as ratios such as |ETypes in CQs ∩ ETypes in datasets| / |ETypes in CQs|. Report them only if they were actually computed in `Evaluation/`, with their formula written out.
 3. **Data Layer Evaluation**:
    - Missing-value rate / source completeness table for raw vs processed datasets.

@@ -24,10 +24,16 @@ KG has to do:
 
 > Build a reproducible Knowledge Graph that links **human genes** (identified through HGNC) to
 > the **50 MSigDB Hallmark pathways** they belong to and to the **human cell types** for which
-> CellMarker reports them as markers. A researcher who has already run a spatial
-> transcriptomics analysis can use it to look up which genes make up a pathway, which pathways
-> a gene belongs to, which cell types share marker genes with a pathway, and which genes are
+> CellMarker reports them as markers. The cell types are linked to the **diseases** in which
+> CellMarker reports them, grounded in the **Mondo Disease Ontology (MONDO)** when possible. A
+> researcher who has already run a spatial transcriptomics analysis can use it to look up which
+> genes make up a pathway, which pathways a gene belongs to, which cell types share marker genes
+> with a pathway (optionally only cell types reported in a given disease), and which genes are
 > shared between a set of activated and a set of suppressed pathways.
+
+*Scope change (2026-11-13):* at first diseases were only a text attribute of the cell types.
+We then decided to make Disease a fourth entity type, linked to CellType and grounded in MONDO
+(see decisions D6–D14 in `04_input_inspection.md`).
 
 One thing we want to be clear about from the start: our KG is **descriptive and exploratory**.
 If a pathway and a cell type share some genes, this is only context that helps the
@@ -54,22 +60,25 @@ As the guide suggests, we describe the context along three dimensions: space, ti
 
 - **Organism:** only *Homo sapiens*. We use the human Hallmark collection, HGNC (which only
   covers human genes), and the human marker file of CellMarker.
-- **Biological space:** the tissues and cell types annotated in CellMarker. We keep tissue and
-  disease information as attributes of the cell types (see decision D5 in
-  `05_concept_identification.md`), not as separate entities.
+- **Biological space:** the tissues, diseases, and cell types annotated in CellMarker. We keep
+  tissue information as attributes of the cell types (see decision D5 in
+  `05_concept_identification.md`). Diseases are a separate entity type, linked to the cell
+  types and grounded in MONDO when an exact match exists (decisions D6–D14).
 - **What we do not cover:** spatial coordinates, tissue images, spots, regions, or expression
   matrices. The KG never sees raw spatial transcriptomics data.
 
 ### Time
 
 **Our temporal scope is the knowledge published from 1978 to 2026, as it appears in the 2026
-releases of the three sources, which we downloaded on 2026-11-05.**
+releases of our sources: the three main sources were downloaded on 2026-11-05, MONDO on
+2026-11-13.**
 
 | Source | Temporal reference | Where we got it from |
 |---|---|---|
-| MSigDB Hallmark | Collection defined in 2015 (Liberzon et al., *Cell Systems* 2015); file release v2026.2 | Citation `liberzon2015molecular`; the release comes from the file name and had to be confirmed in Stage 1B |
+| MSigDB Hallmark | Collection defined in 2015 (Liberzon et al., *Cell Systems* 2015); file release v2026.2 | Citation `liberzon2015molecular`; the release comes from the file name |
 | HGNC | Gene nomenclature as of our download on 2026-11-05 (resource described in Seal et al., *NAR* 2026) | `SOURCES.md`; citation `seal2026genenames` |
 | CellMarker 3.0 | Marker evidence from studies published **1978–2026**; resource released in 2026 (Hu et al., *NAR* 2026) | `year` column of `human_cell_marker.txt`; citation `hu2026cellmarker` |
+| MONDO | Disease ontology, release 2026-11-03 (added to the project on 2026-11-13) | `owl:versionIRI` in the header of `mondo.owl`; citation `vasilevsky2026mondo` |
 
 To get the CellMarker range we looked at the `year` column (1,779,944 records):
 
@@ -90,14 +99,19 @@ What this means for our KG:
 ### Domain boundaries
 
 What is in scope:
-- three entity types: **Gene**, **Pathway**, **CellType**;
-- two biological relations: Gene **participates in** Pathway, and Gene **is marker for**
-  CellType;
+- four entity types: **Gene**, **Pathway**, **CellType**, **Disease**;
+- three relations: Gene **participates in** Pathway, Gene **is marker for** CellType, and
+  CellType **observed in** Disease;
 - HGNC information (HGNC ID, approved symbol, approved name) as attributes of Gene, only for
-  genes that appear in MSigDB Hallmark or CellMarker.
+  genes that appear in MSigDB Hallmark or CellMarker;
+- MONDO information (MONDO ID, label) as attributes of Disease, only for diseases that appear in
+  CellMarker and match a MONDO term exactly.
 
 What is out of scope:
-- cell states, diseases as entities, and causal relations (promotes / suppresses);
+- cell states, tissues as entities, and causal relations (promotes / suppresses);
+- disease mechanisms or disease–gene associations (the KG only says in which diseases
+  CellMarker reports a cell type);
+- MONDO terms that do not appear in CellMarker (we do not import the whole ontology);
 - pathway or GO enrichment, statistical inference of pathway–cell-type associations,
   pathway–pathway crosstalk;
 - machine-learning or predictive models;

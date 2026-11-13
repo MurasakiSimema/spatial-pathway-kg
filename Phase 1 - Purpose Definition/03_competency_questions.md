@@ -1,14 +1,13 @@
 # 3. Competency Questions
 
 *Phase 1 (Purpose Definition), Stage 1A: purpose formalization.*
-*Status: approved by the domain expert. We discarded two of the proposed sub-CQs, CQ1.1 (gene
-count per pathway) and CQ3.2 (count of shared genes per cell type), but we kept the other IDs
-unchanged so that references stay valid.*
+*Status: approved by the domain expert. We discarded two of the proposed sub-CQs, CQ1.1 (gene count per pathway) and CQ3.2 (count of shared genes per cell type), but we kept the other IDs unchanged so that references stay valid. CQ3.4 was added on 2026-11-13 with the Disease scope and approved in the reworded form below.*
 
 The four main competency questions (CQ1–CQ4) come from our project proposal
 (`docs/0_project_summary.pdf`). The guide asks for a varied list of CQs, so we also wrote some
-sub-questions that refine the main ones. All of them only use our three entity types (Gene,
-Pathway, CellType) and our two relations (*participates in*, *is marker for*).
+sub-questions that refine the main ones. All of them only use our four entity types (Gene,
+Pathway, CellType, Disease) and our three relations (*participates in*, *is marker for*,
+*observed in*).
 
 ## 3.1 Main competency questions
 
@@ -34,6 +33,7 @@ Two things to keep in mind:
 | CQ2.2 | CQ2 | For which cell types is a given gene reported as a marker, optionally within a given tissue class? | approved |
 | CQ3.1 | CQ3 | Which cell types share marker genes with a selected pathway, considering only markers reported in a given tissue class (e.g. *Lung*)? | approved |
 | CQ3.3 | CQ3 | Which specific genes make up the overlap between a given pathway and a given cell type? | approved |
+| CQ3.4 | CQ3 | Which cell types, for which CellMarker reports at least one record in a given disease (optionally including its MONDO subclasses), have marker genes in common with a selected pathway? | approved |
 | CQ4.1 | CQ4 | For each gene shared by the two groups, which activated and which suppressed pathways contain it? | approved |
 | CQ4.2 | CQ4 | Which of the genes shared by the two groups are also markers of at least one cell type, and of which ones? | approved |
 
@@ -43,6 +43,14 @@ ontology: `tissue_class` has 138 distinct values and is never empty. We decided 
 UBERON IDs, because they are missing in 101,872 records and do not match tissue types
 one-to-one.
 
+**Careful with CQ3.4.** The disease filter selects **cell types**, not markers. The link
+*observed in* goes from a CellType to a Disease, so the KG knows that a cell type was reported
+in a disease, but not in which disease each single marker was reported. For example, the
+CellType *Macrophage – Lung – Cancer* is reported in 9 diseases, among them *Osteosarcoma*
+(6 records). It shares 24 marker genes with `HALLMARK_COMPLEMENT`, but only 1 of them comes
+from an osteosarcoma record. This is why CQ3.4 says "for which CellMarker reports at least one
+record in a given disease", and the answer has to be read that way.
+
 ## 3.3 CQs and entities by Focus
 
 The guide asks to classify the entities with the Focus parameter (Common / Core / Contextual).
@@ -50,9 +58,10 @@ We proposed this classification and the domain expert accepted it:
 
 - **Core:** Pathway and CellType, because the whole purpose is about linking these two.
 - **Common:** Gene. It is a general entity, already modelled in reference resources like HGNC,
-  and it is the bridge between pathways and cell types.
-- **Contextual:** the tissue and disease context from CellMarker. It is not an entity type: it
-  is kept as attributes of CellType (see decision D5 in `05_concept_identification.md`).
+  and it is the bridge between pathways and cell types. Disease is also Common, for the same
+  reason: it is already modelled in a reference resource (MONDO).
+- **Contextual:** the tissue context from CellMarker. It is not an entity type: it is kept as
+  attributes of CellType (see decision D5 in `05_concept_identification.md`).
 
 | Scenario | Persona | CQ | Common entities | Core entities | Contextual |
 |---|---|---|---|---|---|
@@ -64,6 +73,7 @@ We proposed this classification and the domain expert accepted it:
 | S3 | P2 | CQ3 | Gene | Pathway, CellType | |
 | S3 | P2 | CQ3.1 | Gene | Pathway, CellType | tissue class |
 | S3 | P2 | CQ3.3 | Gene | Pathway, CellType | |
+| S3 | P2 | CQ3.4 | Gene, Disease | Pathway, CellType | |
 | S4 | P1 | CQ4 | Gene | Pathway | |
 | S4 | P1 | CQ4.1 | Gene | Pathway | |
 | S4 | P1 | CQ4.2 | Gene | Pathway, CellType | |

@@ -235,7 +235,7 @@ Provide comprehensive quantitative, ontological, data-quality, and query-based e
    - Summary table generated from `Evaluation/graph_statistics.json`:
      - Total RDF Triples.
      - Distinct Subjects and Objects.
-     - Entity instance counts: `Gene`, `Pathway`, `CellType`.
+     - Entity instance counts: `Gene`, `Pathway`, `CellType`, `Disease`.
      - Object property assertions: `participates_in`, `is_marker_for`.
      - Total unique symbols in MSigDB vs CellMarker.
      - Shared genes across MSigDB and CellMarker (by HGNC ID).
@@ -251,7 +251,7 @@ Provide comprehensive quantitative, ontological, data-quality, and query-based e
      $$\text{Field completeness} = 100\% - \text{Missing-value rate}$$
      Reported for required columns vs optional columns (e.g., Cell Ontology ID).
    - **Entity Connectivity**:
-     $$\text{Entity Connectivity} = \frac{\text{Distinct Connected Entities (Gene, Pathway, CellType)}}{\text{Total Entities (Gene, Pathway, CellType)}} \times 100\%$$
+     $$\text{Entity Connectivity} = \frac{\text{Distinct Connected Entities (Gene, Pathway, CellType, Disease)}}{\text{Total Entities (Gene, Pathway, CellType, Disease)}} \times 100\%$$
      Reported overall and per entity type, with the number of isolated entities per type as measured.
 4. **Query Execution & Competency Validation**:
    - Evaluation of CQ1, CQ2, CQ3, CQ4.

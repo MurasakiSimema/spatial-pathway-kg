@@ -1,6 +1,8 @@
 Scenarios,Personas,CompetencyQuestions,Element,ElementKind,Properties,Focus,Source
-"S1,S2,S5,S6","P1,P3,P4","CQ1,CQ1.2,CQ2,CQ2.1,CQ2.2,CQ3,CQ3.1,CQ3.3,CQ4,CQ4.1,CQ4.2",Gene,EType,"hgnc_id (id); approved_symbol; approved_name; source_symbols; resolution_status",Common,HGNC; MSigDB Hallmark; CellMarker 3.0
-"S1,S2,S3,S4,S5","P1,P2,P3","CQ1,CQ1.2,CQ2,CQ2.1,CQ3,CQ3.1,CQ3.3,CQ4,CQ4.1,CQ4.2",Pathway,EType,"hallmark_id (id); label; source_url",Core,MSigDB Hallmark
-"S3,S6","P2,P4","CQ2.2,CQ3,CQ3.1,CQ3.3,CQ4.2",CellType,EType,"cell_name + tissue_class + disease_category (id); disease (multi); tissue_type (multi); cell_name_class; cell_ontology_id (multi)",Core,CellMarker 3.0
-"S1,S2,S3,S4,S5","P1,P2,P3","CQ1,CQ1.2,CQ2,CQ2.1,CQ3,CQ3.1,CQ3.3,CQ4,CQ4.1,CQ4.2",participates_in,Relation (Gene -> Pathway; N:M),,Core,MSigDB Hallmark
-"S3,S6","P2,P4","CQ2.2,CQ3,CQ3.1,CQ3.3,CQ4.2",is_marker_for,Relation (Gene -> CellType; N:M),"marker_source; method_details; pmid (multi); year (multi)",Core,CellMarker 3.0
+"S1,S2,S3,S4,S5,S6","P1,P2,P3,P4","CQ1,CQ1.2,CQ2,CQ2.1,CQ2.2,CQ3,CQ3.1,CQ3.3,CQ3.4,CQ4,CQ4.1,CQ4.2",Gene,EType,"hgnc_id (id); approved_symbol; approved_name; source_symbols; resolution_status",Common,HGNC; MSigDB Hallmark; CellMarker 3.0
+"S1,S2,S3,S4,S5","P1,P2,P3","CQ1,CQ1.2,CQ2,CQ2.1,CQ3,CQ3.1,CQ3.3,CQ3.4,CQ4,CQ4.1,CQ4.2",Pathway,EType,"hallmark_id (id); label; source_url",Core,MSigDB Hallmark
+"S3,S6","P2,P4","CQ2.2,CQ3,CQ3.1,CQ3.3,CQ3.4,CQ4.2",CellType,EType,"cell_name + tissue_class + disease_category (id); tissue_type (multi); cell_name_class; cell_ontology_id (multi)",Core,CellMarker 3.0
+S3,P2,CQ3.4,Disease,EType,"mondo_id or normalised source string (id); label; source_strings (multi); resolution_status; primary_mondo_id",Common,CellMarker 3.0; MONDO
+"S1,S2,S3,S4,S5","P1,P2,P3","CQ1,CQ1.2,CQ2,CQ2.1,CQ3,CQ3.1,CQ3.3,CQ3.4,CQ4,CQ4.1,CQ4.2",participates_in,Relation (Gene -> Pathway; N:M),,Core,MSigDB Hallmark
+"S3,S6","P2,P4","CQ2.2,CQ3,CQ3.1,CQ3.3,CQ3.4,CQ4.2",is_marker_for,Relation (Gene -> CellType; N:M),"marker_source; method_details; pmid (multi); year (multi)",Core,CellMarker 3.0
+S3,P2,CQ3.4,observed_in,Relation (CellType -> Disease; N:M),,Common,CellMarker 3.0
