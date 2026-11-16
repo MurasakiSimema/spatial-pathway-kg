@@ -17,7 +17,7 @@ sheet [`pf_sheet.csv`](pf_sheet.csv).
 | Gene | Common | A human gene, identified through HGNC. It connects pathways and cell types. We only include genes that appear in MSigDB Hallmark or CellMarker. | HGNC (identity), MSigDB, CellMarker (where it appears) | ≤ 4,384 from Hallmark + those from CellMarker (exact count after Phase 2) |
 | Pathway | Core | One of the 50 MSigDB Hallmark gene sets, i.e. a coherent biological state or process. | MSigDB Hallmark | 50 |
 | CellType | Core | A human cell type **in a tissue class and disease category**, as reported by CellMarker (e.g. *Macrophage — Lung — Cancer*). | CellMarker 3.0 | 12,632 |
-| Disease | Common | A disease in which CellMarker reports a cell type, matched to a MONDO term when an exact match exists (e.g. *hepatocellular carcinoma*, `MONDO:0007256`). | CellMarker 3.0 (instances), MONDO (identity, labels) | ≈ 1,017 minus the non-disease values (exact count in Phase 2) |
+| Disease | Common | A MONDO disease in which CellMarker reports a cell type (e.g. *hepatocellular carcinoma*, `MONDO:0007256`). Only the CellMarker diseases with a reliable MONDO match become Diseases (D15). | CellMarker 3.0 (instances), MONDO (identity, labels) | ≈ 521 (prototype; exact count in Phase 2) |
 
 ### Why CellType includes the context (decisions D2 and D5)
 
@@ -33,7 +33,7 @@ sheet [`pf_sheet.csv`](pf_sheet.csv).
   putting it in the key would mean normalizing it first. At first we kept it as a descriptive
   attribute with more than one value (2,126 of the 12,632 CellTypes have more than one disease
   value, at most 93). With the scope change of 2026-11-13 it became the **Disease** entity
-  type, linked through *observed in* (decisions D6–D14, `04_input_inspection.md` §4.8).
+  type, linked through *observed in* (decisions D6–D15, `04_input_inspection.md`).
 
 ## 5.2 Identifying attributes (from the datasets)
 
@@ -42,7 +42,7 @@ sheet [`pf_sheet.csv`](pf_sheet.csv).
 | Gene | HGNC ID (`hgnc_id`, e.g. `HGNC:1697`) | approved HGNC symbol (e.g. `CD74`); for genes we cannot resolve to HGNC, the normalized source symbol (the rule will be set in Phase 2) |
 | Pathway | Hallmark gene-set identifier (e.g. `HALLMARK_HYPOXIA`) | MSigDB gene-set URL |
 | CellType | (`cell_name`, `tissue_class`, `disease_category`) | Cell Ontology ID(s), when present and valid |
-| Disease | MONDO ID (e.g. `MONDO:0007256`) when the match is reliable (D9); otherwise the normalized CellMarker string (D8) | label (MONDO label, or the normalized string) |
+| Disease | MONDO ID (e.g. `MONDO:0007256`), from a reliable match (D8, D9, D15) | MONDO label |
 
 ## 5.3 Descriptive attributes (from the CQs)
 
@@ -62,11 +62,9 @@ sheet [`pf_sheet.csv`](pf_sheet.csv).
 | CellType | tissue type | string | multi | Contextual | descriptive context (more detailed than tissue class) |
 | CellType | cell name class | string | single | Contextual | browsing (248 broader classes) |
 | CellType | Cell Ontology ID | string | multi | Common | link to the Cell Ontology (LOD) |
-| Disease | MONDO ID | string | single, optional | Common | CQ3.4 (subclasses), link to MONDO (LOD) |
+| Disease | MONDO ID | string | single | Common | CQ3.4 (subclasses), link to MONDO (LOD) |
 | Disease | label | string | single | Common | CQ3.4, readability |
 | Disease | source strings | string | multi | Contextual | the CellMarker `disease` values, verbatim (D11) |
-| Disease | resolution status | string | single | Contextual | checking the MONDO match (e.g. `mondo_label`, `mondo_exact`, `unresolved`) |
-| Disease | primary MONDO ID | string | single, optional | Contextual | metastases only (D13) |
 
 ## 5.4 Relationships
 
@@ -102,6 +100,7 @@ reification) is something we will decide in Phase 3; see open item O1 in `06_er_
 |---|---|
 | Tissue as entity type | kept as literals of CellType (D5); no mapping to a tissue ontology |
 | Disease values that are not diseases (`Undefined`, `Pan-cancer`, vaccines, viruses, …) | they would make false Disease instances; logged as `non_disease` in the audit table (D14) |
+| Disease strings without a reliable MONDO match (metastases, qualified diseases, typos, …) | no reliable identity; no Disease and no link, logged as `unresolved` in the audit table (D15) |
 | UBERON tissue IDs | incomplete (5.7% missing) and not one-to-one; they would need a mapping |
 | Activated / suppressed pathway group | it is a query input, not something stored in the KG |
 | Gene count per pathway (CQ1.1) | the domain expert discarded this sub-CQ |

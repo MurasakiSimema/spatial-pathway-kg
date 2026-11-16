@@ -14,3 +14,4 @@ Documentation/**/*.synctex.gz
 Documentation/**/*.fdb_latexmk
 Documentation/**/*.fls
 Documentation/**/main.pdf
+EDIT.md

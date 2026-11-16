@@ -11,7 +11,7 @@ The Knowledge Graph models **exactly four** principal entity classes (Disease wa
 1. `Gene`: Human genetic entities normalized through HGNC.
 2. `Pathway`: Biological pathways represented by the 50 gene sets in the MSigDB Hallmark collection.
 3. `CellType`: Human cell types characterized by marker genes in CellMarker 3.0.
-4. `Disease`: Diseases in which CellMarker reports a cell type, grounded in MONDO when an exact match exists.
+4. `Disease`: MONDO diseases in which CellMarker reports a cell type. Only CellMarker diseases with a reliable MONDO match become `Disease` instances; unmatched strings give no `Disease` and no `observed_in` link.
 
 *Negative Rule*: Do **not** introduce additional entity classes such as `CellState`, `Tissue`, `Protein`, or `SpatialSpot`. Tissue context from CellMarker is retained as literal properties or context qualifiers of `CellType`, never as separate entity nodes. CellMarker `disease` values that are not diseases (e.g. `Undefined`, vaccines, viruses) are not `Disease` instances.
 

@@ -25,7 +25,7 @@ KG has to do:
 > Build a reproducible Knowledge Graph that links **human genes** (identified through HGNC) to
 > the **50 MSigDB Hallmark pathways** they belong to and to the **human cell types** for which
 > CellMarker reports them as markers. The cell types are linked to the **diseases** in which
-> CellMarker reports them, grounded in the **Mondo Disease Ontology (MONDO)** when possible. A
+> CellMarker reports them, taken from the **Mondo Disease Ontology (MONDO)**: only the diseases that match a MONDO term are included. A
 > researcher who has already run a spatial transcriptomics analysis can use it to look up which
 > genes make up a pathway, which pathways a gene belongs to, which cell types share marker genes
 > with a pathway (optionally only cell types reported in a given disease), and which genes are
@@ -33,7 +33,8 @@ KG has to do:
 
 *Scope change (2026-11-13):* at first diseases were only a text attribute of the cell types.
 We then decided to make Disease a fourth entity type, linked to CellType and grounded in MONDO
-(see decisions D6–D14 in `04_input_inspection.md`).
+(see decisions D6–D14 in `04_input_inspection.md`). On 2026-11-16 we also decided that Disease is
+based on MONDO only: a disease string with no reliable MONDO match gives no Disease and no link (D15).
 
 One thing we want to be clear about from the start: our KG is **descriptive and exploratory**.
 If a pathway and a cell type share some genes, this is only context that helps the
@@ -63,7 +64,7 @@ As the guide suggests, we describe the context along three dimensions: space, ti
 - **Biological space:** the tissues, diseases, and cell types annotated in CellMarker. We keep
   tissue information as attributes of the cell types (see decision D5 in
   `05_concept_identification.md`). Diseases are a separate entity type, linked to the cell
-  types and grounded in MONDO when an exact match exists (decisions D6–D14).
+  types; only the diseases that match a MONDO term are included (decisions D6–D15).
 - **What we do not cover:** spatial coordinates, tissue images, spots, regions, or expression
   matrices. The KG never sees raw spatial transcriptomics data.
 

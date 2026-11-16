@@ -51,6 +51,10 @@ CellType *Macrophage – Lung – Cancer* is reported in 9 diseases, among them 
 from an osteosarcoma record. This is why CQ3.4 says "for which CellMarker reports at least one
 record in a given disease", and the answer has to be read that way.
 
+The filter also works only on the diseases that match MONDO (D15): a cell type reported only
+in diseases without a MONDO match (e.g. metastases) has no *observed in* link and is never
+returned by CQ3.4.
+
 ## 3.3 CQs and entities by Focus
 
 The guide asks to classify the entities with the Focus parameter (Common / Core / Contextual).

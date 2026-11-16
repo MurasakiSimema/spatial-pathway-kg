@@ -12,7 +12,7 @@ This project builds an integrated, queryable Knowledge Graph to provide biologic
 - **Human Genes**: Identified and normalized via the official HGNC standard.
 - **Biological Pathways**: The 50 well-defined gene sets from the **MSigDB Hallmark** collection.
 - **Cell Types**: Human cell-type marker profiles from **CellMarker 3.0**.
-- **Diseases**: The diseases in which CellMarker reports each cell type, grounded in the **Mondo Disease Ontology (MONDO)** when an exact match exists.
+- **Diseases**: The diseases in which CellMarker reports each cell type, taken from the **Mondo Disease Ontology (MONDO)**: only the diseases with a reliable MONDO match are included.
 
 > [!NOTE]
 > The Knowledge Graph is descriptive and exploratory. It provides biological context and identifies gene overlaps; it does not directly process raw image/coordinate matrices, nor does it infer causal mechanisms or assume pathway activity.

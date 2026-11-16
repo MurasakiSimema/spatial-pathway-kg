@@ -15,7 +15,7 @@ All the numbers below were computed from the files themselves on 2026-11-12, usi
 | MSigDB Hallmark | `h.all.v2026.2.Hs.symbols.gmt` | 48,694 B | GMT (tab-separated, no header) | 50 gene sets | ASCII | LF |
 | HGNC | `hgnc_complete_set.txt` | 16,994,064 B | TSV with header, 53 columns | 45,326 genes | UTF-8 (112 lines with non-ASCII characters) | LF |
 | CellMarker 3.0 | `human_cell_marker.txt` | 577,624,367 B | TSV with header, 23 columns | 1,779,944 marker records | UTF-8 (we validated the whole file) | LF |
-| MONDO (added 2026-11-13, see §4.8) | `mondo.owl` | 255,163,272 B | OWL, RDF/XML serialization | 36,168 `MONDO_` class declarations | ASCII | LF |
+| MONDO (added 2026-11-13) | `mondo.owl` | 255,163,272 B | OWL, RDF/XML serialization | 36,168 `MONDO_` class declarations | ASCII | LF |
 
 Every line has the same number of fields (53 for HGNC, 23 for CellMarker), so both files can be
 read as plain TSV.
@@ -170,7 +170,7 @@ markers: COSG, CelliD, FindAllMarker, Cepo, SEMITONES, Spapros. These are the *c
 | CQ2.2, CQ3.1 | gene → cell types, tissue filter | CellMarker `symbol`/`marker`, `cell_name`, `tissue_class` | yes |
 | CQ3, CQ3.3 | pathway genes ∩ cell-type marker genes | GMT + CellMarker, joined through HGNC | yes, once both sides are resolved to HGNC |
 | CQ4, CQ4.1, CQ4.2 | pathway groups (query input) → shared genes (+ markers) | GMT (+ CellMarker) | yes |
-| CQ3.4 | cell type → diseases in which it is reported; disease hierarchy | CellMarker `disease`; MONDO labels, EXACT synonyms, `subClassOf` | yes, for the diseases that match MONDO (§4.8); the others can be filtered only by their own name |
+| CQ3.4 | cell type → diseases in which it is reported; disease hierarchy | CellMarker `disease`; MONDO labels, EXACT synonyms, `subClassOf` | yes, for the diseases that match MONDO; the others can be filtered only by their own name |
 
 The sources we collected cover all the approved CQs. As the guide says, this means we do not
 need to go back and look for other sources.
@@ -195,7 +195,7 @@ need to go back and look for other sources.
 3. To resolve CellMarker genes against HGNC, use `symbol` when it is there and `marker`
    otherwise, and keep the original string for audit.
 4. Keep tissue (`tissue_class`, `tissue_type`) and `disease_category` as literals of CellType
-   (`tissue_class` and `disease_category` are part of its identity key, decision D5). Do not map tissues to UBERON. *Changed on 2026-11-13:* the specific `disease` is no longer a literal; it becomes a Disease entity, matched automatically to MONDO (decisions D6–D14).
+   (`tissue_class` and `disease_category` are part of its identity key, decision D5). Do not map tissues to UBERON. *Changed on 2026-11-13:* the specific `disease` is no longer a literal; it becomes a Disease entity, matched automatically to MONDO (decisions D6–D15).
 5. Change `CL:nnnnnnn` into `CL_nnnnnnn`; treat IDs in `cellontology_id` that are not CL IDs as missing, and log them.
 6. Never drop records without saying so: every excluded or unresolved record is counted and logged.
 
@@ -264,18 +264,20 @@ Matching on the abbreviation alone was tried and **rejected**: `Crohn's-like dis
 |---|---|---|
 | D6 | Is Disease an entity type? | **Yes**, a fourth EType. It replaces the `disease` literal of CellType. |
 | D7 | What is Disease linked to? | **CellType**, through **observed in** (CellType → Disease, N:M). CellTypes with `disease_category = Normal` have no link. We accept that the KG does not say in which disease each single marker was reported; the per-record detail stays in the Phase 2 audit table. This is why CQ3.4 is worded as "cell types for which CellMarker reports at least one record in a given disease". |
-| D8 | What identifies a Disease? | The **MONDO ID** when the match is reliable, otherwise the **normalized CellMarker string** (same pattern as Gene with HGNC). |
-| D9 | What is a reliable match? | Only a MONDO **label or EXACT synonym with a single candidate**, on the full string or on the string without the final parentheses. RELATED / NARROW / BROAD and ambiguous matches stay unresolved, with the candidate written in the audit table. Matching the abbreviation alone is not allowed. |
-| D10 | Which URIs and links? | A **local URI** for every Disease. Resolved diseases also store `mondo_id` and a link to the MONDO IRI (`http://purl.obolibrary.org/obo/MONDO_nnnnnnn`). The URI rule goes with O2, and the link predicate is open item O8 (Phase 3). |
+| D8 | What identifies a Disease? | The **MONDO ID**. *(Changed by D15: at first, strings without a reliable match were identified by the normalized CellMarker string, as for Gene with HGNC.)* |
+| D9 | What is a reliable match? | Only a MONDO **label or EXACT synonym with a single candidate**, on the full string or on the string without the final parentheses. RELATED / NARROW / BROAD and ambiguous matches stay unresolved (no Disease, D15), with the candidate written in the audit table. Matching the abbreviation alone is not allowed. |
+| D10 | Which URIs and links? | A **local URI** for every Disease, built from its MONDO ID. Every Disease also stores `mondo_id` and a link to the MONDO IRI (`http://purl.obolibrary.org/obo/MONDO_nnnnnnn`). The URI rule goes with O2, and the link predicate is open item O8 (Phase 3). |
 | D11 | What happens to the original strings? | They are kept in the multi-valued attribute `source_strings`, because merging onto MONDO hides qualifiers like `(circulating)` or `(MASLD-related)`. |
 | D12 | Is `disease_category` part of the Disease identity? | **No**, it stays only in the CellType key (D5). |
-| D13 | Metastases (e.g. `Lung cancer brain metastasis`)? | **Not merged** into the primary cancer. They stay as unresolved Diseases with the extra attribute `primary_mondo_id`, filled by a rule (`<primary> … metastasis/metastases`) when the primary part matches MONDO under D9. |
-| D14 | Values that are not diseases (`Undefined`, `Pan-cancer`, vaccines, viruses, …)? | **No Disease entity and no *observed in* link** for them. Their records stay in the KG (the CellType and its markers are kept) and the value is logged in the audit table as `non_disease`, so nothing is dropped silently. The values are listed by hand in a documented list; the list starts from the five examples above and is completed and reviewed in Phase 2. |
+| D13 | Metastases (e.g. `Lung cancer brain metastasis`)? | **Not merged** into the primary cancer. They do not match MONDO, so they get no Disease and no *observed in* link, and are logged in the audit table (D15). *(Changed by D15: at first they were local Diseases with an extra attribute `primary_mondo_id`.)* |
+| D14 | Values that are not diseases (`Undefined`, `Pan-cancer`, vaccines, viruses, …)? | **No Disease entity and no *observed in* link** for them. Their records stay in the KG (the CellType and its markers are kept) and the value is logged in the audit table as `non_disease`, so nothing is dropped silently. The values are listed by hand in a documented list; the list starts from the five examples above and is completed and reviewed in Phase 2. The list is still needed with D15, so that a non-disease value is never matched to a MONDO term by chance. |
+| D15 | (2026-11-16) What happens to disease strings without a reliable MONDO match (D9)? | **No Disease and no *observed in* link.** The Disease instances come only from MONDO, so every Disease has a MONDO ID. The records stay in the KG (the CellType, its markers and its `disease_category` are kept), and the strings are logged in the audit table as `unresolved`, so nothing is dropped silently. A CellType whose disease strings are all unresolved has no *observed in* link. Old: unresolved strings became local Diseases keyed by the normalized string (D8, D13). |
 
-Expected size, from the prototype: 569 matched strings merge into **521 MONDO-backed
-Diseases**, and the 496 unmatched strings give at most 496 local Diseases. The total is
-therefore at most about 1,017 Diseases, minus the non-disease values of D14. The exact numbers
-are computed in Phase 2.
+Expected size, from the prototype: the 569 matched strings merge into **521 Diseases**, and
+with D15 this is also the expected total, because the unmatched strings give no Disease. The
+strings without a reliable match (20 + 477 in the table above) cover 209,225 records (25.3%):
+these records give no *observed in* link. How many CellTypes are left with no link at all, and
+the exact numbers, are computed in Phase 2.
 
 **Known risk.** Some MONDO EXACT synonyms are broad: for example `Common variable
 immunodeficiency` and `Primary antibody deficiency` end up on the same term. Every merge is
