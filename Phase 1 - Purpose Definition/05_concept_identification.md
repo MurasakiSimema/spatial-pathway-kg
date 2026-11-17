@@ -68,31 +68,41 @@ sheet [`pf_sheet.csv`](pf_sheet.csv).
 
 ## 5.4 Relationships
 
-| Relation | Domain → Range | Cardinality | Focus | Source | Needed by |
-|---|---|---|---|---|---|
-| participates in | Gene → Pathway | N:M | Core | MSigDB Hallmark | CQ1, CQ1.2, CQ2, CQ2.1, CQ3, CQ3.1, CQ3.3, CQ4, CQ4.1, CQ4.2 |
-| is marker for | Gene → CellType | N:M | Core | CellMarker 3.0 | CQ2.2, CQ3, CQ3.1, CQ3.3, CQ3.4, CQ4.2 |
-| observed in | CellType → Disease | N:M | Common | CellMarker 3.0 (`disease` with `disease_category` ≠ `Normal`) | CQ3.4 |
+| Relation | Domain → Range | Focus | Source | Needed by |
+|---|---|---|---|---|
+| participates in | Gene → Pathway | Core | MSigDB Hallmark | CQ1, CQ1.2, CQ2, CQ2.1, CQ3, CQ3.1, CQ3.3, CQ4, CQ4.1, CQ4.2 |
+| is marker for | Gene → CellType | Core | CellMarker 3.0 | CQ2.2, CQ3, CQ3.1, CQ3.3, CQ3.4, CQ4.2 |
+| ↳ is reported marker for | Gene → CellType | Contextual | CellMarker 3.0 (at least one record with `marker_source` ≠ `Method`) | D1 filter on the CQs above |
+| ↳ is predicted marker for | Gene → CellType | Contextual | CellMarker 3.0 (only `Method` records) | D1 filter on the CQs above |
+| observed in | CellType → Disease | Common | CellMarker 3.0 (`disease` with `disease_category` ≠ `Normal`) | CQ3.4 |
 
 *observed in* has no attributes. It says that CellMarker has at least one record of the cell
 type in that disease; it does not say which markers were found there (D7).
 
-### Attributes of the *is marker for* relation (marker evidence)
+### Sub-relations of *is marker for* (decisions D16–D18)
 
-With decision D1 we keep all the CellMarker records, both predicted and curated, and we keep
-track of their source. This information is about one specific gene–cell-type link, not about
-the gene or the cell type on its own:
+With decision D1 we keep all the CellMarker records, both predicted and reported. At first we
+kept the evidence (`marker_source`, `method_details`, PubMed ID, year) as attributes of the
+relation. On 2026-11-17 we removed them: no CQ needs them, they have many values on
+the same link, and in RDF they would need reification.
 
-| Attribute | Values | Focus |
+What we keep is only whether a link is **reported** or **predicted**, and we write it in the
+predicate itself. Each gene–cell-type link is written with **exactly one** of two sub-relations
+of *is marker for*:
+
+| Sub-relation | When | Links (before HGNC resolution) |
 |---|---|---|
-| marker source | `Method`, `Single-cell sequencing`, `Experiment`, `Review`, `Company` | Contextual |
-| method details | e.g. `COSG`, `CelliD`, `Cepo` | Contextual |
-| PubMed ID | multi | Contextual |
-| publication year | multi, 1978–2026 | Contextual |
+| *is reported marker for* | at least one record with `marker_source` = Single-cell sequencing, Experiment, Review, or Company | 108,040 |
+| *is predicted marker for* | only `Method` records (computational tools such as COSG, CelliD) | 869,420 |
 
-In the ER model these are **attributes of the relationship**. How to write them in RDF without
-adding an extra entity type for the evidence (for example with RDF-star annotations or with standard
-reification) is something we will decide in Phase 3; see open item O1 in `06_er_model.md`.
+*Reported* means that CellMarker collected the marker from a study, a review, or a company, and
+did not predict it with a tool. It does not mean that the marker was validated by hand. The
+10,571 links that have both kinds of records count as reported.
+
+*is marker for* stays as the parent relation (`rdfs:subPropertyOf`), and the CQs still use it.
+Its triple is stored too, next to the sub-relation triple, so that the queries do not depend on
+a reasoner (D18). The relations have no attributes any more, so open
+item O1 is closed.
 
 ## 5.5 Concepts we considered and left out
 
@@ -103,6 +113,7 @@ reification) is something we will decide in Phase 3; see open item O1 in `06_er_
 | Disease strings without a reliable MONDO match (metastases, qualified diseases, typos, …) | no reliable identity; no Disease and no link, logged as `unresolved` in the audit table (D15) |
 | UBERON tissue IDs | incomplete (5.7% missing) and not one-to-one; they would need a mapping |
 | Activated / suppressed pathway group | it is a query input, not something stored in the KG |
+| Marker evidence: `pmid`, `year`, `method_details` | no CQ needs them; multi-valued on the aggregated link; audit table only (D16) |
 | Gene count per pathway (CQ1.1) | the domain expert discarded this sub-CQ |
 | HGNC locus group/type, Entrez, Ensembl, UniProt | out of scope |
 | CellMarker `gene_id`, `uniprot_id`, `technology_seq`, `series_id`, `title`, `journal` | no CQ needs them; they stay in the Phase 2 audit table, not in the KG |

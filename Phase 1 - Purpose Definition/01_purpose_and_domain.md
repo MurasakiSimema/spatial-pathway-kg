@@ -94,8 +94,8 @@ What this means for our KG:
   wants it up to date, they have to rebuild it on newer releases;
 - we do **not model time as an entity or a relation**: no biological states that change over
   time, no history of gene membership, no marker versions. The publication year of a
-  CellMarker record is at most a descriptive attribute of the marker evidence (we decided this
-  in concept identification).
+  CellMarker record is not kept in the KG: it was first a descriptive attribute of the marker
+  evidence, and was removed on 2026-11-17 (decision D16 in `04_input_inspection.md`).
 
 ### Domain boundaries
 

@@ -129,7 +129,7 @@ Replace the template guidelines in [Documentation/section/](../../../Documentati
   - *Personas*: The personas defined in `Phase 1 - Purpose Definition/` (illustrative user profiles, e.g. a translational cancer biologist or a spatial genomics bioinformatician).
   - *Competency Questions (CQs)*: Report every CQ and sub-CQ exactly as in `03_competency_questions.md`, in a table that links each CQ to its persona(s) and scenario(s).
   - *Informal Labels & Popularity Categories*: Report the Core / Common / Contextual classification of eTypes and properties exactly as recorded in `pf_sheet.csv` and `05_concept_identification.md` (do not reclassify).
-  - *ER Model Definition*: Describe the Purpose ER Model, cardinalities, and attributes. Include an ER diagram figure or structural description.
+  - *ER Model Definition*: Describe the Purpose ER Model and its attributes (no cardinalities, user preference). Include an ER diagram figure or structural description.
 - **Information Gathering** (structure required by the 2026 template):
   - *KG/KnowDive Data Sources*: already available, quality KG/KnowDive resources. Knowledge layer and data layer, each with: sources description, resources collection, classification over Common / Core / Contextual. If none were used, say so explicitly for both layers.
   - *External Data Sources*: informal, heterogeneous resources. Knowledge layer (external ontologies/vocabularies considered, e.g. Cell Ontology) and data layer (MSigDB Hallmark GMT, CellMarker 3.0 TSV, HGNC `hgnc_complete_set.txt`), each with: sources description, collection, classification over Common / Core / Contextual.

@@ -69,7 +69,7 @@ Traditional ontology and KG engineering often suffers from scope creep, semantic
 - **Step 1.3**: Characterize the Personas acting within the scenarios.
 - **Step 1.4**: Define the Competency Questions (CQ1 to CQ4 from the proposal, plus any approved sub-CQs).
 - **Step 1.5**: Extract informal labels for entity types, object properties, and data properties; classify by popularity.
-- **Step 1.6**: Construct the Purpose ER model (entities, relationships, attributes, cardinalities).
+- **Step 1.6**: Construct the Purpose ER model (entities, relationships, attributes; cardinalities are not reported in this project).
 - **Step 1.7**: Conduct Information Gathering: identify formal KnowDive sources and external sources (MSigDB, CellMarker, HGNC).
 - **Step 1.8**: Complete Phase 1 Qualitative Evaluation table and Appendix A (Part 1, 2, 3).
 

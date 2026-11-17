@@ -18,7 +18,7 @@ The Knowledge Graph models **exactly four** principal entity classes (Disease wa
 ### 1.2 Main Biological Object Properties
 The Knowledge Graph asserts **only three** main biological relationships:
 1. `participates_in` — Domain: `Gene`, Range: `Pathway`.
-2. `is_marker_for` — Domain: `Gene`, Range: `CellType`.
+2. `is_marker_for` — Domain: `Gene`, Range: `CellType`. Each link is stored as the parent triple plus exactly one of its two sub-properties, `is_reported_marker_for` or `is_predicted_marker_for`; these are specializations, not additional relations.
 3. `observed_in` — Domain: `CellType`, Range: `Disease`.
 
 *Phrasing rule for `observed_in`*: it means that CellMarker has at least one record of the cell type in that disease. It is attached to the CellType, not to single markers: never write that the overlapping marker genes were observed in the disease, and never present it as a disease mechanism or a disease–gene association.

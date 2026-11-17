@@ -90,13 +90,14 @@ Formalize user needs through scenarios, personas, competency questions, and the 
   - Use a table with one row per CQ and columns for the persona(s) and scenario(s) it serves (the example report has a "Person" column; the template asks for CQs "created considering the personas in the scenarios").
 - **Informal Labels & Popularity Categories**:
   - Take the labels and their Core / Common / Contextual classification from `pf_sheet.csv` and `05_concept_identification.md`; do not reclassify them in the report.
-  - Report, per eType, the identifying attributes (from the datasets) and the descriptive attributes (from the CQs), and, per relation, domain, range, cardinality and any relation attributes.
+  - Report, per eType, the identifying attributes (from the datasets) and the descriptive attributes (from the CQs), and, per relation, domain, range and any relation attributes. Do not report cardinalities (user preference).
   - State the main design choices with their strong and weak points (template requirement).
 - **Purpose ER Model**:
-  - Formal entity-relationship diagram and narrative specifying cardinalities:
-    - `Gene` (1..*) `participates_in` (1..*) `Pathway`
-    - `Gene` (1..*) `is_marker_for` (1..*) `CellType`
-  - Cardinality notes, primary keys, and attributes.
+  - Formal entity-relationship diagram and narrative, without cardinalities (user preference):
+    - `Gene` `participates_in` `Pathway`
+    - `Gene` `is_marker_for` `CellType`
+    - `CellType` `observed_in` `Disease`
+  - Primary keys and attributes.
 
 #### 3.2 Information Gathering
 The 2026 template requires this two-level structure (one subsubsection per source group, a paragraph or table per layer):

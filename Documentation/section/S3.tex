@@ -79,7 +79,7 @@ The concepts were collected in a Purpose Formalization sheet (\texttt{pf\_sheet.
 \begin{itemize}
     \item \textbf{Core}: \emph{Pathway} and \emph{CellType}, and the relations \emph{participates in} and \emph{is marker for}. The purpose is built around linking pathways and cell types through genes.
     \item \textbf{Common}: \emph{Gene} and \emph{Disease}, and the relation \emph{observed in}. Gene and Disease are general entities, already modelled by reference resources (HGNC and MONDO); Gene is the bridge between pathways and cell types.
-    \item \textbf{Contextual}: the descriptive context of cell types (tissue type, broader cell class), the evidence attached to marker links, and the provenance attributes of diseases (source strings, resolution status).
+    \item \textbf{Contextual}: the descriptive context of cell types (tissue type, broader cell class), the two sub-relations of \emph{is marker for} (\emph{is reported marker for}, \emph{is predicted marker for}), and the provenance attribute of diseases (source strings).
 \end{itemize}
 
 \begin{table}[htbp]
@@ -103,9 +103,9 @@ Disease & Common & MONDO ID (e.g.\ \texttt{MONDO:0007256}), from a reliable matc
 \begin{tabularx}{\linewidth}{|l|l|l|X|}
 \hline
 \textbf{Relation} & \textbf{Domain $\rightarrow$ Range} & \textbf{Focus} & \textbf{Relation attributes} \\ \hline
-participates in & Gene $\rightarrow$ Pathway (N:M) & Core & none (membership as stated by MSigDB) \\ \hline
-is marker for & Gene $\rightarrow$ CellType (N:M) & Core & marker source, method details, PubMed ID, publication year (Contextual) \\ \hline
-observed in & CellType $\rightarrow$ Disease (N:M) & Common & none (CellMarker has at least one record of the cell type in the disease) \\ \hline
+participates in & Gene $\rightarrow$ Pathway & Core & none (membership as stated by MSigDB) \\ \hline
+is marker for & Gene $\rightarrow$ CellType & Core & none; specialized into \emph{is reported marker for} and \emph{is predicted marker for} (Contextual) \\ \hline
+observed in & CellType $\rightarrow$ Disease & Common & none (CellMarker has at least one record of the cell type in the disease) \\ \hline
 \end{tabularx}
 \caption{Relations}
 \label{tab:relations}
@@ -116,12 +116,12 @@ observed in & CellType $\rightarrow$ Disease (N:M) & Common & none (CellMarker h
     \item \textbf{Cell type naming.} A cell type is named by the CellMarker cell name rather than by its Cell Ontology (CL) identifier. Names and CL identifiers are not one-to-one in the source (\emph{Macrophage} occurs with 24 different CL identifiers), and the name is what users search for. The CL identifiers are kept as a multi-valued attribute for linking to the Cell Ontology. Weak point: two names for the same biological concept remain separate.
     \item \textbf{Context-qualified cell types.} The same cell type is reported in different tissues and disease contexts (\emph{Macrophage} appears in 98 tissue classes). Pooling all of them into one context-free marker profile would lose this distinction and would prevent the tissue filter of CQ2.2 and CQ3.1. The identity of a CellType is therefore the triple (cell name, tissue class, disease category), which gives 12,632 CellTypes; with the cell name alone there would be 3,190. The three parts remain separate literals, so all CellTypes with a given base name can still be retrieved. Tissue class and disease category were chosen because they are always present and have few, clean values (138 tissue classes; disease category is one of \emph{Normal}, \emph{Cancer}, \emph{Disease}); no mapping to external tissue or disease ontologies is needed. Weak point: the number of CellTypes grows about fourfold.
     \item \textbf{Disease as an entity type.} The specific disease is free text with 1,067 values (e.g.\ \emph{Lung adenocarcinoma (LUAD)}), and 2,126 of the 12,632 CellTypes have more than one (at most 93). It was first kept as a multi-valued literal of CellType; with the scope change it became an entity type, linked to CellType through \emph{observed in} and based on MONDO only. A string becomes a Disease, identified by its MONDO ID, only when its normalized form equals the label or an EXACT synonym of exactly one non-obsolete MONDO term (also after removing a final parenthesised part, e.g.\ \emph{Lung adenocarcinoma (LUAD)}). Strings without such a match give no Disease and no link: their records are kept and the strings are logged. An earlier version identified them by the normalized string; this was dropped so that every Disease has a MONDO identity. Matching on an abbreviation alone was rejected because it produced a serious false positive. Metastases are not merged into the primary disease (they do not match MONDO, so they get no link), and values that are not diseases (e.g.\ \emph{Undefined}, \emph{SARS-CoV-2 vaccine}) get no Disease and no link; they are logged. Strong points: one identity per disease concept (e.g.\ \emph{Glioblastoma} and \emph{Glioblastoma multiforme}), queries through the MONDO hierarchy, links to other resources. Weak points: according to a first prototype about a quarter of the non-normal records do not match MONDO and therefore give no link, so some cell types reported in a disease are not reachable from it; the link is attached to the cell type and not to single markers.
-    \item \textbf{All marker evidence kept, with its source.} 91.9\% of the CellMarker records are computationally predicted markers; the rest are manually curated. All of them are kept, and the marker source is recorded on the \emph{is marker for} relation, so that queries can be restricted to curated markers. How to encode relation attributes in RDF without adding a fourth entity type is left to Phase 3.
+    \item \textbf{All markers kept, reported or predicted.} 91.9\% of the CellMarker records are markers predicted by computational tools; the rest are reported by studies, reviews, or companies. All of them are kept. Each gene--cell-type link is written with exactly one of two sub-properties of \emph{is marker for}: \emph{is reported marker for} when at least one of its records is not predicted (108,040 links, including the 10,571 that also have predicted records), and \emph{is predicted marker for} otherwise (869,420 links); counts before HGNC resolution. The parent \emph{is marker for} triple is stored as well, so that queries do not depend on a reasoner; queries can be restricted to reported markers by changing only the predicate. The other evidence columns (PubMed ID, year, method details) were first kept as attributes of the relation and then removed: no CQ needs them, they have many values on the same link, and in RDF they would require reification of about one million links.
 \end{itemize}
 
 \subsubsection{Purpose ER model}
 
-Figure~\ref{fig:er} shows the Purpose ER model. All three relations are many-to-many: a gene can belong to several pathways (e.g.\ \emph{MYC} belongs to 10) and mark several cell types, a pathway contains between 32 and 200 genes, and a cell type can be reported in several diseases (up to 93). Pathways and cell types are never linked directly: their connection (CQ3) is always computed through shared genes, so the model does not assert pathway activity in any cell type. Diseases are reached from a pathway only through genes and cell types; cell types with disease category \emph{Normal} have no \emph{observed in} link. The activated and suppressed pathway groups of CQ4 are not part of the model, since they are passed to the query.
+Figure~\ref{fig:er} shows the Purpose ER model. A gene can belong to several pathways (e.g.\ \emph{MYC} belongs to 10) and mark several cell types, a pathway contains between 32 and 200 genes, and a cell type can be reported in several diseases (up to 93). Pathways and cell types are never linked directly: their connection (CQ3) is always computed through shared genes, so the model does not assert pathway activity in any cell type. Diseases are reached from a pathway only through genes and cell types; cell types with disease category \emph{Normal} have no \emph{observed in} link. The activated and suppressed pathway groups of CQ4 are not part of the model, since they are passed to the query.
 
 \begin{figure}[htbp]
 \centering
@@ -138,16 +138,15 @@ Figure~\ref{fig:er} shows the Purpose ER model. All three relations are many-to-
   \node[rel, right=of gene] (marker) {is marker\\for};
   \node[entity, fill=green!15, right=of marker, text width=3.4cm] (cell) {\textbf{CELLTYPE} \hfill \textit{Core}\\[2pt]
     $\ast$\,cell\_name\\ $\ast$\,tissue\_class\\ $\ast$\,disease\_category\\ tissue\_type [multi]\\ cell\_name\_class\\ cell\_ontology\_id [multi]};
-  \node[entity, fill=red!12, below=0.6cm of marker, text width=3.3cm] (ev) {\textit{relation attributes (Contextual)}\\ marker\_source, method\_details,\\ pmid [multi], year [multi]};
+  \node[below=0.1cm of marker, align=center, font=\scriptsize] (sub) {\textit{sub-relations:}\\\textit{reported,}\\\textit{predicted}};
   \node[rel, fill=blue!12, below=0.6cm of cell] (obs) {observed\\in};
   \node[entity, fill=blue!12, below=0.6cm of obs, text width=3.4cm] (dis) {\textbf{DISEASE} \hfill \textit{Common}\\[2pt]
     $\ast$\,mondo\_id\\ label\\ source\_strings [multi]};
-  \draw[thick] (gene) -- node[above]{N} (part) -- node[above]{M} (pathway);
-  \draw[thick] (gene) -- node[above]{N} (marker) -- node[above]{M} (cell);
-  \draw[thick] (cell) -- node[right]{N} (obs) -- node[right]{M} (dis);
-  \draw[dashed] (marker) -- (ev);
+  \draw[thick] (gene) -- (part) -- (pathway);
+  \draw[thick] (gene) -- (marker) -- (cell);
+  \draw[thick] (cell) -- (obs) -- (dis);
 \end{tikzpicture}
-\caption{Purpose ER model. Attributes marked with $\ast$ form the identity of the entity type; [multi] marks multi-valued attributes; colours show the Focus (blue: Common, green: Core, red: Contextual).}
+\caption{Purpose ER model. Attributes marked with $\ast$ form the identity of the entity type; [multi] marks multi-valued attributes; colours show the Focus (blue: Common, green: Core); the two sub-relations of \emph{is marker for} (\emph{is reported marker for}, \emph{is predicted marker for}) are Contextual.}
 \label{fig:er}
 \end{figure}
 
@@ -206,7 +205,7 @@ CellMarker 3.0 & \texttt{cell\_name}, \texttt{tissue\_class}, \texttt{disease\_c
 CellMarker 3.0 & \texttt{tissue\_type}, \texttt{cell\_name\_class}, \texttt{cellontology\_id} & CellType descriptive attributes \\ \hline
 CellMarker 3.0 & \texttt{disease} (when \texttt{disease\_category} is not \emph{Normal}) & Disease instances and \emph{observed in} \\ \hline
 CellMarker 3.0 & \texttt{symbol} (or \texttt{marker} when \texttt{symbol} is empty) & gene of \emph{is marker for} (after HGNC resolution) \\ \hline
-CellMarker 3.0 & \texttt{marker\_source}, \texttt{method\_details}, \texttt{pmid}, \texttt{year} & attributes of \emph{is marker for} \\ \hline
+CellMarker 3.0 & \texttt{marker\_source} & choice of the sub-relation of \emph{is marker for} (reported or predicted) \\ \hline
 MONDO & class IRI, \texttt{rdfs:label}, EXACT synonyms, \texttt{rdfs:subClassOf}, \texttt{owl:deprecated} & Disease identity and label, hierarchy for CQ3.4; obsolete terms excluded \\ \hline
 \end{tabularx}
 \caption{Source columns used by the Purpose ER model}
@@ -295,7 +294,7 @@ CQ4.2 & Shared genes that are also cell-type markers & Retained \\ \hline
 \caption{Competency questions: considered vs final (14 considered, 12 final)}
 \end{table}
 
-\medskip\noindent\textbf{Purpose refinement.} The informal purpose did not change in substance. The temporal boundary was made explicit (1978--2026) from the publication years in CellMarker, and the ER model was adjusted after information gathering: the inspection of the data showed that cell names and CL identifiers are not one-to-one and that the same cell type occurs in many tissue and disease contexts, which led to the context-qualified \emph{CellType} described above. Finally, after the phase had been written, the scope was extended with the \emph{Disease} entity type and the \emph{observed in} relation (approved on 2026-11-13). This reversed two earlier decisions: diseases had been listed as out of scope, and the parsing rules said not to map diseases to disease ontologies. On 2026-11-16 the Disease entity type was further restricted to the diseases that match MONDO. The scenarios, CQs, concepts, and ER model were updated accordingly.
+\medskip\noindent\textbf{Purpose refinement.} The informal purpose did not change in substance. The temporal boundary was made explicit (1978--2026) from the publication years in CellMarker, and the ER model was adjusted after information gathering: the inspection of the data showed that cell names and CL identifiers are not one-to-one and that the same cell type occurs in many tissue and disease contexts, which led to the context-qualified \emph{CellType} described above. Finally, after the phase had been written, the scope was extended with the \emph{Disease} entity type and the \emph{observed in} relation (approved on 2026-11-13). This reversed two earlier decisions: diseases had been listed as out of scope, and the parsing rules said not to map diseases to disease ontologies. On 2026-11-16 the Disease entity type was further restricted to the diseases that match MONDO. On 2026-11-17 the evidence attributes of \emph{is marker for} were removed and replaced by its two sub-relations (reported, predicted). The scenarios, CQs, concepts, and ER model were updated accordingly.
 
 \medskip\noindent\textbf{Dataset-level formatting and transformations.} None. In this phase the raw files were only inspected, in read-only mode; no file was modified, filtered, or converted. The parsing rules proposed for Phase 2 are: select columns by name; strip the double quotes of HGNC multi-valued fields before splitting them; use the CellMarker standardized symbol when present and the original marker otherwise, keeping the original string for audit; normalize CL identifiers of the form \texttt{CL:nnnnnnn} to \texttt{CL\_nnnnnnn} and treat non-CL identifiers as missing; match diseases to MONDO only through a label or EXACT synonym with a single candidate, logging every merge; and never drop records silently.
 

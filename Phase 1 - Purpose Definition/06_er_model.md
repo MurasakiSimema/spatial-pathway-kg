@@ -46,9 +46,13 @@ Mermaid cannot draw attributes on a relationship, so we list them here:
 
 | Relationship | Attributes |
 |---|---|
-| GENE — *is marker for* → CELLTYPE | `marker_source`, `method_details`, `pmid` (multi), `year` (multi) |
+| GENE — *is marker for* → CELLTYPE | none; specialized into *is reported marker for* and *is predicted marker for* (D17) |
 | GENE — *participates in* → PATHWAY | none (the membership is just as MSigDB states it) |
 | CELLTYPE — *observed in* → DISEASE | none (CellMarker has at least one record of the cell type in the disease) |
+
+Mermaid cannot draw sub-relations either. *is marker for* has two sub-relations, *is reported
+marker for* and *is predicted marker for* (Gene → CellType); each gene–cell-type link is
+stored with *is marker for* and with exactly one of them (D17, D18).
 
 ## 6.2 Focus
 
@@ -60,15 +64,17 @@ Mermaid cannot draw attributes on a relationship, so we list them here:
 | CellType | Core |
 | participates in, is marker for | Core |
 | observed in | Common |
-| marker evidence, `tissue_type`, `cell_name_class`, Disease `source_strings` | Contextual |
+| *is reported marker for*, *is predicted marker for*, `tissue_type`, `cell_name_class`, Disease `source_strings` | Contextual |
 
 ## 6.3 How to read the model
 
-- Both relations are many-to-many. A gene can belong to several pathways (e.g. `MYC` is in 10)
+- A gene can belong to several pathways (e.g. `MYC` is in 10)
   and be a marker of several cell types. A pathway contains between 32 and 200 genes.
 - Pathway and CellType are **never connected directly**. Their connection (CQ3) is always
   computed through the genes they share, so the KG never asserts pathway activity in a cell
   type.
+- A marker link is either reported or predicted, never both (D17). Queries on any marker use
+  *is marker for*, which covers both sub-relations.
 - Disease is reached from a Pathway only through Gene → CellType → Disease. *observed in* is
   attached to the CellType, not to the single marker, so the KG does not say in which disease a
   marker was reported (D7, CQ3.4).
@@ -82,7 +88,7 @@ Mermaid cannot draw attributes on a relationship, so we list them here:
 
 | ID | Item | Phase |
 |---|---|---|
-| O1 | How to write the *is marker for* evidence attributes in RDF without adding a fourth entity type (RDF-star annotation vs. reification vs. audit table only) | Phase 3 |
+| O1 | ~~How to write the *is marker for* evidence attributes in RDF without adding a fourth entity type~~ **Closed on 2026-11-17** by D16–D18: no relation attributes are left | — |
 | O2 | How to build the URI key of a CellType from (`cell_name`, `tissue_class`, `disease_category`) in a deterministic way | Phase 3 |
 | O3 | What to do with duplicate rows (D3), and the HGNC resolution rules for unresolved symbols and symbols that differ only in case | Phase 2 |
 | O4 | The exact local URI rule for Disease, from the MONDO ID (together with O2) | Phase 3 |
@@ -90,3 +96,4 @@ Mermaid cannot draw attributes on a relationship, so we list them here:
 | O6 | The MONDO matching pipeline: D14 non-disease list, audit log of merges and of unresolved strings (including metastases, D13, D15), review of the merges | Phase 2 (rules) / Phase 4 (pipeline) |
 | O7 | Pin the MONDO release used (`mondo.owl`, 2026-11-03) so that results can be reproduced | Phase 4 |
 | O8 | Which predicate links a Disease to its MONDO IRI | Phase 3 |
+| O9 | The exact names and URIs of the two sub-relations of *is marker for*, and whether to align them to an external vocabulary | Phase 3 |
