@@ -53,7 +53,7 @@ sheet [`pf_sheet.csv`](pf_sheet.csv).
 | Gene | source symbol(s) | string | multi | Contextual | checking the HGNC resolution |
 | Gene | resolution status | string | single | Contextual | checking the HGNC resolution |
 | Pathway | Hallmark identifier | string | single | Core | CQ1–CQ4 (query input and output) |
-| Pathway | label | string | single | Core | readability (e.g. *Hypoxia*) |
+| Pathway | label | string | single | Core | readability (e.g. *HYPOXIA*, built from the identifier: Phase 2, D23) |
 | Pathway | source URL | string (URI) | single | Common | provenance |
 | CellType | cell name | string | single | Core | CQ2.2, CQ3, CQ3.1, CQ3.3, CQ4.2 |
 | CellType | tissue class | string | single | Core | CQ2.2, CQ3.1 (tissue filter) |

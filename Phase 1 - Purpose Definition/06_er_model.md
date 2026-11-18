@@ -24,7 +24,7 @@ erDiagram
     }
     PATHWAY {
         string hallmark_id PK "e.g. HALLMARK_HYPOXIA"
-        string label "e.g. Hypoxia"
+        string label "e.g. HYPOXIA"
         string source_url "MSigDB gene-set page"
     }
     CELLTYPE {

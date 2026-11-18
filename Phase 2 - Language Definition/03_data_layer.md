@@ -122,7 +122,7 @@ are 873,776 (101,897 reported, 771,879 predicted).
 |---|---|---|
 | D3 | (open since Phase 1, closed 2026-11-18) Exact duplicate rows? | **Collapsed and counted:** after D16 the KG has no per-record data, so duplicates change no triple; 88,979 copies are reported. |
 | D22 | CellTypes left without any marker gene after D21? | **Excluded:** a CellType enters the KG only if it has at least one `isMarkerFor` link (172 of 12,632 excluded; kept in `cell_types.csv` with `inKg = no`). |
-| D23 | How is the Pathway label built? | The GMT file has no readable name, so: drop `HALLMARK_`, turn `_` into spaces, keep the source upper case (`HALLMARK_TNFA_SIGNALING_VIA_NFKB` → `TNFA SIGNALING VIA NFKB`). Acronyms stay correct. |
+| D23 | How is the Pathway label built? | The GMT file has no readable name, so: drop `HALLMARK_`, turn `_` into spaces, keep the source upper case (`HALLMARK_TNFA_SIGNALING_VIA_NFKB` → `TNFA SIGNALING VIA NFKB`). Acronyms stay correct. The label examples of Phase 1 (`05`, `06`, report Section 3) were aligned on 2026-11-18. |
 
 ## 3.6 Diseases: matching to MONDO
 
