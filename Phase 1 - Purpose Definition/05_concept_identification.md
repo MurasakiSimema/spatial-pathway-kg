@@ -22,8 +22,7 @@ sheet [`pf_sheet.csv`](pf_sheet.csv).
 ### Why CellType includes the context (decisions D2 and D5)
 
 - **D2:** we name a cell type with the CellMarker `cell_name` and not with its Cell Ontology ID.
-  Names and CL IDs do not match one-to-one (`Macrophage` appears with 24 CL IDs), and the name
-  is what users actually search for.
+  Names and CL IDs do not match one-to-one (`Macrophage` appears with 24 CL IDs), and the name is what users actually search for.
 - **D5:** the same cell type is reported in many contexts (e.g. `Macrophage` appears in 98
   tissue classes), so the identity key of a CellType is **(`cell_name`, `tissue_class`,
   `disease_category`)**. In this way the tissue filter of CQ2.2 and CQ3.1 works on simple

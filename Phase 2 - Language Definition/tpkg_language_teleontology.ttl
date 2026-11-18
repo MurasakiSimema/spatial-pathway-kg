@@ -1,0 +1,176 @@
+@prefix tpkg: <http://knowdive.disi.unitn.it/etype#> .
+@prefix owl:  <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+# Language teleontology of the Transcriptomics Pathways KG (Phase 2, Language Definition).
+# Generated from language_resource_table.csv. It contains only the language terms:
+# no instances and no knowledge modelling (Phase 3).
+# rdfs:label is reused as it is (W3C RDF Schema) for Pathway and Disease labels.
+
+<http://knowdive.disi.unitn.it/etype> a owl:Ontology ;
+    rdfs:label "Transcriptomics Pathways KG - language teleontology"@en ;
+    dcterms:created "2026-11-18"^^xsd:date .
+
+
+#################### Entity types
+
+tpkg:Gene a owl:Class ;
+    rdfs:label "gene"@en ;
+    rdfs:comment "(genetics) a segment of DNA that is involved in producing a polypeptide chain; it can include regions preceding and following the coding DNA as well as introns between the exons; it is considered a unit of heredity (UKC-29340)"@en .
+
+tpkg:Pathway a owl:Class ;
+    rdfs:label "pathway"@en ;
+    rdfs:comment "A set or series of interactions, often forming a network, which biologists have found useful to group together for organizational, historic, biophysical, or other reasons. (NCIT:C54214)"@en ;
+    rdfs:seeAlso <http://purl.obolibrary.org/obo/NCIT_C54214> .
+
+tpkg:CellType a owl:Class ;
+    rdfs:label "cell type"@en ;
+    rdfs:comment "A cell type is a distinct morphological or functional form of cell. Examples are epithelial, glial etc. (EFO:0000324)"@en ;
+    rdfs:seeAlso <http://www.ebi.ac.uk/efo/EFO_0000324> .
+
+tpkg:Disease a owl:Class ;
+    rdfs:label "disease"@en ;
+    rdfs:comment "an impairment of health or a condition of abnormal functioning (UKC-67092)"@en .
+
+
+#################### Object properties
+
+tpkg:participatesIn a owl:ObjectProperty ;
+    rdfs:label "participates in"@en ;
+    rdfs:comment "a relation between a continuant and a process, in which the continuant is somehow involved in the process (RO:0000056)"@en ;
+    rdfs:seeAlso <http://purl.obolibrary.org/obo/RO_0000056> ;
+    rdfs:domain tpkg:Gene ;
+    rdfs:range tpkg:Pathway .
+
+tpkg:isMarkerFor a owl:ObjectProperty ;
+    rdfs:label "is marker for"@en ;
+    rdfs:comment "c is marker for d iff the presence or occurrence of d is correlated with the presence of occurrence of c, and the observation of c is used to infer the presence or occurrence of d. Note that this does not imply that c and d are in a direct causal relationship, as it may be the case that there is a third entity e that stands in a direct causal relationship with c and d. (RO:0002607)"@en ;
+    rdfs:seeAlso <http://purl.obolibrary.org/obo/RO_0002607> ;
+    rdfs:domain tpkg:Gene ;
+    rdfs:range tpkg:CellType .
+
+tpkg:isReportedMarkerFor a owl:ObjectProperty ;
+    rdfs:label "is reported marker for"@en ;
+    rdfs:comment "A gene is a reported marker for a cell type when CellMarker has at least one record of it collected from a study, a review, or a company, rather than predicted by a computational tool. (TPKG26-01)"@en ;
+    rdfs:domain tpkg:Gene ;
+    rdfs:range tpkg:CellType ;
+    rdfs:subPropertyOf tpkg:isMarkerFor .
+
+tpkg:isPredictedMarkerFor a owl:ObjectProperty ;
+    rdfs:label "is predicted marker for"@en ;
+    rdfs:comment "A gene is a predicted marker for a cell type when all the CellMarker records of it come from computational marker-detection tools. (TPKG26-02)"@en ;
+    rdfs:domain tpkg:Gene ;
+    rdfs:range tpkg:CellType ;
+    rdfs:subPropertyOf tpkg:isMarkerFor .
+
+tpkg:observedIn a owl:ObjectProperty ;
+    rdfs:label "observed in"@en ;
+    rdfs:comment "A cell type is observed in a disease when CellMarker has at least one record of the cell type in that disease; it does not say which of its markers were found there. (TPKG26-03)"@en ;
+    rdfs:domain tpkg:CellType ;
+    rdfs:range tpkg:Disease .
+
+
+#################### Data properties
+
+tpkg:hgncId a owl:DatatypeProperty ;
+    rdfs:label "HGNC ID"@en ;
+    rdfs:comment "Identifier for a gene approved by the HUGO Gene Nomenclature Committee. (EDAM:data_2298)"@en ;
+    rdfs:seeAlso <http://edamontology.org/data_2298> ;
+    rdfs:domain tpkg:Gene ;
+    rdfs:range xsd:string .
+
+tpkg:approvedSymbol a owl:DatatypeProperty ;
+    rdfs:label "approved symbol"@en ;
+    rdfs:comment "A unique gene name approved by an organism specific nomenclature committee. (NCIT:C43568)"@en ;
+    rdfs:seeAlso <http://purl.obolibrary.org/obo/NCIT_C43568> ;
+    rdfs:domain tpkg:Gene ;
+    rdfs:range xsd:string .
+
+tpkg:approvedName a owl:DatatypeProperty ;
+    rdfs:label "approved name"@en ;
+    rdfs:comment "The name of a gene, (typically) assigned by a person and/or according to a naming scheme. It may contain white space characters and is typically more intuitive and readable than a gene symbol. It (typically) may be used to identify similar genes in different species and to derive a gene symbol. (EDAM:data_2299)"@en ;
+    rdfs:seeAlso <http://edamontology.org/data_2299> ;
+    rdfs:domain tpkg:Gene ;
+    rdfs:range xsd:string .
+
+tpkg:sourceSymbol a owl:DatatypeProperty ;
+    rdfs:label "source symbol"@en ;
+    rdfs:comment "The short name of a gene; a single word that does not contain white space characters. It is typically derived from the gene name. (EDAM:data_1026)"@en ;
+    rdfs:seeAlso <http://edamontology.org/data_1026> ;
+    rdfs:domain tpkg:Gene ;
+    rdfs:range xsd:string .
+
+tpkg:hgncResolutionMethod a owl:DatatypeProperty ;
+    rdfs:label "HGNC resolution method"@en ;
+    rdfs:comment "The way a gene symbol of a source dataset was matched to its HGNC entry: on the approved symbol, or on a unique previous or alias symbol. (TPKG26-04)"@en ;
+    rdfs:domain tpkg:Gene ;
+    rdfs:range xsd:string .
+
+tpkg:hallmarkId a owl:DatatypeProperty ;
+    rdfs:label "Hallmark identifier"@en ;
+    rdfs:comment "Identifier of an entry from a database of biological pathways or networks. (EDAM:data_1082)"@en ;
+    rdfs:seeAlso <http://edamontology.org/data_1082> ;
+    rdfs:domain tpkg:Pathway ;
+    rdfs:range xsd:string .
+
+tpkg:sourceUrl a owl:DatatypeProperty ;
+    rdfs:label "source URL"@en ;
+    rdfs:comment "A Uniform Resource Locator (URL). (EDAM:data_1052)"@en ;
+    rdfs:seeAlso <http://edamontology.org/data_1052> ;
+    rdfs:domain tpkg:Pathway ;
+    rdfs:range xsd:anyURI .
+
+tpkg:cellName a owl:DatatypeProperty ;
+    rdfs:label "cell name"@en ;
+    rdfs:comment "The name of a type or group of cells. (EDAM:data_2892)"@en ;
+    rdfs:seeAlso <http://edamontology.org/data_2892> ;
+    rdfs:domain tpkg:CellType ;
+    rdfs:range xsd:string .
+
+tpkg:tissueClass a owl:DatatypeProperty ;
+    rdfs:label "tissue class"@en ;
+    rdfs:comment "The broad tissue or organ category under which CellMarker groups a record (138 values, e.g. Lung, Bone); a tissue class contains one or more tissue types. (TPKG26-05)"@en ;
+    rdfs:domain tpkg:CellType ;
+    rdfs:range xsd:string .
+
+tpkg:diseaseCategory a owl:DatatypeProperty ;
+    rdfs:label "disease category"@en ;
+    rdfs:comment "The broad health context in which CellMarker reports a cell type: Normal, Cancer, or Disease (other diseases). (TPKG26-06)"@en ;
+    rdfs:domain tpkg:CellType ;
+    rdfs:range xsd:string .
+
+tpkg:tissueType a owl:DatatypeProperty ;
+    rdfs:label "tissue type"@en ;
+    rdfs:comment "part of an organism consisting of an aggregate of cells having a similar structure and function (UKC-28479)"@en ;
+    rdfs:domain tpkg:CellType ;
+    rdfs:range xsd:string .
+
+tpkg:cellNameClass a owl:DatatypeProperty ;
+    rdfs:label "cell name class"@en ;
+    rdfs:comment "The broader cell class under which CellMarker groups a cell name (248 values, e.g. Progenitor cell). (TPKG26-07)"@en ;
+    rdfs:domain tpkg:CellType ;
+    rdfs:range xsd:string .
+
+tpkg:cellOntologyId a owl:DatatypeProperty ;
+    rdfs:label "Cell Ontology ID"@en ;
+    rdfs:comment "Cell type ontology concept ID. (EDAM:data_3238)"@en ;
+    rdfs:seeAlso <http://edamontology.org/data_3238> ;
+    rdfs:domain tpkg:CellType ;
+    rdfs:range xsd:string .
+
+tpkg:mondoId a owl:DatatypeProperty ;
+    rdfs:label "MONDO ID"@en ;
+    rdfs:comment "Identifier of an entry from a database of disease. (EDAM:data_3667)"@en ;
+    rdfs:seeAlso <http://edamontology.org/data_3667> ;
+    rdfs:domain tpkg:Disease ;
+    rdfs:range xsd:string .
+
+tpkg:sourceDiseaseName a owl:DatatypeProperty ;
+    rdfs:label "source disease name"@en ;
+    rdfs:comment "The name of some disease. (EDAM:data_3668)"@en ;
+    rdfs:seeAlso <http://edamontology.org/data_3668> ;
+    rdfs:domain tpkg:Disease ;
+    rdfs:range xsd:string .

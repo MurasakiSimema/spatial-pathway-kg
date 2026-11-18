@@ -76,9 +76,10 @@ Traditional ontology and KG engineering often suffers from scope creep, semantic
 ### Phase 2: Language Definition
 - **Knowledge Layer**:
   - Finalize language terms for `Gene`, `Pathway`, `CellType`, `Disease`, `participates_in`, `is_marker_for`, `observed_in`, and data properties.
-  - Align terms to lexical concepts in UKC / WordNet (identifying synsets, hypernyms, definitions).
+  - Concept alignment, one term at a time, to the chosen Language Teleontology (UKC and/or reference ontologies): if the concept exists, align to it; if not, define a new concept in the right place of the hierarchy, with a custom ID and gloss.
+  - Produce the Language Resource Table (ConceptID, Word-en, Gloss-en) and the language teleontology OWL file (Protégé).
 - **Data Layer**:
-  - Filter and clean raw input datasets: trim whitespace, uppercase gene symbols for comparison only (AGENT.md §5.1; the original strings are kept for audit), validate format of identifiers.
+  - Dataset filtering (drop elements not defined by an LRT concept), cleaning and formatting (column headings renamed to the language terms, value formats standardized to the datatype ranges, missing values handled), HGNC resolution and MONDO matching (AGENT.md §5.1, §4.5).
 - **Evaluation**: Report initial vs final term counts and teleontology alignments.
 
 ### Phase 3: Knowledge Definition

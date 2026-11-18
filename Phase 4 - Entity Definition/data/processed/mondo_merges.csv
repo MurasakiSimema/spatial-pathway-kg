@@ -1,0 +1,38 @@
+mondoId,label,strings,sourceDiseaseName
+MONDO:0000607,primary cutaneous T-cell non-Hodgkin lymphoma,2,Cutaneous T-cell lymphoma|Primary cutaneous T-cell lymphoma
+MONDO:0001056,gastric cancer,3,Gastric cancer|Gastric cancer (circulating)|Stomach cancer
+MONDO:0001572,leiomyoma,2,Fibroid|Leiomyoma
+MONDO:0002529,skin squamous cell carcinoma,2,Cutaneous squamous cell carcinoma|Skin squamous cell carcinoma
+MONDO:0002691,liver cancer,2,Liver cancer|Primary liver cancer
+MONDO:0002728,rhabdoid tumor,2,Malignant rhabdoid tumor|Rhabdoid tumor
+MONDO:0003198,small intestine adenocarcinoma,2,Small bowel adenocarcinoma|Small intestine adenocarcinoma
+MONDO:0004947,B-cell acute lymphoblastic leukemia,3,B cell acute lymphoblastic leukemia|B cell-acute lymphoblastic leukemia|B-cell acute lymphoblastic leukemia
+MONDO:0004953,invasive ductal breast carcinoma,2,Invasive ductal breast carcinoma|Invasive ductal carcinoma (IDC)
+MONDO:0004992,cancer,2,Cancer|Cancer (TIL)
+MONDO:0005036,gastric adenocarcinoma,2,Gastric adenocarcinoma|Stomach adenocarcinoma
+MONDO:0005075,thyroid gland papillary carcinoma,2,Papillary thyroid cancer|Papillary thyroid carcinoma
+MONDO:0005105,melanoma,2,Malignant melanoma|Melanoma
+MONDO:0005140,ovarian carcinoma,2,Epithelial ovarian cancer|Ovarian carcinoma
+MONDO:0005148,type 2 diabetes mellitus,2,Type 2 diabetes|Type 2 diabetes mellitus
+MONDO:0005184,pancreatic ductal adenocarcinoma,2,Pancreatic ductal adenocarcinoma|Pancreatic ductal carcinoma
+MONDO:0005233,non-small cell lung carcinoma,2,Non-small cell lung cancer|Non-small cell lung carcinoma
+MONDO:0005502,dengue disease,3,Dengue|Dengue fever|Dengue virus infection
+MONDO:0005575,colorectal cancer,2,Colorectal cancer|Colorectal cancer (circulating)
+MONDO:0007027,metabolic dysfunction-associated steatohepatitis,2,Metabolic dysfunction-associated steatohepatitis|Non-alcoholic steatohepatitis
+MONDO:0007254,breast cancer,3,Breast cancer|Breast cancer (Irradiated)|Breast cancer (circulating)
+MONDO:0007256,hepatocellular carcinoma,4,Hepatocellular cancer|Hepatocellular carcinoma|Hepatocellular carcinoma (HEV+ MASLD+)|Hepatocellular carcinoma (MASLD-related)
+MONDO:0009693,plasma cell myeloma,3,Multiple myeloma|Myeloma|Plasma cell myeloma
+MONDO:0010030,Sjogren syndrome,2,Sicca syndrome|Sjogren's syndrome
+MONDO:0013209,metabolic dysfunction-associated steatotic liver disease,2,Metabolic dysfunction-associated steatotic liver disease|Non-alcoholic fatty liver disease
+MONDO:0015759,B-cell non-Hodgkin lymphoma,2,B-cell lymphoma|B-cell non-Hodgkin lymphoma
+MONDO:0018076,tuberculosis,2,Tuberculosis|Tuberculosis disease
+MONDO:0018177,glioblastoma,2,Glioblastoma|Glioblastoma multiforme
+MONDO:0018874,acute myeloid leukemia,2,Acute myelogenous leukemia|Acute myeloid leukemia (AML)
+MONDO:0018881,myelodysplastic syndrome,2,Myelodysplastic neoplasm|Myelodysplastic syndrome
+MONDO:0019087,cholangiocarcinoma,2,Cholangiocarcinoma|Cholangiocellular carcinoma
+MONDO:0024644,myocardial ischemia,2,Ischaemic heart disease|Ischemic heart disease
+MONDO:0044881,hematopoietic and lymphoid cell neoplasm,2,Hematologic cancer|Hematologic malignancy
+MONDO:0100096,COVID-19,3,COVID-19|COVID-19 (Omicron BA.5 sublineages)|COVID-19 (SARS-CoV-2 infection)
+MONDO:0100291,early T cell progenitor acute lymphoblastic leukemia,2,Early T-cell precursor acute lymphoblastic leukemia (ETP-ALL)|Early T-cell progenitor acute lymphoblastic leukemia
+MONDO:0100342,malignant glioma,2,High-grade glioma (HGG)|Malignant glioma
+MONDO:0700079,hormone receptor-positive breast cancer,2,Hormone receptor-positive breast cancer|Hormone receptor-positive breast cancer (HR+ BC)

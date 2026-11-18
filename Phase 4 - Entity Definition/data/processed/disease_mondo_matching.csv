@@ -1,0 +1,1065 @@
+sourceDiseaseName,normalized,status,mondoId,matchedOn,candidates,mondoLabel,metastasis,records,cellTypes
+AIDS-related non-hodgkin's lymphoma,aids related non hodgkin lymphoma,no_match,,,,,no,7,1
+Abdominal aortic aneurysm (AAA),abdominal aortic aneurysm (aaa),resolved,MONDO:0005350,without final parentheses,,abdominal aortic aneurysm,no,79,20
+Acanthamoeba keratitis,acanthamoeba keratitis,resolved,MONDO:0005629,full string,,Acanthamoeba keratitis,no,25,13
+Acinetobacter baumannii infection,acinetobacter baumannii infection,no_match,,,,,no,11,1
+Acne,acne,resolved,MONDO:0011438,full string,,acne,no,2,1
+Acral melanoma,acral melanoma,related_only,,full string,MONDO:0003865,,no,78,14
+Activated B-cell like-Diffuse large B cell lymphoma (ABC-DLBCL),activated b cell like diffuse large b cell lymphoma (abc dlbcl),no_match,,,,,no,10,1
+Acute B lymphoblastic leukemia,acute b lymphoblastic leukemia,no_match,,,,,no,13,7
+Acute SARS-CoV-2 Infection,acute sars cov 2 infection,no_match,,,,,no,18,9
+Acute T lymphoblastic leukaemia,acute t lymphoblastic leukaemia,no_match,,,,,no,11,3
+Acute anterior uveitis,acute anterior uveitis,no_match,,,,,no,15,6
+Acute aortic dissection,acute aortic dissection,no_match,,,,,no,9,5
+Acute atherothrombotic stroke,acute atherothrombotic stroke,no_match,,,,,no,2,1
+Acute cellular rejection,acute cellular rejection,no_match,,,,,no,4,4
+Acute coronary syndrom,acute coronary syndrom,no_match,,,,,no,22,6
+Acute exacerbation of idiopathic pulmonary fibrosis (AE-IPF),acute exacerbation of idiopathic pulmonary fibrosis (ae ipf),no_match,,,,,no,9,3
+Acute kidney injury,acute kidney injury,resolved,MONDO:0002492,full string,,acute kidney injury,no,16447,21
+Acute leukemia,acute leukemia,resolved,MONDO:0010643,full string,,acute leukemia,no,3,1
+Acute liver failure,acute liver failure,resolved,MONDO:0019542,full string,,acute liver failure,no,17,10
+Acute lung injury,acute lung injury,resolved,MONDO:0015796,full string,,acute lung injury,no,7,4
+Acute lymphoblastic leukemia(ALL),acute lymphoblastic leukemia(all),resolved,MONDO:0004967,without final parentheses,,acute lymphoblastic leukemia,no,189,36
+Acute myelogenous leukemia,acute myelogenous leukemia,resolved,MONDO:0018874,full string,,acute myeloid leukemia,no,13,7
+Acute myeloid leukemia (AML),acute myeloid leukemia (aml),resolved,MONDO:0018874,full string,,acute myeloid leukemia,no,12633,150
+Acute pancreatitis,acute pancreatitis,resolved,MONDO:0006515,full string,,acute pancreatitis,no,2,1
+Acute tubular injury,acute tubular injury,no_match,,,,,no,7,3
+Acute wound,acute wound,no_match,,,,,no,17,9
+Acute-on-chronic Liver Failure,acute on chronic liver failure,no_match,,,,,no,44,12
+Adamantinomatous craniopharyngioma,adamantinomatous craniopharyngioma,resolved,MONDO:0002787,full string,,adamantinous craniopharyngioma,no,12,8
+Adenocarcinoma,adenocarcinoma,resolved,MONDO:0004970,full string,,adenocarcinoma,no,2008,4
+Adenocarcinoma of the cervix,adenocarcinoma of the cervix,resolved,MONDO:0005153,full string,,cervical adenocarcinoma,no,20,12
+Adenocarcinoma of the stomach and the gastroesophageal junction,adenocarcinoma of the stomach and the gastroesophageal junction,no_match,,,,,no,1,1
+Adenoid cystic carcinoma,adenoid cystic carcinoma,resolved,MONDO:0004971,full string,,adenoid cystic carcinoma,no,71,20
+Adenomyosis,adenomyosis,resolved,MONDO:0010888,full string,,adenomyosis,no,51,13
+Adenosquamous carcinoma,adenosquamous carcinoma,resolved,MONDO:0006074,full string,,adenosquamous carcinoma,no,2,1
+Adrenal incidentaloma,adrenal incidentaloma,related_only,,full string,MONDO:0003924,,no,3,1
+Adrenal neuroblastoma,adrenal neuroblastoma,resolved,MONDO:0006076,full string,,adrenal gland neuroblastoma,no,49,12
+Adrenocortical adenoma,adrenocortical adenoma,resolved,MONDO:0003924,full string,,adrenal cortex adenoma,no,11,7
+Adrenocortical carcinoma,adrenocortical carcinoma,resolved,MONDO:0006639,full string,,adrenal cortex carcinoma,no,134,37
+Adult diffuse glioma,adult diffuse glioma,no_match,,,,,no,9,6
+Advanced and refractory cancers,advanced and refractory cancers,no_match,,,,,no,4,4
+Advanced coronary atherosclerosis,advanced coronary atherosclerosis,no_match,,,,,no,2,2
+Age-related macular degeneration,age related macular degeneration,resolved,MONDO:0005150,full string,,age-related macular degeneration,no,92,35
+Aging,aging,non_disease,,,,,no,44,21
+Alcohol use disorder,alcohol use disorder,no_match,,,,,no,35,12
+Alcohol-associated hepatitis,alcohol associated hepatitis,no_match,,,,,no,5,1
+Alcohol-associated liver disease,alcohol associated liver disease,no_match,,,,,no,1,1
+Alcohol-related liver disease,alcohol related liver disease,no_match,,,,,no,6,2
+Alcoholic hepatitis,alcoholic hepatitis,resolved,MONDO:0001505,full string,,alcoholic hepatitis,no,8,3
+Aldosterone-producing adenoma,aldosterone producing adenoma,no_match,,,,,no,5,3
+Alexander disease,alexander disease,resolved,MONDO:0008752,full string,,Alexander disease,no,8521,19
+Allergic asthma,allergic asthma,resolved,MONDO:0004784,full string,,allergic asthma,no,12,6
+Allergic asthmatic,allergic asthmatic,no_match,,,,,no,14,6
+Allergic rhinitis,allergic rhinitis,resolved,MONDO:0011786,full string,,allergic rhinitis,no,44,14
+Alveolar cell carcinoma,alveolar cell carcinoma,no_match,,,,,no,1,1
+Alzheimer's disease,alzheimer disease,resolved,MONDO:0004975,full string,,Alzheimer disease,no,960,68
+Alzheimer's disease and related dementia,alzheimer disease and related dementia,no_match,,,,,no,15,4
+Ameloblastoma,ameloblastoma,resolved,MONDO:0017795,full string,,ameloblastoma,no,38,9
+Ampullary cancer,ampullary cancer,no_match,,,,,no,3,1
+Amyotrophic lateral sclerosis,amyotrophic lateral sclerosis,resolved,MONDO:0004976,full string,,amyotrophic lateral sclerosis,no,196,49
+Anal squamous cell carcinoma,anal squamous cell carcinoma,resolved,MONDO:0006082,full string,,anal squamous cell carcinoma,no,1,1
+Anaplastic large cell lymphoma,anaplastic large cell lymphoma,resolved,MONDO:0020325,full string,,anaplastic large cell lymphoma,no,4,2
+Anaplastic meningioma,anaplastic meningioma,resolved,MONDO:0020635,full string,,anaplastic meningioma,no,1,1
+Anaplastic thyroid cancer,anaplastic thyroid cancer,resolved,MONDO:0006468,full string,,thyroid gland undifferentiated (anaplastic) carcinoma,no,37,11
+Angioimmunoblastic T-cell lymphoma,angioimmunoblastic t cell lymphoma,resolved,MONDO:0004977,full string,,angioimmunoblastic T-cell lymphoma,no,37,14
+Angiosarcoma,angiosarcoma,resolved,MONDO:0016982,full string,,angiosarcoma,no,4,4
+Ankylosing spondylitis,ankylosing spondylitis,resolved,MONDO:0005306,full string,,ankylosing spondylitis,no,37,19
+Antibiotic-refractory lyme arthritis,antibiotic refractory lyme arthritis,no_match,,,,,no,30,7
+Antiphospholipid syndrome,antiphospholipid syndrome,resolved,MONDO:8000010,full string,,antiphospholipid syndrome,no,16,8
+Aortic aneurysm,aortic aneurysm,resolved,MONDO:0005160,full string,,aortic aneurysm,no,32,5
+Aortic calcification,aortic calcification,no_match,,,,,no,1,1
+Aortic dissection,aortic dissection,no_match,,,,,no,13,4
+Aortic valve stenosis,aortic valve stenosis,resolved,MONDO:0042981,full string,,aortic valve stenosis,no,1,1
+Aplastic anemia,aplastic anemia,resolved,MONDO:0015909,full string,,aplastic anemia,no,39,19
+Arrhythmia,arrhythmia,resolved,MONDO:0007263,full string,,cardiac rhythm disease,no,1,1
+Arsenic exposure,arsenic exposure,non_disease,,,,,no,1,1
+Arthritis,arthritis,resolved,MONDO:0005578,full string,,arthritic joint disease,no,25,17
+Ascending aortic aneurysms and dissections,ascending aortic aneurysms and dissections,no_match,,,,,no,5,1
+Aspirin-exacerbated respiratory disease,aspirin exacerbated respiratory disease,no_match,,,,,no,14,8
+Asthma,asthma,resolved,MONDO:0004979,full string,,asthma,no,102,31
+Asthmatic,asthmatic,no_match,,,,,no,13,5
+Astroblastoma,astroblastoma,resolved,MONDO:0016707,full string,,astroblastoma,no,25,2
+Astrocytoma,astrocytoma,related_only,,full string,MONDO:0021636,,no,14,5
+Asymptomatic waldenstrom's macroglobulinemia,asymptomatic waldenstrom macroglobulinemia,no_match,,,,,no,238,13
+Atherosclerosis,atherosclerosis,resolved,MONDO:0005311,full string,,atherosclerosis,no,442,83
+Atherosclerotic cardiovascular disease,atherosclerotic cardiovascular disease,resolved,MONDO:1060134,full string,,atherosclerotic cardiovascular disease,no,2,2
+Atherosclerotic disease,atherosclerotic disease,no_match,,,,,no,12,6
+Atherosclerotic lesions,atherosclerotic lesions,no_match,,,,,no,36,12
+Atopic dermatitis,atopic dermatitis,resolved,MONDO:0004980,full string,,atopic eczema,no,290,64
+Atrial fibrillation,atrial fibrillation,resolved,MONDO:0004981,full string,,atrial fibrillation,no,99,22
+Atypical teratoid rhabdoid tumor,atypical teratoid rhabdoid tumor,resolved,MONDO:0020560,full string,,atypical teratoid rhabdoid tumor,no,13,1
+Autism spectrum disorder (ASD),autism spectrum disorder (asd),resolved,MONDO:0005258,without final parentheses,,autism spectrum disorder,no,59,16
+Autoimmune disease,autoimmune disease,resolved,MONDO:0007179,full string,,autoimmune disease,no,16,2
+Autoimmune encephalitis,autoimmune encephalitis,resolved,MONDO:0020640,full string,,autoimmune encephalitis,no,11,2
+Autoimmune limbic encephalitis,autoimmune limbic encephalitis,resolved,MONDO:0850097,full string,,autoimmune limbic encephalitis,no,1,1
+Autoimmune polyendocrinopathy-candidiasis-ectodermal dystrophy,autoimmune polyendocrinopathy candidiasis ectodermal dystrophy,resolved,MONDO:0009411,full string,,autoimmune polyendocrine syndrome type 1,no,1,1
+Autoimmune uveitis,autoimmune uveitis,resolved,MONDO:0031012,full string,,autoimmune uveitis,no,6,2
+Autosomal dominant polycystic kidney disease,autosomal dominant polycystic kidney disease,resolved,MONDO:0004691,full string,,autosomal dominant polycystic kidney disease,no,1,1
+Axial spondloarthritis,axial spondloarthritis,no_match,,,,,no,43,12
+Azoospermia,azoospermia,resolved,MONDO:0100459,full string,,azoospermia,no,6,2
+B cell acute lymphoblastic leukemia,b cell acute lymphoblastic leukemia,resolved,MONDO:0004947,full string,,B-cell acute lymphoblastic leukemia,no,17,5
+B cell expansion with NF-KB and T cell anergy (BENTA),b cell expansion with nf kb and t cell anergy (benta),no_match,,,,,no,14,6
+B cell type MALT lymphoma,b cell type malt lymphoma,no_match,,,,,no,9,2
+B cell-acute lymphoblastic leukemia,b cell acute lymphoblastic leukemia,resolved,MONDO:0004947,full string,,B-cell acute lymphoblastic leukemia,no,220,17
+B-Acute Lymphoblastic Leukemia,b acute lymphoblastic leukemia,related_only,,full string,MONDO:0000814|MONDO:0000872|MONDO:0020511,,no,184,8
+B-cell acute lymphoblastic leukemia,b cell acute lymphoblastic leukemia,resolved,MONDO:0004947,full string,,B-cell acute lymphoblastic leukemia,no,18,7
+B-cell leukemia,b cell leukemia,no_match,,,,,no,1,1
+B-cell lymphoma,b cell lymphoma,resolved,MONDO:0015759,full string,,B-cell non-Hodgkin lymphoma,no,95,25
+B-cell malignancies,b cell malignancies,no_match,,,,,no,14,6
+B-cell non-Hodgkin lymphoma,b cell non hodgkin lymphoma,resolved,MONDO:0015759,full string,,B-cell non-Hodgkin lymphoma,no,32,5
+B-cell precursor acute lymphoblastic leukemia,b cell precursor acute lymphoblastic leukemia,no_match,,,,,no,20,7
+B-cell progenitor acute lymphoblastic leukemia (BCP-ALL),b cell progenitor acute lymphoblastic leukemia (bcp all),no_match,,,,,no,5,2
+B-lymphoblastic leukemia,b lymphoblastic leukemia,no_match,,,,,no,4,2
+Bacterial infection,bacterial infection,resolved,MONDO:0005113,full string,,bacterial infectious disease,no,14,5
+Bacterial keratitis,bacterial keratitis,no_match,,,,,no,25,13
+Bacterial pneumonia,bacterial pneumonia,resolved,MONDO:0004652,full string,,bacterial pneumonia,no,23,9
+Barrett's esophagus,barrett esophagus,resolved,MONDO:0013662,full string,,Barrett esophagus,no,16,9
+Basal cell carcinoma,basal cell carcinoma,resolved,MONDO:0020804,full string,,basal cell carcinoma,no,726,104
+Behçet's disease,behçet disease,resolved,MONDO:0007191,full string,,Behcet disease,no,1,1
+Behçet's uveitis,behçet uveitis,no_match,,,,,no,23,9
+Benign prostatic hyperplasia,benign prostatic hyperplasia,resolved,MONDO:0010811,full string,,benign prostatic hyperplasia,no,37,12
+Beta thalassemia,beta thalassemia,resolved,MONDO:0019402,full string,,beta thalassemia,no,7,7
+Biliary atresia,biliary atresia,resolved,MONDO:0008867,full string,,biliary atresia,no,8,4
+Biliary tract cancer,biliary tract cancer,resolved,MONDO:0003060,full string,,biliary tract cancer,no,11,5
+Bioprosthetic heart valve calcification,bioprosthetic heart valve calcification,no_match,,,,,no,4,1
+Bipolar disorder,bipolar disorder,resolved,MONDO:0004985,full string,,bipolar disorder,no,16,5
+Birdshot chorioretinopathy,birdshot chorioretinopathy,resolved,MONDO:0011599,full string,,birdshot chorioretinopathy,no,13,1
+Birt-Hogg-Dubé syndrome,birt hogg dubé syndrome,resolved,MONDO:0800444,full string,,Birt-Hogg-Dube syndrome,no,11,2
+Bladder cancer,bladder cancer,related_only,,full string,MONDO:0004986|MONDO:0022578,,no,411,82
+Bladder carcinoma,bladder carcinoma,resolved,MONDO:0004986,full string,,urinary bladder carcinoma,no,1,1
+Blastic plasmacytoid dendritic cell neoplasm,blastic plasmacytoid dendritic cell neoplasm,resolved,MONDO:0019467,full string,,CD4+/CD56+ hematodermic neoplasm,no,7037,19
+Body myositis,body myositis,no_match,,,,,no,56,28
+Bone cancer,bone cancer,resolved,MONDO:0002129,full string,,bone cancer,no,2,2
+Bone development,bone development,no_match,,,,,no,19,3
+Bone fractures,bone fractures,no_match,,,,,no,18,6
+Bone marrow lesions,bone marrow lesions,no_match,,,,,no,42,13
+Bone metabolism,bone metabolism,no_match,,,,,no,2,1
+Brain cancer,brain cancer,resolved,MONDO:0001657,full string,,brain cancer,no,66,17
+Brain inflammation,brain inflammation,related_only,,full string,MONDO:0019956,,no,9,4
+Brain metastasis,brain metastasis,no_match,,,,,yes,8,3
+Brain metastasis from lung adenocarcinoma,brain metastasis from lung adenocarcinoma,no_match,,,,,yes,2,1
+Brain parenchymal and leptomeningeal metastases from NSCLC,brain parenchymal and leptomeningeal metastases from nsclc,no_match,,,,,yes,17,10
+Brainstem organoid,brainstem organoid,no_match,,,,,no,7,4
+Breast adenocarcinoma,breast adenocarcinoma,resolved,MONDO:0004988,full string,,breast adenocarcinoma,no,4,2
+Breast cancer,breast cancer,resolved,MONDO:0007254,full string,,breast cancer,no,15757,239
+Breast cancer (Irradiated),breast cancer (irradiated),resolved,MONDO:0007254,without final parentheses,,breast cancer,no,2,1
+Breast cancer (circulating),breast cancer (circulating),resolved,MONDO:0007254,without final parentheses,,breast cancer,no,19,2
+Breast cancer bone metastases,breast cancer bone metastases,no_match,,,,,yes,567,6
+Breast cancer bone metastasis,breast cancer bone metastasis,no_match,,,,,yes,4,2
+Breast cancer brain metastasis,breast cancer brain metastasis,no_match,,,,,yes,2,1
+Breast carcinoma,breast carcinoma,resolved,MONDO:0004989,full string,,breast carcinoma,no,329,37
+Breast invasive carcinoma,breast invasive carcinoma,no_match,,,,,no,16,3
+Bronchial asthma,bronchial asthma,no_match,,,,,no,1,1
+Bronchiolitis obliterans syndrome,bronchiolitis obliterans syndrome,resolved,MONDO:0015265,full string,,bronchiolitis obliterans syndrome,no,8,3
+Bronchopulmonary dysplasia,bronchopulmonary dysplasia,resolved,MONDO:0019091,full string,,bronchopulmonary dysplasia,no,10,4
+Brucellosis,brucellosis,resolved,MONDO:0005683,full string,,brucellosis,no,8,3
+Bullous pemphigoid,bullous pemphigoid,resolved,MONDO:0019082,full string,,bullous pemphigoid,no,8,5
+CACNA1A haploinsufficiency,cacna1a haploinsufficiency,no_match,,,,,no,6,3
+CNS primitive neuroectodermal tumor,cns primitive neuroectodermal tumor,resolved,MONDO:0000640,full string,,central nervous system primitive neuroectodermal neoplasm,no,3,1
+COVID-19,covid 19,resolved,MONDO:0100096,full string,,COVID-19,no,67070,230
+COVID-19 (Omicron BA.5 sublineages),covid 19 (omicron ba.5 sublineages),resolved,MONDO:0100096,without final parentheses,,COVID-19,no,13,8
+COVID-19 (SARS-CoV-2 infection),covid 19 (sars cov 2 infection),resolved,MONDO:0100096,without final parentheses,,COVID-19,no,16,6
+COVID-19 and tuberculosis coinfection,covid 19 and tuberculosis coinfection,no_match,,,,,no,15,8
+COVID-19-associated lung injury,covid 19 associated lung injury,no_match,,,,,no,13,3
+COVID-19-associated pulmonary aspergillosis,covid 19 associated pulmonary aspergillosis,no_match,,,,,no,10,2
+Calcium Oxalate (CaOx) Stone Disease,calcium oxalate (caox) stone disease,no_match,,,,,no,34,8
+Cancer,cancer,resolved,MONDO:0004992,full string,,cancer,no,34,13
+Cancer (TIL),cancer (til),resolved,MONDO:0004992,without final parentheses,,cancer,no,18,4
+Cardiac allograft rejection,cardiac allograft rejection,no_match,,,,,no,3,2
+Cardiac arrest,cardiac arrest,resolved,MONDO:0000745,full string,,cardiac arrest,no,18,3
+Cardiac fibrosis,cardiac fibrosis,no_match,,,,,no,1,1
+Cardiac remodeling,cardiac remodeling,no_match,,,,,no,2,1
+Cardiovascular disease,cardiovascular disease,resolved,MONDO:0004995,full string,,cardiovascular disorder,no,22,3
+Cardiovascular diseases,cardiovascular diseases,no_match,,,,,no,8,3
+Cartilage defect,cartilage defect,no_match,,,,,no,20,5
+Cartilage hair hypoplasia (CHH),cartilage hair hypoplasia (chh),resolved,MONDO:0009595,without final parentheses,,cartilage-hair hypoplasia,no,1,1
+Castration-resistant prostate adenocarcinoma,castration resistant prostate adenocarcinoma,no_match,,,,,no,3,1
+Castration-resistant prostate cancer,castration resistant prostate cancer,no_match,,,,,no,30,3
+Cataract,cataract,resolved,MONDO:0005129,full string,,cataract,no,1,1
+Cavernous malformation,cavernous malformation,no_match,,,,,no,11,8
+Celiac disease,celiac disease,resolved,MONDO:0005130,full string,,celiac disease,no,15,9
+Central nervous system cancer,central nervous system cancer,resolved,MONDO:0002714,full string,,central nervous system cancer,no,11,1
+Central neurocytoma,central neurocytoma,resolved,MONDO:0019134,full string,,central neurocytoma,no,17,7
+Cerebral cavernous,cerebral cavernous,no_match,,,,,no,9,8
+Cerebral cavernous malformations (CCMs),cerebral cavernous malformations (ccms),related_only,,without final parentheses,MONDO:0020724|MONDO:0031037,,no,4,1
+Cerebrovascular malformation,cerebrovascular malformation,no_match,,,,,no,13,1
+Cervical cancer,cervical cancer,resolved,MONDO:0002974,full string,,cervical cancer,no,382,55
+Cervical cancer and cervical intraepithelial neoplasia,cervical cancer and cervical intraepithelial neoplasia,no_match,,,,,no,3,1
+Cervical premalignant lesions,cervical premalignant lesions,no_match,,,,,no,9,9
+Cervical squamous cell carcinoma,cervical squamous cell carcinoma,resolved,MONDO:0006143,full string,,cervical squamous cell carcinoma,no,203,31
+Checkpoint-induced colitis,checkpoint induced colitis,no_match,,,,,no,13,12
+Childhood Medulloblastoma,childhood medulloblastoma,resolved,MONDO:0002797,full string,,childhood medulloblastoma,no,2006,4
+Cholangiocarcinoma,cholangiocarcinoma,resolved,MONDO:0019087,full string,,cholangiocarcinoma,no,730,105
+Cholangiocellular carcinoma,cholangiocellular carcinoma,resolved,MONDO:0019087,full string,,cholangiocarcinoma,no,6,3
+Chondrosarcoma,chondrosarcoma,resolved,MONDO:0008977,full string,,chondrosarcoma,no,5,1
+Chordoma,chordoma,resolved,MONDO:0008978,full string,,chordoma,no,40,15
+Choroid plexus papilloma,choroid plexus papilloma,resolved,MONDO:0009837,full string,,choroid plexus papilloma,no,1,1
+Choroidal atrophy,choroidal atrophy,no_match,,,,,no,11,3
+Chromophobe renal cell carcinoma,chromophobe renal cell carcinoma,resolved,MONDO:0017885,full string,,chromophobe renal cell carcinoma,no,1,1
+Chronic Hepatitis B (CHB),chronic hepatitis b (chb),resolved,MONDO:0005366,without final parentheses,,chronic hepatitis B virus infection,no,7271,53
+Chronic Hepatitis C,chronic hepatitis c,resolved,MONDO:0005354,full string,,chronic hepatitis C virus infection,no,5,1
+Chronic active EBV disease,chronic active ebv disease,no_match,,,,,no,6,6
+Chronic active antibody-mediated rejection,chronic active antibody mediated rejection,no_match,,,,,no,14,3
+Chronic apical periodontitis,chronic apical periodontitis,resolved,MONDO:0001251,full string,,chronic apical periodontitis,no,25,13
+Chronic dematiaceous fungal infection,chronic dematiaceous fungal infection,no_match,,,,,no,3,2
+Chronic graft versus host disease,chronic graft versus host disease,resolved,MONDO:0020547,full string,,chronic graft versus host disease,no,4,4
+Chronic idiopathic erythroderma,chronic idiopathic erythroderma,no_match,,,,,no,105,21
+Chronic inflammatory demyelinating polyneuropathy,chronic inflammatory demyelinating polyneuropathy,resolved,MONDO:0006702,full string,,chronic inflammatory demyelinating polyradiculoneuropathy,no,15,10
+Chronic kidney disease,chronic kidney disease,resolved,MONDO:0005300,full string,,chronic kidney disease,no,28,15
+Chronic limb-threatening ischemia,chronic limb threatening ischemia,no_match,,,,,no,11,10
+Chronic lymphocytic leukemia,chronic lymphocytic leukemia,resolved,MONDO:0004948,full string,,B-cell chronic lymphocytic leukemia,no,156,40
+Chronic myeloid leukemia,chronic myeloid leukemia,resolved,MONDO:0011996,full string,,chronic myeloid leukemia,no,144,25
+Chronic myelomonocytic leukemia,chronic myelomonocytic leukemia,resolved,MONDO:0020311,full string,,chronic myelomonocytic leukemia,no,6,1
+Chronic myocarditis,chronic myocarditis,no_match,,,,,no,2,1
+Chronic obstructive pulmonary disease,chronic obstructive pulmonary disease,resolved,MONDO:0005002,full string,,chronic obstructive pulmonary disease,no,29,12
+Chronic pain,chronic pain,no_match,,,,,no,1,1
+Chronic pancreatitis,chronic pancreatitis,resolved,MONDO:0005003,full string,,chronic pancreatitis,no,8,2
+Chronic rhinosinusitis,chronic rhinosinusitis,resolved,MONDO:0006031,full string,,chronic rhinosinusitis,no,174,31
+Chronic rhinosinusitis with nasal polyposis,chronic rhinosinusitis with nasal polyposis,no_match,,,,,no,11,6
+Chronic rhinosinusitis with nasal polyps,chronic rhinosinusitis with nasal polyps,no_match,,,,,no,59,18
+Chronic spontaneous urticaria,chronic spontaneous urticaria,no_match,,,,,no,14,5
+Chronic thromboembolic pulmonary hypertension,chronic thromboembolic pulmonary hypertension,resolved,MONDO:0013024,full string,,chronic thromboembolic pulmonary hypertension,no,7,5
+Chronic traumatic encephalopathy,chronic traumatic encephalopathy,resolved,MONDO:0019976,full string,,chronic traumatic encephalopathy,no,14,6
+Chronic wound,chronic wound,no_match,,,,,no,2,1
+Cirrhosis,cirrhosis,resolved,MONDO:0005155,full string,,cirrhosis of liver,no,4,1
+Classic Hodgkin lymphoma,classic hodgkin lymphoma,resolved,MONDO:0009348,full string,,classic Hodgkin lymphoma,no,58,19
+Clear cell renal cell carcinoma,clear cell renal cell carcinoma,resolved,MONDO:0005005,full string,,clear cell renal carcinoma,no,744,115
+Clear cell renal cell carcinoma pancreatic metastasis,clear cell renal cell carcinoma pancreatic metastasis,no_match,,,,,yes,14,9
+Colitis,colitis,resolved,MONDO:0005292,full string,,colitis,no,6,3
+Colon adenocarcinoma,colon adenocarcinoma,resolved,MONDO:0002271,full string,,colon adenocarcinoma,no,43,16
+Colon cancer,colon cancer,resolved,MONDO:0021063,full string,,malignant colon neoplasm,no,388,67
+Colon carcinoma,colon carcinoma,resolved,MONDO:0002032,full string,,colon carcinoma,no,3,1
+Colonic diverticulosis,colonic diverticulosis,no_match,,,,,no,12,9
+Colorectal adenocarcinoma,colorectal adenocarcinoma,resolved,MONDO:0005008,full string,,colorectal adenocarcinoma,no,3,1
+Colorectal adenoma,colorectal adenoma,resolved,MONDO:0005484,full string,,colorectal adenoma,no,5,3
+Colorectal cancer,colorectal cancer,resolved,MONDO:0005575,full string,,colorectal cancer,no,51959,324
+Colorectal cancer (circulating),colorectal cancer (circulating),resolved,MONDO:0005575,without final parentheses,,colorectal cancer,no,5,1
+Colorectal cancer liver metastasis,colorectal cancer liver metastasis,no_match,,,,,yes,13627,96
+Colorectal cancer peritoneal metastasis,colorectal cancer peritoneal metastasis,no_match,,,,,yes,40,18
+Colorectal carcinoma,colorectal carcinoma,resolved,MONDO:0024331,full string,,colorectal carcinoma,no,123,26
+Colorectal neuroendocrine tumour,colorectal neuroendocrine tumor,no_match,,,,,no,40,18
+Combined hepatocellular and intrahepatic cholangiocarcinoma,combined hepatocellular and intrahepatic cholangiocarcinoma,no_match,,,,,no,4,1
+Combined hepatocellular carcinoma and cholangiocarcinoma,combined hepatocellular carcinoma and cholangiocarcinoma,resolved,MONDO:0044791,full string,,combined hepatocellular carcinoma and cholangiocarcinoma,no,4,4
+Common variable immunodeficiency,common variable immunodeficiency,resolved,MONDO:0015517,full string,,common variable immunodeficiency,no,23,13
+Complete intestinal metaplasia,complete intestinal metaplasia,no_match,,,,,no,5,1
+Congenital diaphragmatic hernia(CDH),congenital diaphragmatic hernia(cdh),resolved,MONDO:0005711,without final parentheses,,congenital diaphragmatic hernia,no,6,5
+Congenital heart disease,congenital heart disease,resolved,MONDO:0005453,full string,,congenital heart disease,no,13898,28
+Congenital pituitary hypoplasia,congenital pituitary hypoplasia,no_match,,,,,no,4,2
+Congenital zika syndrome,congenital zika syndrome,resolved,MONDO:0000890,full string,,Zika virus congenital syndrome,no,12,4
+Conjunctival melanoma,conjunctival melanoma,resolved,MONDO:0002096,full string,,malignant conjunctival melanoma,no,36,13
+Constitutional mismatch repair deficiency syndrome,constitutional mismatch repair deficiency syndrome,resolved,MONDO:0031219,full string,,mismatch repair cancer syndrome,no,1,1
+Coronary artery disease,coronary artery disease,resolved,MONDO:0005010,full string,,coronary artery disorder,no,23,4
+Coronavirus disease,coronavirus disease,no_match,,,,,no,48,11
+Corticotroph tumor,corticotroph tumor,no_match,,,,,no,62,13
+Craniopharyngioma,craniopharyngioma,resolved,MONDO:0018907,full string,,craniopharyngioma,no,22,15
+Critical illness,critical illness,no_match,,,,,no,3,2
+Critical limb ischemia,critical limb ischemia,no_match,,,,,no,12,4
+Crohn's disease (CD),crohn disease (cd),resolved,MONDO:0005011,without final parentheses,,Crohn disease,no,589,129
+Crohn's-like disease of the pouch (CDP),crohn like disease of the pouch (cdp),no_match,,,,,no,35888,90
+Cryptorchidism,cryptorchidism,resolved,MONDO:0009047,full string,,cryptorchidism,no,19,14
+Cutaneous B-cell lymphoma,cutaneous b cell lymphoma,no_match,,,,,no,9,3
+Cutaneous T-cell lymphoma,cutaneous t cell lymphoma,resolved,MONDO:0000607,full string,,primary cutaneous T-cell non-Hodgkin lymphoma,no,98,24
+Cutaneous epithelioid angiomatous nodule,cutaneous epithelioid angiomatous nodule,no_match,,,,,no,3,1
+Cutaneous lichen planus,cutaneous lichen planus,no_match,,,,,no,55,11
+Cutaneous malignant melanoma,cutaneous malignant melanoma,no_match,,,,,no,2,1
+Cutaneous melanoma,cutaneous melanoma,resolved,MONDO:0005012,full string,,cutaneous melanoma,no,82,16
+Cutaneous neurofibroma,cutaneous neurofibroma,no_match,,,,,no,63,7
+Cutaneous perivascular epithelioid cell tumor,cutaneous perivascular epithelioid cell tumor,no_match,,,,,no,7,2
+Cutaneous squamous cell carcinoma,cutaneous squamous cell carcinoma,resolved,MONDO:0002529,full string,,skin squamous cell carcinoma,no,11720,48
+Cutaneous γδ T cell lymphoma,cutaneous γδ t cell lymphoma,no_match,,,,,no,3,1
+Cystic fibrosis,cystic fibrosis,resolved,MONDO:0009061,full string,,cystic fibrosis,no,57,19
+Decompensated Cirrhosis,decompensated cirrhosis,no_match,,,,,no,7,2
+Decompensated liver cirrhosis,decompensated liver cirrhosis,no_match,,,,,no,12,3
+Dedifferentiated Liposarcoma,dedifferentiated liposarcoma,resolved,MONDO:0020563,full string,,dedifferentiated liposarcoma,no,8,7
+Deficiency of ADA2 (DADA2),deficiency of ada2 (dada2),no_match,,,,,no,2,1
+Degenerative disc disease,degenerative disc disease,related_only,,full string,MONDO:0044339,,no,1,1
+Dementia with Lewy bodies,dementia with lewy bodies,resolved,MONDO:0007488,full string,,Lewy body dementia,no,3,3
+Dengue,dengue,resolved,MONDO:0005502,full string,,dengue disease,no,22,4
+Dengue Infection,dengue infection,no_match,,,,,no,5,2
+Dengue fever,dengue fever,resolved,MONDO:0005502,full string,,dengue disease,no,63,20
+Dengue virus infection,dengue virus infection,resolved,MONDO:0005502,full string,,dengue disease,no,13,6
+Dental caries,dental caries,resolved,MONDO:0005276,full string,,dental caries,no,22,11
+Depression,depression,resolved,MONDO:0002050,full string,,depressive disorder,no,2,2
+Dermatomyositis,dermatomyositis,resolved,MONDO:0016367,full string,,dermatomyositis,no,2,2
+Detrusor underactivity,detrusor underactivity,no_match,,,,,no,24,14
+Diabetes,diabetes,resolved,MONDO:0005015,full string,,diabetes mellitus,no,139,57
+Diabetic chronic wound,diabetic chronic wound,no_match,,,,,no,3,3
+Diabetic kidney disease,diabetic kidney disease,resolved,MONDO:0005016,full string,,diabetic kidney disease,no,16091,27
+Diabetic macroangiopathy,diabetic macroangiopathy,no_match,,,,,no,20,12
+Diabetic osteoarthritis,diabetic osteoarthritis,no_match,,,,,no,5,2
+Diabetic retinopathy,diabetic retinopathy,resolved,MONDO:0005266,full string,,diabetic retinopathy,no,12,6
+Diabetic sensory polyneuropathy,diabetic sensory polyneuropathy,no_match,,,,,no,1,1
+Diabetic wound,diabetic wound,no_match,,,,,no,12,6
+Diffuse glioma,diffuse glioma,no_match,,,,,no,2,1
+"Diffuse hemispheric gliomas, H3G34-mutant",diffuse hemispheric gliomas h3g34 mutant,no_match,,,,,no,3317,7
+Diffuse intrinsic pontine glioma,diffuse intrinsic pontine glioma,resolved,MONDO:0006033,full string,,diffuse intrinsic pontine glioma,no,4,1
+Diffuse large B-cell lymphoma (DLBCL),diffuse large b cell lymphoma (dlbcl),resolved,MONDO:0018905,without final parentheses,,diffuse large B-cell lymphoma,no,147,50
+Diffuse large B-cell lymphoma of the bone,diffuse large b cell lymphoma of the bone,no_match,,,,,no,6,6
+Diffuse small lymphocytic lymphoma,diffuse small lymphocytic lymphoma,no_match,,,,,no,4,2
+Diffuse-type gastric cancer,diffuse type gastric cancer,no_match,,,,,no,7,1
+Dilated cardiomyopathy,dilated cardiomyopathy,resolved,MONDO:0005021,full string,,dilated cardiomyopathy,no,10,7
+Disseminated tuberculosis,disseminated tuberculosis,resolved,MONDO:0005848,full string,,miliary tuberculosis,no,22,8
+Distal Cholangiocarcinoma,distal cholangiocarcinoma,resolved,MONDO:0003707,full string,,distal cholangiocarcinoma,no,22,10
+Down syndrome,down syndrome,resolved,MONDO:0008608,full string,,Down syndrome,no,68,28
+Doxorubicin-Induced Cardiomyopathy,doxorubicin induced cardiomyopathy,resolved,MONDO:0023006,full string,,doxorubicin induced cardiomyopathy,no,5,5
+Doxorubicin-induced cardiotoxicity,doxorubicin induced cardiotoxicity,no_match,,,,,no,1,1
+Drug hypersensitivity syndrome,drug hypersensitivity syndrome,resolved,MONDO:0015340,full string,,drug rash with eosinophilia and systemic symptoms,no,5,4
+Drug-resistant epilepsy,drug resistant epilepsy,no_match,,,,,no,12,2
+Ductal Breast Carcinoma,ductal breast carcinoma,resolved,MONDO:0005590,full string,,breast ductal adenocarcinoma,no,2,2
+Ductal carcinoma in situ,ductal carcinoma in situ,resolved,MONDO:0005023,full string,,ductal breast carcinoma in situ,no,572,23
+Duodenal adenocarcinoma,duodenal adenocarcinoma,resolved,MONDO:0006186,full string,,duodenal adenocarcinoma,no,30,7
+EBV-associated hemophagocytic lymphohistiocytosis,ebv associated hemophagocytic lymphohistiocytosis,no_match,,,,,no,16,9
+EBV-positive neuroendocrine carcinoma,ebv positive neuroendocrine carcinoma,no_match,,,,,no,8,2
+ER+ breast cancer,er+ breast cancer,resolved,MONDO:0006512,full string,,estrogen-receptor positive breast cancer,no,12,1
+Early T-cell precursor acute lymphoblastic leukemia (ETP-ALL),early t cell precursor acute lymphoblastic leukemia (etp all),resolved,MONDO:0100291,without final parentheses,,early T cell progenitor acute lymphoblastic leukemia,no,31,13
+Early T-cell progenitor acute lymphoblastic leukemia,early t cell progenitor acute lymphoblastic leukemia,resolved,MONDO:0100291,full string,,early T cell progenitor acute lymphoblastic leukemia,no,93,13
+Early atrophic age-related macular degeneration,early atrophic age related macular degeneration,no_match,,,,,no,6922,14
+Early embryonic arrest,early embryonic arrest,no_match,,,,,no,2,1
+Early-onset Alzheimer's disease,early onset alzheimer disease,no_match,,,,,no,9,3
+Early-onset colorectal cancer,early onset colorectal cancer,no_match,,,,,no,6,5
+Ebola vaccine study,ebola vaccine study,non_disease,,,,,no,9,3
+Ebola virus,ebola virus,non_disease,,,,,no,5,4
+Embryonal tumor with multilayered rosettes,embryonal tumor with multilayered rosettes,ambiguous,,full string,MONDO:0016715|MONDO:0958119,,no,6,2
+Emphysema,emphysema,resolved,MONDO:0004849,full string,,pulmonary emphysema,no,56,4
+Encephalitis,encephalitis,resolved,MONDO:0019956,full string,,encephalitis,no,12,4
+Endometrial cancer,endometrial cancer,resolved,MONDO:0011962,full string,,endometrial cancer,no,271,36
+Endometrial carcinoma,endometrial carcinoma,resolved,MONDO:0002447,full string,,endometrial carcinoma,no,86,24
+Endometrial injury,endometrial injury,no_match,,,,,no,7,4
+Endometrial tumour,endometrial tumor,resolved,MONDO:0021251,full string,,endometrium neoplasm,no,5,2
+Endometrioid endometrial cancer,endometrioid endometrial cancer,no_match,,,,,no,24,8
+Endometriosis,endometriosis,resolved,MONDO:0005133,full string,,endometriosis,no,69,17
+Enhanced S cone syndrome,enhanced s cone syndrome,resolved,MONDO:0100288,full string,,enhanced S-cone syndrome,no,5,2
+Eosinophilic chronic rhinosinusitis,eosinophilic chronic rhinosinusitis,no_match,,,,,no,1,1
+Eosinophilic chronic rhinosinusitis with nasal polyps,eosinophilic chronic rhinosinusitis with nasal polyps,no_match,,,,,no,1,1
+Eosinophilic oesophagitis,eosinophilic oesophagitis,no_match,,,,,no,18,7
+Ependymoma,ependymoma,resolved,MONDO:0016698,full string,,ependymoma,no,82,13
+Epilepsy,epilepsy,resolved,MONDO:0005027,full string,,epilepsy,no,15,8
+Episodic ataxia 6,episodic ataxia 6,no_match,,,,,no,1,1
+Epithelial ovarian cancer,epithelial ovarian cancer,resolved,MONDO:0005140,full string,,ovarian carcinoma,no,4,2
+Epithelioid glioblastoma,epithelioid glioblastoma,no_match,,,,,no,8,3
+Epithelioid sarcoma-like (pseudomyogenic) hemangioendothelioma,epithelioid sarcoma like (pseudomyogenic) hemangioendothelioma,no_match,,,,,no,2,1
+Epithelioid sarcoma-like hemangioendothelioma,epithelioid sarcoma like hemangioendothelioma,no_match,,,,,no,2,1
+Epithelioid soft tissue tumor,epithelioid soft tissue tumor,no_match,,,,,no,2,1
+Epstein-barr virus hemophagocytic lymphohistiocytosis,epstein barr virus hemophagocytic lymphohistiocytosis,no_match,,,,,no,3,1
+Esophageal adenocarcinoma,esophageal adenocarcinoma,resolved,MONDO:0005028,full string,,esophageal adenocarcinoma,no,24580,49
+Esophageal cancer,esophageal cancer,resolved,MONDO:0007576,full string,,esophageal cancer,no,186,45
+Esophageal carcinoma,esophageal carcinoma,resolved,MONDO:0019086,full string,,carcinoma of esophagus,no,2310,5
+Esophageal squamous cell carcinoma,esophageal squamous cell carcinoma,resolved,MONDO:0005580,full string,,esophageal squamous cell carcinoma,no,1083,129
+Essential thrombocythemia,essential thrombocythemia,resolved,MONDO:0005029,full string,,essential thrombocythemia,no,20,4
+Etastatic melanoma,etastatic melanoma,no_match,,,,,no,12,3
+Ewing's sarcoma,ewing sarcoma,resolved,MONDO:0012817,full string,,Ewing sarcoma,no,21444,60
+Experimental sclerosing cholangitis,experimental sclerosing cholangitis,no_match,,,,,no,13,4
+Extra-mammary paget's disease,extra mammary paget disease,no_match,,,,,no,18,9
+Extrahepatic cholangiocarcinoma,extrahepatic cholangiocarcinoma,no_match,,,,,no,18,3
+Extramedullary multiple myeloma,extramedullary multiple myeloma,no_match,,,,,no,79,13
+Extranodal NK/T-cell lymphoma,extranodal nk t cell lymphoma,no_match,,,,,no,20,8
+Extrapulmonary tuberculosis,extrapulmonary tuberculosis,resolved,MONDO:0000368,full string,,extrapulmonary tuberculosis,no,8,6
+Extreme myopia,extreme myopia,no_match,,,,,no,8,3
+FOXG1 syndrome(FS),foxg1 syndrome(fs),resolved,MONDO:0100040,without final parentheses,,FOXG1 disorder,no,4,2
+Familial adenomatous polyposis,familial adenomatous polyposis,resolved,MONDO:0021055,full string,,classic familial adenomatous polyposis,no,31,11
+Familial platelet disorder with a predisposition to myeloid malignancy,familial platelet disorder with a predisposition to myeloid malignancy,no_match,,,,,no,7,3
+Fatty liver,fatty liver,resolved,MONDO:0004790,full string,,fatty liver disease,no,42,16
+Ferroptosis,ferroptosis,no_match,,,,,no,18,3
+Fertilization failure,fertilization failure,no_match,,,,,no,7,2
+Fibrocalcification,fibrocalcification,no_match,,,,,no,2510,5
+Fibroid,fibroid,resolved,MONDO:0001572,full string,,leiomyoma,no,2,1
+Fibrosarcoma,fibrosarcoma,resolved,MONDO:0005164,full string,,fibrosarcoma,no,11,1
+Fibrosis,fibrosis,no_match,,,,,no,2,1
+Fibrotic disease,fibrotic disease,no_match,,,,,no,109,27
+Fibrotic hypersensitivity pneumonitis,fibrotic hypersensitivity pneumonitis,resolved,MONDO:0975896,full string,,fibrotic hypersensitivity pneumonitis,no,5137,16
+Focal cortical dysplasia type II,focal cortical dysplasia type ii,related_only,,full string,MONDO:0011818,,no,10,3
+Follicular lymphoma,follicular lymphoma,resolved,MONDO:0018906,full string,,follicular lymphoma,no,262,66
+Follicular thyroid carcinoma,follicular thyroid carcinoma,resolved,MONDO:0005034,full string,,thyroid gland follicular carcinoma,no,15,6
+Frontotemporal dementia,frontotemporal dementia,resolved,MONDO:0017276,full string,,frontotemporal dementia,no,36,6
+Frozen shoulder,frozen shoulder,resolved,MONDO:0006763,full string,,frozen shoulder,no,13,7
+Fuchs' endothelial corneal dystrophy,fuchs' endothelial corneal dystrophy,no_match,,,,,no,8,1
+Fumarate hydratase-deficient renal cell carcinoma,fumarate hydratase deficient renal cell carcinoma,no_match,,,,,no,53,15
+Fungal infection sequelae,fungal infection sequelae,no_match,,,,,no,8,4
+Fungal keratitis,fungal keratitis,resolved,MONDO:0033821,full string,,fungal keratitis,no,25,13
+Fusiform cerebral aneurysms,fusiform cerebral aneurysms,no_match,,,,,no,1,1
+Gallbladder adenocarcinoma,gallbladder adenocarcinoma,resolved,MONDO:0006215,full string,,gallbladder adenocarcinoma,no,38,13
+Gallbladder cancer,gallbladder cancer,resolved,MONDO:0005411,full string,,gallbladder cancer,no,86,34
+Gallbladder carcinoma,gallbladder carcinoma,resolved,MONDO:0003220,full string,,gallbladder carcinoma,no,12,5
+Ganglioglioma,ganglioglioma,resolved,MONDO:0016733,full string,,ganglioglioma,no,13152,33
+Gastric adenocarcinoma,gastric adenocarcinoma,resolved,MONDO:0005036,full string,,gastric adenocarcinoma,no,204,47
+Gastric adenocarcinoma of fundic-gland type,gastric adenocarcinoma of fundic gland type,no_match,,,,,no,4,3
+Gastric cancer,gastric cancer,resolved,MONDO:0001056,full string,,gastric cancer,no,11772,177
+Gastric cancer (circulating),gastric cancer (circulating),resolved,MONDO:0001056,without final parentheses,,gastric cancer,no,1,1
+Gastric cancer liver metastasis,gastric cancer liver metastasis,no_match,,,,,yes,7677,32
+Gastric cancer lymph node metastasis,gastric cancer lymph node metastasis,no_match,,,,,yes,9,6
+Gastric cancer ovary metastasis,gastric cancer ovary metastasis,no_match,,,,,yes,7707,28
+Gastric cancer peritoneum metastasis,gastric cancer peritoneum metastasis,no_match,,,,,yes,8542,28
+Gastric cardia adenocarcinoma,gastric cardia adenocarcinoma,resolved,MONDO:0003835,full string,,gastric cardia adenocarcinoma,no,49,16
+Gastric signet ring cell carcinoma (GSRC),gastric signet ring cell carcinoma (gsrc),no_match,,,,,no,90,27
+Gastroesophageal reflux disease,gastroesophageal reflux disease,resolved,MONDO:0007186,full string,,gastroesophageal reflux disease,no,4,3
+Gastrointestinal cancer,gastrointestinal cancer,no_match,,,,,no,8,7
+Gastrointestinal infection,gastrointestinal infection,resolved,MONDO:0043424,full string,,digestive system infectious disorder,no,14,6
+Gastrointestinal stromal tumor,gastrointestinal stromal tumor,resolved,MONDO:0011719,full string,,gastrointestinal stromal tumor,no,103,24
+Gastrointestinal tumor,gastrointestinal tumor,resolved,MONDO:0021223,full string,,digestive system neoplasm,no,5,1
+Germ cell tumor,germ cell tumor,resolved,MONDO:0005040,full string,,germ cell tumor,no,3,1
+Germinal center B-cell like-Diffuse large B cell lymphoma (GCB-DLBCL),germinal center b cell like diffuse large b cell lymphoma (gcb dlbcl),no_match,,,,,no,11,1
+Germinal matrix hemorrhage,germinal matrix hemorrhage,no_match,,,,,no,13,6
+Giant cell arteritis,giant cell arteritis,resolved,MONDO:0008538,full string,,temporal arteritis,no,4232,14
+Giant cell tumor (circulating),giant cell tumor (circulating),resolved,MONDO:0002171,without final parentheses,,giant cell tumor,no,1,1
+Glioblastoma,glioblastoma,resolved,MONDO:0018177,full string,,glioblastoma,no,24205,182
+Glioblastoma multiforme,glioblastoma multiforme,resolved,MONDO:0018177,full string,,glioblastoma,no,99,26
+Glioma,glioma,resolved,MONDO:0021042,full string,,glioma,no,704,89
+Glomerulonephritis,glomerulonephritis,resolved,MONDO:0002462,full string,,glomerulonephritis,no,26,5
+Glucagonoma,glucagonoma,resolved,MONDO:0019959,full string,,glucagonoma,no,6,1
+Gonadoblastoma,gonadoblastoma,resolved,MONDO:0010768,full string,,gonadoblastoma,no,1,1
+Gout,gout,resolved,MONDO:0005393,full string,,gout,no,11,1
+Graft-versus-host disease,graft versus host disease,resolved,MONDO:0013730,full string,,graft versus host disease,no,29,13
+Granular cell tumor,granular cell tumor,resolved,MONDO:0006235,full string,,granular cell tumor,no,1,1
+Granulosa cell tumor,granulosa cell tumor,resolved,MONDO:0006036,full string,,granulosa cell tumor,no,10,5
+Graves' disease,graves' disease,no_match,,,,,no,39,9
+Group B streptococcus infection,group b streptococcus infection,no_match,,,,,no,8,1
+Growth hormone-secreting pituitary adenoma,growth hormone secreting pituitary adenoma,no_match,,,,,no,25,10
+Guillain-Barré syndrome,guillain barré syndrome,resolved,MONDO:0016218,full string,,Guillain-Barre syndrome,no,14,4
+HCoV-229E infection,hcov 229e infection,no_match,,,,,no,6,2
+HER2+ breast cancer,her2+ breast cancer,no_match,,,,,no,55,13
+HER2+ gastric cancer,her2+ gastric cancer,no_match,,,,,no,15,5
+HIV,hiv,no_match,,,,,no,123,31
+HIV-1,hiv 1,no_match,,,,,no,41,15
+"HR+, HER2- breast cancer",hr+ her2 breast cancer,no_match,,,,,no,13,1
+Haematological malignancies,haematological malignancies,no_match,,,,,no,1,1
+Hand osteoarthritis,hand osteoarthritis,no_match,,,,,no,20,9
+Head and neck cancer,head and neck cancer,resolved,MONDO:0005627,full string,,head and neck cancer,no,149,31
+Head and neck squamous cell carcinoma,head and neck squamous cell carcinoma,resolved,MONDO:0010150,full string,,head and neck squamous cell carcinoma,no,648,122
+Healthy brain aging,healthy brain aging,non_disease,,,,,no,15,11
+Heart disease,heart disease,resolved,MONDO:0005267,full string,,heart disorder,no,7,1
+Heart failure (HF),heart failure (hf),resolved,MONDO:0005252,without final parentheses,,heart failure,no,248,52
+Heart transplantation,heart transplantation,non_disease,,,,,no,8,3
+Helicobacter pylori infection/reinfection,helicobacter pylori infection reinfection,no_match,,,,,no,34,11
+Hematologic cancer,hematologic cancer,resolved,MONDO:0044881,full string,,hematopoietic and lymphoid cell neoplasm,no,4,2
+Hematologic malignancy,hematologic malignancy,resolved,MONDO:0044881,full string,,hematopoietic and lymphoid cell neoplasm,no,38,14
+Hepatic ischemia-reperfusion injury,hepatic ischemia reperfusion injury,no_match,,,,,no,6,4
+Hepatitis B,hepatitis b,resolved,MONDO:0005344,full string,,hepatitis B virus infection,no,6,3
+Hepatitis B virus (HBV) infection,hepatitis b virus (hbv) infection,no_match,,,,,no,2,1
+Hepatitis B virus-related acute-on-chronic liver failure,hepatitis b virus related acute on chronic liver failure,no_match,,,,,no,24,7
+Hepatitis C virus,hepatitis c virus,non_disease,,,,,no,2374,7
+Hepatobiliary tumor,hepatobiliary tumor,resolved,MONDO:0002514,full string,,hepatobiliary neoplasm,no,11,2
+Hepatoblastoma,hepatoblastoma,resolved,MONDO:0018666,full string,,hepatoblastoma,no,162,27
+Hepatocellular cancer,hepatocellular cancer,resolved,MONDO:0007256,full string,,hepatocellular carcinoma,no,1027,60
+Hepatocellular carcinoma,hepatocellular carcinoma,resolved,MONDO:0007256,full string,,hepatocellular carcinoma,no,24521,221
+Hepatocellular carcinoma (HEV+ MASLD+),hepatocellular carcinoma (hev+ masld+),resolved,MONDO:0007256,without final parentheses,,hepatocellular carcinoma,no,2,1
+Hepatocellular carcinoma (MASLD-related),hepatocellular carcinoma (masld related),resolved,MONDO:0007256,without final parentheses,,hepatocellular carcinoma,no,4,1
+Hepatosplenic T-cell lymphoma,hepatosplenic t cell lymphoma,resolved,MONDO:0019474,full string,,hepatosplenic T-cell lymphoma,no,2,1
+Herpes simplex encephalitis,herpes simplex encephalitis,resolved,MONDO:0012521,full string,,herpes simplex encephalitis,no,25,17
+Herpes simplex virus type 2,herpes simplex virus type 2,non_disease,,,,,no,1,1
+Herpes simplex virus type 3,herpes simplex virus type 3,non_disease,,,,,no,1,1
+Herpes simplex virus type 4,herpes simplex virus type 4,non_disease,,,,,no,1,1
+Heterotopic ossification,heterotopic ossification,no_match,,,,,no,7,4
+Hidradenitis suppurativa,hidradenitis suppurativa,resolved,MONDO:0006559,full string,,hidradenitis suppurativa,no,137,28
+High BMI-Associated Colorectal Cancer,high bmi associated colorectal cancer,no_match,,,,,no,7,7
+High hyperdiploid B-cell acute lymphoblastic leukemia,high hyperdiploid b cell acute lymphoblastic leukemia,no_match,,,,,no,64,24
+High-Risk/Locally advanced prostate cancer,high risk locally advanced prostate cancer,no_match,,,,,no,24,8
+High-grade glioma (HGG),high grade glioma (hgg),resolved,MONDO:0100342,without final parentheses,,malignant glioma,no,39,12
+High-grade serous carcinoma (HGSC),high grade serous carcinoma (hgsc),no_match,,,,,no,16,8
+High-grade serous carcinoma of uterine adnexa,high grade serous carcinoma of uterine adnexa,no_match,,,,,no,5,2
+High-grade serous ovarian cancer,high grade serous ovarian cancer,no_match,,,,,no,86,28
+High-grade serous ovarian carcinoma,high grade serous ovarian carcinoma,no_match,,,,,no,2,1
+High-grade squamous intraepithelial lesion,high grade squamous intraepithelial lesion,no_match,,,,,no,20,12
+High-risk neuroblastoma,high risk neuroblastoma,no_match,,,,,no,47,17
+Hindlimb ischemia,hindlimb ischemia,no_match,,,,,no,26,8
+Hirschsprung's disease,hirschsprung disease,resolved,MONDO:0018309,full string,,Hirschsprung disease,no,2,2
+Hodgkin lymphoma,hodgkin lymphoma,resolved,MONDO:0004952,full string,,Hodgkins lymphoma,no,124,50
+Hormone receptor-positive breast cancer,hormone receptor positive breast cancer,resolved,MONDO:0700079,full string,,hormone receptor-positive breast cancer,no,13,7
+Hormone receptor-positive breast cancer (HR+ BC),hormone receptor positive breast cancer (hr+ bc),resolved,MONDO:0700079,without final parentheses,,hormone receptor-positive breast cancer,no,118,21
+Human achalasia,human achalasia,no_match,,,,,no,18,12
+Human epidermal growth factor receptor 2-positive breast cancer,human epidermal growth factor receptor 2 positive breast cancer,no_match,,,,,no,20,5
+Human immunodeficiency virus,human immunodeficiency virus,non_disease,,,,,no,14,2
+Human immunodeficiency virus type 1 infection,human immunodeficiency virus type 1 infection,no_match,,,,,no,6,5
+Human immunodeficiency virus-1,human immunodeficiency virus 1,non_disease,,,,,no,12,9
+Human papillomavirus exposure,human papillomavirus exposure,non_disease,,,,,no,12,1
+Human papillomavirus-associated head and neck squamous cell carcinoma,human papillomavirus associated head and neck squamous cell carcinoma,no_match,,,,,no,3,1
+Human papillomaviruses (HPV),human papillomaviruses (hpv),non_disease,,,,,no,4,2
+Huntington's disease,huntington disease,resolved,MONDO:0007739,full string,,Huntington disease,no,52,12
+Hybrid peripheral nerve sheath tumor,hybrid peripheral nerve sheath tumor,no_match,,,,,no,3,3
+Hydatidiform mole,hydatidiform mole,resolved,MONDO:0006248,full string,,hydatidiform mole,no,4,2
+Hydrocephalus,hydrocephalus,resolved,MONDO:0001150,full string,,hydrocephalus,no,11,7
+Hyper-IgE syndrome,hyper ige syndrome,resolved,MONDO:0018037,full string,,hyper-IgE syndrome,no,39,15
+Hyperhomocysteinemia,hyperhomocysteinemia,resolved,MONDO:0004743,full string,,hyperhomocysteinemia,no,23,12
+Hyperinflammatory state-not otherwise specified,hyperinflammatory state not otherwise specified,no_match,,,,,no,3,1
+Hyperinsulinaemic hypoglycaemia during infancy,hyperinsulinaemic hypoglycaemia during infancy,no_match,,,,,no,11,4
+Hyperlipidemia and hypertension,hyperlipidemia and hypertension,no_match,,,,,no,7,1
+Hypertension,hypertension,no_match,,,,,no,7,2
+Hypertensive chronic kidney disease,hypertensive chronic kidney disease,no_match,,,,,no,14519,21
+Hypertensive intracerebral hemorrhage,hypertensive intracerebral hemorrhage,no_match,,,,,no,7,2
+Hypertensive kidney disease,hypertensive kidney disease,no_match,,,,,no,2,1
+Hypertrophic cardiomyopathy,hypertrophic cardiomyopathy,resolved,MONDO:0005045,full string,,hypertrophic cardiomyopathy,no,30,18
+Hypopharyngeal squamous cell carcinoma,hypopharyngeal squamous cell carcinoma,resolved,MONDO:0044638,full string,,hypopharynx squamous cell carcinoma,no,7,3
+Hypophysoma,hypophysoma,no_match,,,,,no,7,4
+ICANS,icans,no_match,,,,,no,10,3
+ICB-related arthritis,icb related arthritis,no_match,,,,,no,1,1
+ICI-induced colitis,ici induced colitis,no_match,,,,,no,6,4
+IDH-wildtype glioblastoma,idh wildtype glioblastoma,resolved,MONDO:0850335,full string,,IDH-wildtype glioblastoma,no,19,11
+IDH1-mutant astrocytoma,idh1 mutant astrocytoma,no_match,,,,,no,10,9
+IPSC differentiation,ipsc differentiation,no_match,,,,,no,12,4
+Idiopathic inflammatory myopathies,idiopathic inflammatory myopathies,resolved,MONDO:0020122,full string,,acquired idiopathic inflammatory myopathy,no,3,1
+Idiopathic multicentric castleman disease,idiopathic multicentric castleman disease,resolved,MONDO:0035838,full string,,idiopathic multicentric Castleman disease,no,4,3
+Idiopathic nephrotic syndrome,idiopathic nephrotic syndrome,resolved,MONDO:0018170,full string,,idiopathic nephrotic syndrome,no,3,1
+Idiopathic nonobstructive azoospermia (iNOA),idiopathic nonobstructive azoospermia (inoa),no_match,,,,,no,18,15
+Idiopathic pulmonary arterial hypertension,idiopathic pulmonary arterial hypertension,resolved,MONDO:0001999,full string,,idiopathic pulmonary arterial hypertension,no,15,6
+Idiopathic pulmonary fibrosis,idiopathic pulmonary fibrosis,resolved,MONDO:0800504,full string,,idiopathic pulmonary fibrosis,no,14022,88
+Idiopathic subglottic stenosis,idiopathic subglottic stenosis,resolved,MONDO:0958099,full string,,idiopathic subglottic stenosis,no,16,8
+IgG4-related chronic rhinosinusitis,igg4 related chronic rhinosinusitis,no_match,,,,,no,23,17
+IgG4-related disease,igg4 related disease,resolved,MONDO:0017287,full string,,immunoglobulin G4-related sclerosing disease,no,37,14
+Immune Dysregulation Disorders,immune dysregulation disorders,no_match,,,,,no,3,1
+Immune checkpoint inhibitor-induced colitis,immune checkpoint inhibitor induced colitis,no_match,,,,,no,16,8
+Immune thrombocytopenia,immune thrombocytopenia,resolved,MONDO:0002048,full string,,thrombocytopenia due to immune destruction,no,3,1
+Immune-related myocarditis,immune related myocarditis,no_match,,,,,no,25,17
+Immunotherapy-related colitis,immunotherapy related colitis,no_match,,,,,no,18,9
+In utero development,in utero development,no_match,,,,,no,13,9
+Inborn error of immunity with T cell defects and fibrosis,inborn error of immunity with t cell defects and fibrosis,no_match,,,,,no,7,4
+Inborn errors of immunity,inborn errors of immunity,resolved,MONDO:0003778,full string,,inborn error of immunity,no,6,6
+Indolent B-cell non-Hodgkin's lymphoma,indolent b cell non hodgkin lymphoma,resolved,MONDO:0017594,full string,,indolent B-cell non-Hodgkin lymphoma,no,77,14
+Infantile hemangiomas,infantile hemangiomas,no_match,,,,,no,15,5
+Infertility,infertility,no_match,,,,,no,19,7
+Inflammation,inflammation,no_match,,,,,no,7,5
+Inflammatory arthritis (IA),inflammatory arthritis (ia),no_match,,,,,no,109,21
+Inflammatory bowel disease,inflammatory bowel disease,resolved,MONDO:0005265,full string,,inflammatory bowel disease,no,177,26
+Inflammatory breast cancer,inflammatory breast cancer,resolved,MONDO:0006804,full string,,inflammatory breast carcinoma,no,24,12
+Inflammatory leiomyosarcoma,inflammatory leiomyosarcoma,resolved,MONDO:0003347,full string,,inflammatory leiomyosarcoma,no,3,1
+Influenza infection,influenza infection,resolved,MONDO:0005812,full string,,influenza,no,1,1
+Inherited retinal disease,inherited retinal disease,no_match,,,,,no,1,1
+Interstitial lung disease,interstitial lung disease,resolved,MONDO:0015925,full string,,interstitial lung disease,no,8,2
+Intervertebral disc degeneration,intervertebral disc degeneration,resolved,MONDO:0011385,full string,,intervertebral disk degenerative disorder,no,99,23
+Intervertebral disc disease,intervertebral disc disease,rejected_merge,,full string,MONDO:0011385,,no,4,3
+Intestinal cancer,intestinal cancer,resolved,MONDO:0005814,full string,,intestinal cancer,no,2,2
+Intestinal metaplasia,intestinal metaplasia,resolved,MONDO:0100190,full string,,gastric intestinal metaplasia,no,26,18
+Intimal sarcoma,intimal sarcoma,resolved,MONDO:0006255,full string,,intimal sarcoma,no,2,1
+Intracerebral hemorrhage,intracerebral hemorrhage,resolved,MONDO:0013792,full string,,intracerebral hemorrhage,no,54,23
+Intracranial aneurysm,intracranial aneurysm,no_match,,,,,no,18,8
+Intracranial atherosclerosis,intracranial atherosclerosis,no_match,,,,,no,16,2
+Intracranial germinoma,intracranial germinoma,related_only,,full string,MONDO:0002214,,no,1,1
+Intracranial meningioma,intracranial meningioma,resolved,MONDO:0850302,full string,,intracranial meningioma,no,1,1
+Intraductal papillary neoplasm,intraductal papillary neoplasm,resolved,MONDO:0003455,full string,,bile duct papillary neoplasm,no,3,1
+Intrahepatic cholangiocarcinoma,intrahepatic cholangiocarcinoma,resolved,MONDO:0003210,full string,,intrahepatic cholangiocarcinoma,no,220,42
+Intrauterine adhesion,intrauterine adhesion,no_match,,,,,no,15,7
+Invasive breast cancer,invasive breast cancer,resolved,MONDO:0006256,full string,,invasive breast carcinoma,no,9,7
+Invasive ductal breast carcinoma,invasive ductal breast carcinoma,resolved,MONDO:0004953,full string,,invasive ductal breast carcinoma,no,1,1
+Invasive ductal cancer,invasive ductal cancer,no_match,,,,,no,2,1
+Invasive ductal carcinoma (IDC),invasive ductal carcinoma (idc),resolved,MONDO:0004953,without final parentheses,,invasive ductal breast carcinoma,no,49,15
+Invasive micropapillary carcinoma,invasive micropapillary carcinoma,no_match,,,,,no,2,2
+Ischaemic heart disease,ischaemic heart disease,resolved,MONDO:0024644,full string,,myocardial ischemia,no,6,4
+Ischemic heart disease,ischemic heart disease,resolved,MONDO:0024644,full string,,myocardial ischemia,no,41,14
+Ischemic heart failure,ischemic heart failure,no_match,,,,,no,2,1
+Ischemic stroke,ischemic stroke,resolved,MONDO:1060198,full string,,ischemic stroke,no,2,1
+Juvenile dermatomyositis,juvenile dermatomyositis,resolved,MONDO:0008054,full string,,juvenile dermatomyositis,no,9741,24
+Juvenile idiopathic arthritis,juvenile idiopathic arthritis,resolved,MONDO:0011429,full string,,juvenile idiopathic arthritis,no,14,6
+Juvenile myelomonocytic leukemia,juvenile myelomonocytic leukemia,resolved,MONDO:0011908,full string,,juvenile myelomonocytic leukemia,no,3,1
+Kabuki syndrome,kabuki syndrome,resolved,MONDO:0016512,full string,,Kabuki syndrome,no,13,8
+Kaposi's sarcoma,kaposi sarcoma,resolved,MONDO:0005055,full string,,Kaposi's sarcoma,no,1,1
+Kawasaki disease,kawasaki disease,resolved,MONDO:0012727,full string,,Kawasaki disease,no,3,1
+Keloid disease,keloid disease,no_match,,,,,no,68,17
+Kidney cancer,kidney cancer,resolved,MONDO:0002367,full string,,kidney cancer,no,2411,24
+Kidney disease,kidney disease,resolved,MONDO:0005240,full string,,kidney disorder,no,7833,19
+Kidney transplant rejection,kidney transplant rejection,no_match,,,,,no,3,1
+Kidney transplantation,kidney transplantation,non_disease,,,,,no,3,2
+Knee arthrofibrosis,knee arthrofibrosis,no_match,,,,,no,20,12
+Langerhans cell histiocytosis,langerhans cell histiocytosis,resolved,MONDO:0018310,full string,,Langerhans cell histiocytosis,no,30,9
+Large B cell lymphoma,large b cell lymphoma,resolved,MONDO:0968974,full string,,large B-cell lymphoma,no,108,15
+Laryngeal squamous cell carcinoma,laryngeal squamous cell carcinoma,resolved,MONDO:0005595,full string,,laryngeal squamous cell carcinoma,no,37,27
+Larynx cancer,larynx cancer,resolved,MONDO:0002352,full string,,larynx cancer,no,1,1
+Late-onset Alzheimer's disease,late onset alzheimer disease,resolved,MONDO:0007089,full string,,Alzheimer disease 2,no,2,1
+Leiomyoma,leiomyoma,resolved,MONDO:0001572,full string,,leiomyoma,no,9,2
+Leiomyosarcoma,leiomyosarcoma,resolved,MONDO:0005058,full string,,leiomyosarcoma,no,9,5
+Lentigo maligna melanoma,lentigo maligna melanoma,resolved,MONDO:0023619,full string,,lentigo maligna melanoma,no,2,1
+Lentiviral transduction,lentiviral transduction,no_match,,,,,no,1,1
+Leprosy,leprosy,resolved,MONDO:0005124,full string,,leprosy,no,9,3
+Leprosy granulomas,leprosy granulomas,no_match,,,,,no,160,23
+Leprosy skin lesion,leprosy skin lesion,no_match,,,,,no,8,3
+Leptomeningeal disease,leptomeningeal disease,no_match,,,,,no,14,6
+Leptomeningeal metastases,leptomeningeal metastases,no_match,,,,,yes,2,1
+Lesional dermatomyositis,lesional dermatomyositis,no_match,,,,,no,64,11
+Lesional lupus,lesional lupus,no_match,,,,,no,64,11
+Leukemia,leukemia,resolved,MONDO:0005059,full string,,leukemia,no,131,36
+Leukemia cutis,leukemia cutis,no_match,,,,,no,5,2
+Lewy body disease,lewy body disease,rejected_merge,,full string,MONDO:0007488,,no,59,14
+Ligamentum flavum hypertrophy,ligamentum flavum hypertrophy,no_match,,,,,no,19,8
+Light damage,light damage,no_match,,,,,no,4,1
+Limbal stem cell deficiency,limbal stem cell deficiency,resolved,MONDO:0025667,full string,,limbal stem cell deficiency,no,3,2
+Lineage-switched acute myeloid leukemia,lineage switched acute myeloid leukemia,no_match,,,,,no,6,3
+Lipodystrophy,lipodystrophy,resolved,MONDO:0006573,full string,,lipodystrophy,no,2,2
+Lipoma,lipoma,resolved,MONDO:0005106,full string,,lipoma,no,1,1
+Liposarcoma,liposarcoma,resolved,MONDO:0005060,full string,,liposarcoma,no,6,1
+Liver cancer,liver cancer,resolved,MONDO:0002691,full string,,liver cancer,no,272,33
+Liver cirrhosis,liver cirrhosis,no_match,,,,,no,25,7
+Liver failure,liver failure,resolved,MONDO:0100192,full string,,liver failure,no,10,3
+Liver fibrosis,liver fibrosis,no_match,,,,,no,26,6
+Liver transplantation,liver transplantation,non_disease,,,,,no,20,7
+Liver xenotransplantation,liver xenotransplantation,non_disease,,,,,no,25,8
+Localized scleroderma,localized scleroderma,resolved,MONDO:0019562,full string,,localized scleroderma,no,13,5
+Locally advanced rectal cancer,locally advanced rectal cancer,no_match,,,,,no,7,2
+Long COVID with ME/CFS,long covid with me cfs,no_match,,,,,no,5,4
+Long QT syndrome,long qt syndrome,ambiguous,,full string,MONDO:0002442|MONDO:0019171,,no,5,1
+Low grade glioma FGFR mutant,low grade glioma fgfr mutant,no_match,,,,,no,6482,22
+Low-grade glioma,low grade glioma,resolved,MONDO:0021637,full string,,low grade glioma,no,7525,30
+Lumbar disc herniation,lumbar disc herniation,no_match,,,,,no,2,1
+Lumbar disc herniation and aging,lumbar disc herniation and aging,no_match,,,,,no,1968,6
+Luminal-like breast cancer,luminal like breast cancer,no_match,,,,,no,20,5
+Lung adenocarcinoma (LUAD),lung adenocarcinoma (luad),resolved,MONDO:0005061,without final parentheses,,lung adenocarcinoma,no,30368,218
+Lung adenocarcinoma brain metastasis,lung adenocarcinoma brain metastasis,no_match,,,,,yes,20,10
+Lung adenocarcinoma lymph node metastasis,lung adenocarcinoma lymph node metastasis,no_match,,,,,yes,20,10
+Lung cancer,lung cancer,resolved,MONDO:0008903,full string,,lung cancer,no,616,91
+Lung cancer brain metastasis,lung cancer brain metastasis,no_match,,,,,yes,16197,43
+Lung cancer lymph node metastasis,lung cancer lymph node metastasis,no_match,,,,,yes,14788,38
+Lung carcinoid tumor,lung carcinoid tumor,resolved,MONDO:0006041,full string,,lung carcinoid tumor,no,4,2
+Lung carcinoma,lung carcinoma,resolved,MONDO:0005138,full string,,lung carcinoma,no,7,5
+Lung ischemia-reperfusion injury,lung ischemia reperfusion injury,no_match,,,,,no,1,1
+Lung large cell carcinoma,lung large cell carcinoma,resolved,MONDO:0003050,full string,,lung large cell carcinoma,no,103,18
+Lung squamous cell carcinoma,lung squamous cell carcinoma,resolved,MONDO:0005097,full string,,squamous cell lung carcinoma,no,393,52
+Lung transplantation,lung transplantation,non_disease,,,,,no,4,1
+Lung tumour,lung tumor,resolved,MONDO:0021117,full string,,lung neoplasm,no,6,3
+Lupus erythematosus,lupus erythematosus,resolved,MONDO:0004670,full string,,lupus erythematosus,no,28,10
+Lupus nephritis,lupus nephritis,resolved,MONDO:0005556,full string,,lupus nephritis,no,64,28
+Lymph node,lymph node,no_match,,,,,no,18,6
+Lymphangioleiomyomatosis (LAM),lymphangioleiomyomatosis (lam),resolved,MONDO:0011705,without final parentheses,,lymphangioleiomyomatosis,no,42,7
+Lymphatic malformations,lymphatic malformations,no_match,,,,,no,20,12
+Lymphoblastoma,lymphoblastoma,no_match,,,,,no,1,1
+Lymphocytic variant hypereosinophilic syndrome,lymphocytic variant hypereosinophilic syndrome,no_match,,,,,no,1,1
+Lymphoma,lymphoma,resolved,MONDO:0005062,full string,,lymphoma,no,1615,30
+MWSM1 deficiency,mwsm1 deficiency,no_match,,,,,no,1,1
+Macrophage activation syndrome,macrophage activation syndrome,resolved,MONDO:0015545,full string,,macrophage activation syndrome,no,3,1
+Major depressive disorder,major depressive disorder,resolved,MONDO:0002009,full string,,major depressive disorder,no,72,21
+Malaria infection,malaria infection,no_match,,,,,no,18,6
+Male infertility,male infertility,resolved,MONDO:0005372,full string,,male infertility,no,14,9
+Malformations of cortical development,malformations of cortical development,no_match,,,,,no,16,7
+Malignancy-associated hemophagocytic lymphohistiocytosis,malignancy associated hemophagocytic lymphohistiocytosis,no_match,,,,,no,3,1
+Malignant ascites,malignant ascites,no_match,,,,,no,47,16
+Malignant glioma,malignant glioma,resolved,MONDO:0100342,full string,,malignant glioma,no,8,3
+Malignant insulinoma,malignant insulinoma,no_match,,,,,no,1,1
+Malignant melanoma,malignant melanoma,resolved,MONDO:0005105,full string,,melanoma,no,32,7
+Malignant mesothelioma,malignant mesothelioma,resolved,MONDO:0006292,full string,,malignant mesothelioma,no,24,8
+Malignant peripheral nerve sheath tumor,malignant peripheral nerve sheath tumor,resolved,MONDO:0017827,full string,,malignant peripheral nerve sheath tumor,no,5,2
+Malignant pleural effusion,malignant pleural effusion,no_match,,,,,no,2,1
+Malignant rhabdoid tumor,malignant rhabdoid tumor,resolved,MONDO:0002728,full string,,rhabdoid tumor,no,5,1
+Malignant tenosynovial giant cell tumor,malignant tenosynovial giant cell tumor,resolved,MONDO:0002401,full string,,malignant tenosynovial giant cell tumor,no,3,1
+Mantle cell lymphoma,mantle cell lymphoma,resolved,MONDO:0018876,full string,,mantle cell lymphoma,no,56,16
+Marginal zone lymphoma,marginal zone lymphoma,resolved,MONDO:0017604,full string,,marginal zone lymphoma,no,1,1
+Medullary thyroid cancer,medullary thyroid cancer,resolved,MONDO:0015277,full string,,medullary thyroid gland carcinoma,no,4,3
+Medulloblastoma,medulloblastoma,resolved,MONDO:0007959,full string,,medulloblastoma,no,136,47
+Meiotic arrest,meiotic arrest,no_match,,,,,no,1,1
+Melanoma,melanoma,resolved,MONDO:0005105,full string,,melanoma,no,14393,229
+Meningeal solitary fibrous tumor,meningeal solitary fibrous tumor,no_match,,,,,no,20,5
+Meningioma,meningioma,resolved,MONDO:0016642,full string,,meningioma,no,110,27
+Merkel cell carcinoma,merkel cell carcinoma,resolved,MONDO:0019210,full string,,cutaneous neuroendocrine carcinoma,no,123,37
+Mesangial proliferative glomerulonephritis,mesangial proliferative glomerulonephritis,resolved,MONDO:0003139,full string,,mesangial proliferative glomerulonephritis,no,13,6
+Metabolic dysfunction-associated steatohepatitis,metabolic dysfunction associated steatohepatitis,resolved,MONDO:0007027,full string,,metabolic dysfunction-associated steatohepatitis,no,68,14
+Metabolic dysfunction-associated steatohepatitis-associated hepatocellular carcinoma,metabolic dysfunction associated steatohepatitis associated hepatocellular carcinoma,no_match,,,,,no,1,1
+Metabolic dysfunction-associated steatotic liver disease,metabolic dysfunction associated steatotic liver disease,resolved,MONDO:0013209,full string,,metabolic dysfunction-associated steatotic liver disease,no,22,6
+Metabolic dysfunction-associated steatotic liver disease-related hepatocellular carcinoma,metabolic dysfunction associated steatotic liver disease related hepatocellular carcinoma,no_match,,,,,no,21,7
+Metabolic dysfunction-associated steatotic liver disease/Metabolic dysfunction-associated steatohepatitis,metabolic dysfunction associated steatotic liver disease metabolic dysfunction associated steatohepatitis,no_match,,,,,no,3,2
+Metabolic-associated fatty liver disease,metabolic associated fatty liver disease,no_match,,,,,no,35,7
+Metaplastic breast carcinoma,metaplastic breast carcinoma,resolved,MONDO:0006043,full string,,metaplastic breast carcinoma,no,8,5
+Metastatic breast cancer,metastatic breast cancer,no_match,,,,,yes,33,15
+Metastatic castration-Resistant prostate cancer,metastatic castration resistant prostate cancer,no_match,,,,,yes,14,2
+Metastatic clear cell renal cell carcinoma,metastatic clear cell renal cell carcinoma,no_match,,,,,yes,10,4
+Metastatic colorectal cancer,metastatic colorectal cancer,no_match,,,,,yes,14,8
+Metastatic melanoma,metastatic melanoma,resolved,MONDO:0005191,full string,,metastatic melanoma,yes,61,27
+Metastatic pancreatic ductal adenocarcinoma,metastatic pancreatic ductal adenocarcinoma,no_match,,,,,yes,985,80
+Metastatic prostate cancer,metastatic prostate cancer,resolved,MONDO:0004956,full string,,metastatic prostate carcinoma,yes,1,1
+Metastatic urothelial cancer,metastatic urothelial cancer,no_match,,,,,yes,56,17
+Metastatic urothelial carcinoma,metastatic urothelial carcinoma,no_match,,,,,yes,139,22
+Microphthalmia-associated transcription factor family aberration-associated renal cell carcinoma,microphthalmia associated transcription factor family aberration associated renal cell carcinoma,no_match,,,,,no,1,1
+Microscopic colitis,microscopic colitis,resolved,MONDO:0000702,full string,,microscopic colitis,no,14,8
+Microscopic polyangiitis,microscopic polyangiitis,resolved,MONDO:0019124,full string,,microscopic polyangiitis,no,73,17
+Mild allergic asthma,mild allergic asthma,no_match,,,,,no,3,1
+Mild cognitive impairment,mild cognitive impairment,no_match,,,,,no,16,5
+Mild fibrosis,mild fibrosis,non_disease,,,,,no,2815,6
+Mitochondrial cardiomyopathy,mitochondrial cardiomyopathy,no_match,,,,,no,6,1
+Mixed phenotype acute leukemia,mixed phenotype acute leukemia,resolved,MONDO:0020743,full string,,mixed phenotype acute leukemia,no,24,5
+Moderate fibrosis,moderate fibrosis,no_match,,,,,no,2714,6
+Monocytic leukemia,monocytic leukemia,resolved,MONDO:0004600,full string,,monocytic leukemia,no,7,1
+Morbilliform drug eruption,morbilliform drug eruption,no_match,,,,,no,3,3
+Mucinous tubular and spindle cell carcinoma,mucinous tubular and spindle cell carcinoma,no_match,,,,,no,5,4
+Mucoepidermoid carcinoma,mucoepidermoid carcinoma,resolved,MONDO:0003036,full string,,mucoepidermoid carcinoma,no,3,1
+Multiple cancer,multiple cancer,no_match,,,,,no,10,2
+Multiple myeloma,multiple myeloma,resolved,MONDO:0009693,full string,,plasma cell myeloma,no,522,75
+Multiple sclerosis,multiple sclerosis,resolved,MONDO:0005301,full string,,multiple sclerosis,no,2483,45
+Multisystem inflammatory syndrome in children,multisystem inflammatory syndrome in children,resolved,MONDO:0100163,full string,,COVID-19–associated multisystem inflammatory syndrome in children,no,6,3
+Muscle-invasive bladder cancer,muscle invasive bladder cancer,no_match,,,,,no,58,14
+Muscle-invasive bladder carcinoma,muscle invasive bladder carcinoma,no_match,,,,,no,2,1
+Myasthenia gravis,myasthenia gravis,resolved,MONDO:0009688,full string,,myasthenia gravis,no,25,13
+Mycobacterium tuberculosis,mycobacterium tuberculosis,no_match,,,,,no,47,20
+Mycoplasma pneumoniae pneumonia,mycoplasma pneumoniae pneumonia,resolved,MONDO:0005867,full string,,Mycoplasma pneumoniae pneumonia,no,38,22
+Mycosis fungoides,mycosis fungoides,resolved,MONDO:0009691,full string,,mycosis fungoides,no,7,6
+Myelodysplastic neoplasm,myelodysplastic neoplasm,resolved,MONDO:0018881,full string,,myelodysplastic syndrome,no,17,12
+Myelodysplastic syndrome,myelodysplastic syndrome,resolved,MONDO:0018881,full string,,myelodysplastic syndrome,no,46,13
+Myeloid leukemia,myeloid leukemia,resolved,MONDO:0004643,full string,,myeloid leukemia,no,1,1
+Myeloma,myeloma,resolved,MONDO:0009693,full string,,plasma cell myeloma,no,1897,26
+Myeloproliferative neoplasm,myeloproliferative neoplasm,resolved,MONDO:0020076,full string,,myeloproliferative neoplasm,no,1,1
+Myocardial infarction,myocardial infarction,resolved,MONDO:0005068,full string,,myocardial infarction,no,67,17
+Myocarditis,myocarditis,resolved,MONDO:0004496,full string,,myocarditis,no,899,9
+Myopia,myopia,resolved,MONDO:0001384,full string,,myopia,no,3,1
+Myotonic dystrophy type 1,myotonic dystrophy type 1,resolved,MONDO:0008056,full string,,myotonic dystrophy type 1,no,8,1
+NFKBIA-deficient combined immunodeficiency,nfkbia deficient combined immunodeficiency,no_match,,,,,no,2,2
+NK/T-cell lymphoma,nk t cell lymphoma,resolved,MONDO:0019472,full string,,extranodal nasal NK/T cell lymphoma,no,4,1
+Nasopharyngeal and oral carcinoma,nasopharyngeal and oral carcinoma,no_match,,,,,no,103,18
+Nasopharyngeal cancer,nasopharyngeal cancer,related_only,,full string,MONDO:0015459,,no,343,47
+Nasopharyngeal carcinoma,nasopharyngeal carcinoma,resolved,MONDO:0015459,full string,,nasopharyngeal carcinoma,no,145,36
+Natural killer cell lymphoma,natural killer cell lymphoma,no_match,,,,,no,17,10
+Neck pain,neck pain,no_match,,,,,no,20,8
+Neovascular age-related macular degeneration,neovascular age related macular degeneration,no_match,,,,,no,6222,15
+Nephroblastoma,nephroblastoma,resolved,MONDO:0019004,full string,,kidney Wilms tumor,no,6,2
+Nephrotic syndrome,nephrotic syndrome,resolved,MONDO:0005377,full string,,nephrotic syndrome,no,32,7
+Nerve injury,nerve injury,related_only,,full string,MONDO:0100634,,no,6,4
+Neuroblastoma,neuroblastoma,resolved,MONDO:0005072,full string,,neuroblastoma,no,216,54
+Neurodegenerative disorder,neurodegenerative disorder,no_match,,,,,no,6,1
+Neurodevelopmental disorder,neurodevelopmental disorder,resolved,MONDO:0700092,full string,,neurodevelopmental disorder,no,124,17
+Neuroendocrine prostate cancer,neuroendocrine prostate cancer,no_match,,,,,no,12,3
+Neuroendocrine tumor,neuroendocrine tumor,resolved,MONDO:0019496,full string,,neuroendocrine neoplasm,no,129,23
+Neuroepithelial tumors with PATZ1 fusions,neuroepithelial tumors with patz1 fusions,no_match,,,,,no,2,1
+Neurofibroma,neurofibroma,resolved,MONDO:0016755,full string,,neurofibroma,no,12,3
+Neuromyelitis optica spectrum disorder,neuromyelitis optica spectrum disorder,resolved,MONDO:0019100,full string,,neuromyelitis optica,no,17,7
+Neuronal intranuclear inclusion disease,neuronal intranuclear inclusion disease,resolved,MONDO:0011327,full string,,neuronal intranuclear inclusion disease,no,27,9
+Nickel allergy,nickel allergy,no_match,,,,,no,16,10
+No cognitive impairment,no cognitive impairment,no_match,,,,,no,15,4
+Nodal B-cell lymphoma,nodal b cell lymphoma,no_match,,,,,no,23,6
+Nodular lymphocyte predominant hodgkin lymphoma,nodular lymphocyte predominant hodgkin lymphoma,resolved,MONDO:0044778,full string,,nodular lymphocyte predominant Hodgkin lymphoma,no,1,1
+Non-alcoholic fatty liver disease,non alcoholic fatty liver disease,resolved,MONDO:0013209,full string,,metabolic dysfunction-associated steatotic liver disease,no,3874,11
+Non-alcoholic steatohepatitis,non alcoholic steatohepatitis,resolved,MONDO:0007027,full string,,metabolic dysfunction-associated steatohepatitis,no,2159,14
+Non-alcoholic steatohepatitis with cirrhosis,non alcoholic steatohepatitis with cirrhosis,no_match,,,,,no,5348,8
+Non-atrophic gastritis,non atrophic gastritis,no_match,,,,,no,6,5
+Non-bone marrow lesions,non bone marrow lesions,no_match,,,,,no,42,13
+Non-clear renal cell carcinoma,non clear renal cell carcinoma,no_match,,,,,no,13,1
+Non-hodgkin's lymphoma,non hodgkin lymphoma,resolved,MONDO:0018908,full string,,non-Hodgkin lymphoma,no,33,3
+Non-ischemic heart failure,non ischemic heart failure,no_match,,,,,no,38,13
+Non-lesional dermatomyositis,non lesional dermatomyositis,no_match,,,,,no,64,11
+Non-lesional lupus,non lesional lupus,no_match,,,,,no,64,11
+Non-small cell lung cancer,non small cell lung cancer,resolved,MONDO:0005233,full string,,non-small cell lung carcinoma,no,1847,225
+Non-small cell lung carcinoma,non small cell lung carcinoma,resolved,MONDO:0005233,full string,,non-small cell lung carcinoma,no,1,1
+Nonfibrotic hypersensitivity pneumonitis,nonfibrotic hypersensitivity pneumonitis,no_match,,,,,no,5422,12
+Nonobstructive azoospermia,nonobstructive azoospermia,no_match,,,,,no,2,1
+Nonsyndromic cleft lip and palate,nonsyndromic cleft lip and palate,no_match,,,,,no,17,8
+Nonunion bone fractures,nonunion bone fractures,no_match,,,,,no,13,9
+NorFollicular lymphoma tumormal,norfollicular lymphoma tumormal,no_match,,,,,no,13,5
+Normal karyotype acute myeloid leukemia,normal karyotype acute myeloid leukemia,no_match,,,,,no,21,6
+Normal pressure hydrocephalus,normal pressure hydrocephalus,resolved,MONDO:0009366,full string,,normal pressure hydrocephalus,no,10,6
+Obesity,obesity,resolved,MONDO:0011122,full string,,obesity disorder,no,83,30
+Obstetric antiphospholipid syndrome,obstetric antiphospholipid syndrome,no_match,,,,,no,25,11
+Obstructive azoospermia,obstructive azoospermia,no_match,,,,,no,9,4
+Obstructive sleep apnea,obstructive sleep apnea,resolved,MONDO:0007147,full string,,obstructive sleep apnea syndrome,no,26,7
+Oesophageal cancer,oesophageal cancer,no_match,,,,,no,4,2
+Oesophageal squamous cell carcinoma,oesophageal squamous cell carcinoma,no_match,,,,,no,15,4
+Olfactory neuroblastoma,olfactory neuroblastoma,resolved,MONDO:0006329,full string,,olfactory neuroblastoma,no,121,29
+Oligodendroglioma,oligodendroglioma,resolved,MONDO:0016695,full string,,oligodendroglioma,no,12,2
+Omicron BA.2 breakthrough infection,omicron ba.2 breakthrough infection,no_match,,,,,no,11,8
+Opioid use disorder,opioid use disorder,no_match,,,,,no,26,7
+Oral cancer,oral cancer,resolved,MONDO:0023644,full string,,lip and oral cavity carcinoma,no,2,1
+Oral squamous cell carcinoma,oral squamous cell carcinoma,related_only,,full string,MONDO:0004958,,no,475,77
+Oral submucous fibrosis,oral submucous fibrosis,resolved,MONDO:0018166,full string,,oral submucous fibrosis,no,9,2
+Oropharyngeal cancer,oropharyngeal cancer,resolved,MONDO:0004608,full string,,oropharynx cancer,no,1,1
+Oropharyngeal squamous cell carcinoma,oropharyngeal squamous cell carcinoma,resolved,MONDO:0044704,full string,,oropharynx squamous cell carcinoma,no,34,17
+Orthodontic conditions,orthodontic conditions,no_match,,,,,no,25,13
+Ossification of the posterior longitudinal ligament,ossification of the posterior longitudinal ligament,no_match,,,,,no,18,6
+Osteoarthritis,osteoarthritis,resolved,MONDO:0005178,full string,,osteoarthritis,no,127,47
+Osteochondral defect,osteochondral defect,no_match,,,,,no,23,11
+Osteomyelitis,osteomyelitis,resolved,MONDO:0005246,full string,,osteomyelitis,no,11,2
+Osteoporosis,osteoporosis,resolved,MONDO:0005298,full string,,osteoporosis,no,5,4
+Osteosarcoma,osteosarcoma,resolved,MONDO:0009807,full string,,osteosarcoma,no,507,48
+Osteosarcoma lung metastasis,osteosarcoma lung metastasis,no_match,,,,,yes,4,4
+Ovarian adenocarcinoma,ovarian adenocarcinoma,resolved,MONDO:0002752,full string,,ovarian adenocarcinoma,no,4,1
+Ovarian cancer,ovarian cancer,resolved,MONDO:0008170,full string,,ovarian cancer,no,14322,134
+Ovarian carcinoma,ovarian carcinoma,resolved,MONDO:0005140,full string,,ovarian carcinoma,no,105,19
+Ovarian carcinosarcoma,ovarian carcinosarcoma,resolved,MONDO:0003792,full string,,ovarian carcinosarcoma,no,5,1
+Ovarian clear cell carcinoma,ovarian clear cell carcinoma,no_match,,,,,no,8,4
+Ovarian endometrioma,ovarian endometrioma,no_match,,,,,no,11,3
+Ovarian high-grade serous carcinoma,ovarian high grade serous carcinoma,no_match,,,,,no,18,9
+Ovarian or fallopian tube carcinoma,ovarian or fallopian tube carcinoma,no_match,,,,,no,2105,5
+Ovarian serous cystadenocarcinoma,ovarian serous cystadenocarcinoma,resolved,MONDO:0006046,full string,,ovarian serous cystadenocarcinoma,no,40,9
+Ovarian teratocarcinoma,ovarian teratocarcinoma,no_match,,,,,no,3,2
+Paediatric acute-onset neurological syndrome,paediatric acute onset neurological syndrome,no_match,,,,,no,4,4
+Paediatric cancer,paediatric cancer,resolved,MONDO:0006517,full string,,childhood malignant neoplasm,no,12,2
+Pan-cancer,pan cancer,non_disease,,,,,no,3440,501
+Pancreatic adenocarcinoma,pancreatic adenocarcinoma,resolved,MONDO:0006047,full string,,pancreatic adenocarcinoma,no,325,76
+Pancreatic cancer,pancreatic cancer,resolved,MONDO:0009831,full string,,malignant pancreatic neoplasm,no,8255,75
+Pancreatic carcinoma,pancreatic carcinoma,no_match,,,,,no,103,18
+Pancreatic ductal adenocarcinoma,pancreatic ductal adenocarcinoma,resolved,MONDO:0005184,full string,,pancreatic ductal adenocarcinoma,no,1554,161
+Pancreatic ductal adenocarcinoma liver metastasis,pancreatic ductal adenocarcinoma liver metastasis,no_match,,,,,yes,31,11
+Pancreatic ductal carcinoma,pancreatic ductal carcinoma,resolved,MONDO:0005184,full string,,pancreatic ductal adenocarcinoma,no,69,14
+Pancreatic neuroendocrine tumour,pancreatic neuroendocrine tumor,resolved,MONDO:0019954,full string,,pancreatic neuroendocrine tumor,no,11,9
+Papillary neoplasm,papillary neoplasm,no_match,,,,,no,3,1
+Papillary renal cell carcinoma,papillary renal cell carcinoma,resolved,MONDO:0017884,full string,,papillary renal cell carcinoma,no,2,2
+Papillary thyroid cancer,papillary thyroid cancer,resolved,MONDO:0005075,full string,,thyroid gland papillary carcinoma,no,457,29
+Papillary thyroid carcinoma,papillary thyroid carcinoma,resolved,MONDO:0005075,full string,,thyroid gland papillary carcinoma,no,107,22
+Parapsoriasis,parapsoriasis,resolved,MONDO:0006592,full string,,parapsoriasis,no,70,21
+Parkinson's disease,parkinson disease,resolved,MONDO:0005180,full string,,Parkinson disease,no,206,43
+Pathological lactation/galactorrhea,pathological lactation galactorrhea,no_match,,,,,no,22,7
+Peanut allergy,peanut allergy,no_match,,,,,no,16,6
+Pediatric CNS tumor,pediatric cns tumor,no_match,,,,,no,17,10
+Pediatric acute leukemia,pediatric acute leukemia,no_match,,,,,no,12,6
+Pediatric central nervous system tumor,pediatric central nervous system tumor,no_match,,,,,no,6,3
+Pediatric classic hodgkin lymphoma,pediatric classic hodgkin lymphoma,no_match,,,,,no,2,2
+Pediatric ependymoma,pediatric ependymoma,resolved,MONDO:0003478,full string,,childhood ependymoma,no,23,10
+Pediatric high-grade glioma,pediatric high grade glioma,resolved,MONDO:1010030,full string,,pediatric high-grade glioma,no,22,8
+Pediatric inflammatory bowel disease,pediatric inflammatory bowel disease,no_match,,,,,no,17,9
+Pediatric low-grade glioma,pediatric low grade glioma,no_match,,,,,no,9,7
+Pediatric rhabdomyosarcoma,pediatric rhabdomyosarcoma,no_match,,,,,no,10,1
+Pediatric steroid-sensitive idiopathic nephrotic syndrome,pediatric steroid sensitive idiopathic nephrotic syndrome,no_match,,,,,no,19,10
+Pelvic organ prolapse,pelvic organ prolapse,resolved,MONDO:0000082,full string,,pelvic organ prolapse,no,11,6
+Pemphigus,pemphigus,resolved,MONDO:0006594,full string,,pemphigus,no,1,1
+Penile squamous cell carcinoma,penile squamous cell carcinoma,resolved,MONDO:0018352,full string,,squamous cell carcinoma of penis,no,155,41
+Periodontal bone defect,periodontal bone defect,no_match,,,,,no,17,9
+Periodontitis,periodontitis,resolved,MONDO:0005076,full string,,periodontitis,no,72,27
+Peripheral artery disease,peripheral artery disease,no_match,,,,,no,4877,29
+Peripheral t-cell lymphoma,peripheral t cell lymphoma,resolved,MONDO:0000430,full string,,mature T-cell and NK-cell non-Hodgkin lymphoma,no,40,13
+Periprosthetic joint infection,periprosthetic joint infection,resolved,MONDO:0800179,full string,,periprosthetic joint infection,no,9,3
+Peritoneal carcinomatosis,peritoneal carcinomatosis,resolved,MONDO:0700336,full string,,peritoneal carcinomatosis,no,23,10
+Peritoneal fibrosis,peritoneal fibrosis,no_match,,,,,no,3,1
+Pheochromocytoma,pheochromocytoma,resolved,MONDO:0008233,full string,,pheochromocytoma,no,72,10
+Philadelphia chromosome-like acute lymphoblastic leukemia,philadelphia chromosome like acute lymphoblastic leukemia,no_match,,,,,no,22,6
+Phyllodes tumor,phyllodes tumor,resolved,MONDO:0005078,full string,,phyllodes tumor,no,4,1
+Pick's disease,pick disease,resolved,MONDO:0008243,full string,,Pick disease,no,15,9
+Pig-to-human kidney xenotransplantation,pig to human kidney xenotransplantation,non_disease,,,,,no,10,5
+Pilocytic astrocytoma,pilocytic astrocytoma,resolved,MONDO:0016691,full string,,pilocytic astrocytoma,no,13277,44
+Pituicytoma,pituicytoma,resolved,MONDO:0006372,full string,,pituicytoma,no,1,1
+Pituitary adenoma,pituitary adenoma,resolved,MONDO:0006373,full string,,pituitary gland adenoma,no,6,2
+Pituitary neuroendocrine tumor,pituitary neuroendocrine tumor,no_match,,,,,no,52,24
+Plantar melanoma,plantar melanoma,no_match,,,,,no,21,9
+Plasma cell myeloma,plasma cell myeloma,resolved,MONDO:0009693,full string,,plasma cell myeloma,no,40,8
+Pleomorphic adenoma,pleomorphic adenoma,resolved,MONDO:0008401,full string,,pleomorphic adenoma,no,28,10
+Pleomorphic carcinoma,pleomorphic carcinoma,resolved,MONDO:0003573,full string,,pleomorphic carcinoma,no,103,18
+Pleomorphic dermal sarcoma,pleomorphic dermal sarcoma,no_match,,,,,no,14,9
+Pleural mesothelioma,pleural mesothelioma,resolved,MONDO:0003308,full string,,pleural mesothelioma,no,118,33
+Pleural tumor,pleural tumor,resolved,MONDO:0021065,full string,,pleural neoplasm,no,3,1
+Plexiform neurofibroma,plexiform neurofibroma,resolved,MONDO:0003304,full string,,plexiform neurofibroma,no,2,1
+Polycystic ovary syndrome,polycystic ovary syndrome,resolved,MONDO:0008487,full string,,polycystic ovary syndrome,no,68,14
+Polymyalgia rheumatica,polymyalgia rheumatica,resolved,MONDO:0019735,full string,,polymyalgia rheumatica,no,12,2
+Polyneuropathy,polyneuropathy,resolved,MONDO:0001824,full string,,polyneuropathy,no,72,19
+Post-COVID syndrome,post covid syndrome,no_match,,,,,no,8,5
+Post-COVID-19 cognitive impairment,post covid 19 cognitive impairment,no_match,,,,,no,26,11
+Post-traumatic stress disorder,post traumatic stress disorder,resolved,MONDO:0005146,full string,,post-traumatic stress disorder,no,26,9
+Postoperative atrial fibrillation,postoperative atrial fibrillation,no_match,,,,,no,1,1
+Preeclampsia,preeclampsia,resolved,MONDO:0005081,full string,,preeclampsia,no,20,5
+Preventing the onset of autoimmune type 1 diabetes,preventing the onset of autoimmune type 1 diabetes,no_match,,,,,no,9,1
+Primary antibody deficiency,primary antibody deficiency,rejected_merge,,full string,MONDO:0015517,,no,6,1
+Primary biliary cholangitis,primary biliary cholangitis,resolved,MONDO:0005388,full string,,primary biliary cholangitis,no,17,5
+Primary breast cancer,primary breast cancer,related_only,,full string,MONDO:0007254,,no,18,12
+Primary central nervous system diffuse large B-cell lymphoma,primary central nervous system diffuse large b cell lymphoma,no_match,,,,,no,6,6
+Primary central nervous system lymphoma,primary central nervous system lymphoma,resolved,MONDO:0002571,full string,,primary central nervous system lymphoma,no,19,8
+Primary cutaneous B-cell lymphoma,primary cutaneous b cell lymphoma,resolved,MONDO:0015820,full string,,primary cutaneous B-cell lymphoma,no,9,3
+Primary cutaneous T-cell lymphoma,primary cutaneous t cell lymphoma,resolved,MONDO:0000607,full string,,primary cutaneous T-cell non-Hodgkin lymphoma,no,2,2
+Primary diffuse large B cell lymphoma of the CNS,primary diffuse large b cell lymphoma of the cns,no_match,,,,,no,1,1
+Primary effusion lymphoma,primary effusion lymphoma,resolved,MONDO:0018842,full string,,primary effusion lymphoma,no,5,1
+Primary hemophagocytic lymphohistiocytosis,primary hemophagocytic lymphohistiocytosis,resolved,MONDO:0015541,full string,,hereditary hemophagocytic lymphohistiocytosis,no,3,1
+Primary liver cancer,primary liver cancer,resolved,MONDO:0002691,full string,,liver cancer,no,46,12
+Primary lung cancer,primary lung cancer,no_match,,,,,no,3,1
+Primary mediastinal B-cell lymphoma,primary mediastinal b cell lymphoma,no_match,,,,,no,12,1
+Primary mediastinal large B-cell lymphoma,primary mediastinal large b cell lymphoma,resolved,MONDO:0020323,full string,,primary mediastinal large B-cell lymphoma,no,4,1
+Primary membranous nephropathy,primary membranous nephropathy,no_match,,,,,no,24,14
+Primary open-angle glaucoma,primary open angle glaucoma,no_match,,,,,no,6,5
+Primary sjögren’s syndrome,primary sjögren’s syndrome,no_match,,,,,no,14,7
+Progressive multifocal leukoencephalopathy,progressive multifocal leukoencephalopathy,resolved,MONDO:0016318,full string,,progressive multifocal leukoencephalopathy,no,17,5
+Progressive multiple sclerosis,progressive multiple sclerosis,no_match,,,,,no,14,7
+Progressive supranuclear palsy,progressive supranuclear palsy,resolved,MONDO:0019037,full string,,progressive supranuclear palsy,no,12,6
+Prostate adenocarcinoma,prostate adenocarcinoma,resolved,MONDO:0005082,full string,,prostate adenocarcinoma,no,1,1
+Prostate cancer,prostate cancer,resolved,MONDO:0008315,full string,,prostate cancer,no,757,86
+Prostate cancer bone metastasis,prostate cancer bone metastasis,no_match,,,,,yes,12,9
+Prostate carcinoma,prostate carcinoma,resolved,MONDO:0005159,full string,,prostate carcinoma,no,103,18
+Prostatic intraepithelial neoplasia,prostatic intraepithelial neoplasia,resolved,MONDO:0005193,full string,,prostate intraepithelial neoplasia,no,1,1
+Prurigo nodularis,prurigo nodularis,resolved,MONDO:0026045,full string,,prurigo nodularis,no,129,21
+Psoriasis,psoriasis,resolved,MONDO:0005083,full string,,psoriasis,no,390,64
+Psoriatic arthritis,psoriatic arthritis,resolved,MONDO:0011849,full string,,psoriatic arthritis,no,9,5
+Pulmonary arterial hypertension,pulmonary arterial hypertension,resolved,MONDO:0015924,full string,,pulmonary arterial hypertension,no,64,16
+Pulmonary fibrosis,pulmonary fibrosis,resolved,MONDO:0002771,full string,,pulmonary fibrosis,no,41,15
+Pulmonary long COVID,pulmonary long covid,no_match,,,,,no,9,3
+Pulmonary neuroendocrine tumor,pulmonary neuroendocrine tumor,related_only,,full string,MONDO:0005454,,no,10,3
+Pulmonary sarcomatoid carcinoma,pulmonary sarcomatoid carcinoma,no_match,,,,,no,3,1
+Pulmonary stenosis,pulmonary stenosis,resolved,MONDO:0009938,full string,,pulmonic stenosis,no,2,2
+Pulmonary tuberculosis,pulmonary tuberculosis,resolved,MONDO:0006052,full string,,pulmonary tuberculosis,no,26,14
+Pulpitis,pulpitis,resolved,MONDO:0006937,full string,,pulpitis,no,19,13
+Pyoderma gangrenosum,pyoderma gangrenosum,resolved,MONDO:0018824,full string,,pyoderma gangrenosum,no,45,15
+Radiation-induced skin injury,radiation induced skin injury,no_match,,,,,no,16,11
+Recessive dystrophic epidermolysis bullosa-associated cutaneous squamous cell carcinoma,recessive dystrophic epidermolysis bullosa associated cutaneous squamous cell carcinoma,no_match,,,,,no,1,1
+Rectal adenocarcinoma,rectal adenocarcinoma,resolved,MONDO:0002169,full string,,rectum adenocarcinoma,no,1,1
+Rectal cancer,rectal cancer,resolved,MONDO:0006519,full string,,rectal cancer,no,50,20
+Recurrent endometrial cancer,recurrent endometrial cancer,no_match,,,,,no,8,3
+Recurrent implantation failure,recurrent implantation failure,no_match,,,,,no,15,7
+Recurrent renal cell carcinoma,recurrent renal cell carcinoma,no_match,,,,,no,24,12
+Relapsed/refractory B-cell non-Hodgkin lymphoma,relapsed refractory b cell non hodgkin lymphoma,no_match,,,,,no,12,6
+Relapsed/refractory acute lymphoblastic leukemia,relapsed refractory acute lymphoblastic leukemia,no_match,,,,,no,6,4
+Relapsed/refractory multiple myeloma,relapsed refractory multiple myeloma,no_match,,,,,no,23,11
+Relapsing-remitting multiple sclerosis,relapsing remitting multiple sclerosis,resolved,MONDO:0005314,full string,,relapsing-remitting multiple sclerosis,no,1,1
+Renal cancer,renal cancer,related_only,,full string,MONDO:0005206,,no,1,1
+Renal carcinoma,renal carcinoma,resolved,MONDO:0005206,full string,,renal carcinoma,no,7,3
+Renal cell cancer,renal cell cancer,resolved,MONDO:0005549,full string,,renal cell adenocarcinoma,no,2,2
+Renal cell carcinoma,renal cell carcinoma,resolved,MONDO:0005086,full string,,renal cell carcinoma,no,961,67
+Renal medullary carcinoma,renal medullary carcinoma,resolved,MONDO:0006260,full string,,kidney medullary carcinoma,no,6,4
+Respiratory syncytial virus infection,respiratory syncytial virus infection,resolved,MONDO:0001577,full string,,respiratory syncytial virus infectious disease,no,48,15
+Respiratory viruses,respiratory viruses,non_disease,,,,,no,4,4
+Retinal degenerative diseases,retinal degenerative diseases,no_match,,,,,no,11,1
+Retinoblastoma,retinoblastoma,resolved,MONDO:0008380,full string,,retinoblastoma,no,41,10
+Rett syndrome,rett syndrome,resolved,MONDO:0010726,full string,,Rett syndrome,no,3,1
+Rhabdoid tumor,rhabdoid tumor,resolved,MONDO:0002728,full string,,rhabdoid tumor,no,1,1
+Rhabdomyosarcoma,rhabdomyosarcoma,resolved,MONDO:0005212,full string,,rhabdomyosarcoma,no,30,10
+Rheumatoid arthritis,rheumatoid arthritis,resolved,MONDO:0008383,full string,,rheumatoid arthritis,no,247,66
+Rhinitis,rhinitis,resolved,MONDO:0003014,full string,,rhinitis,no,2,1
+Richter syndrome,richter syndrome,resolved,MONDO:0002083,full string,,Richter transformation,no,28,6
+Rosacea,rosacea,resolved,MONDO:0006604,full string,,rosacea,no,20,12
+SARS-CoV-2,sars cov 2,non_disease,,,,,no,40,15
+SARS-CoV-2 vaccine,sars cov 2 vaccine,non_disease,,,,,no,2,1
+SLC1A2-associated neurodevelopmental disorders,slc1a2 associated neurodevelopmental disorders,no_match,,,,,no,4,3
+STAT1 gain-of-function,stat1 gain of function,no_match,,,,,no,1,1
+STING-associated vasculopathy with onset in infancy,sting associated vasculopathy with onset in infancy,resolved,MONDO:0014405,full string,,STING-associated vasculopathy with onset in infancy,no,7,2
+Salivary gland adenoid cystic carcinoma,salivary gland adenoid cystic carcinoma,resolved,MONDO:0003175,full string,,salivary gland adenoid cystic carcinoma,no,62,22
+Salivary gland adenoid cystic carcinoma lung metastasis,salivary gland adenoid cystic carcinoma lung metastasis,no_match,,,,,yes,61,21
+Salivary gland carcinomas,salivary gland carcinomas,no_match,,,,,no,27,9
+Salivary gland carcinomas lymph node metastasis,salivary gland carcinomas lymph node metastasis,no_match,,,,,yes,9,9
+Salivary gland tumor,salivary gland tumor,resolved,MONDO:0021357,full string,,tumor of salivary gland,no,58,14
+Sarcoid myopathy,sarcoid myopathy,no_match,,,,,no,12,6
+Sarcoidosis,sarcoidosis,resolved,MONDO:0019338,full string,,sarcoidosis,no,4,1
+Sarcoidosis-like inflammation,sarcoidosis like inflammation,no_match,,,,,no,11,5
+Sarcoma,sarcoma,resolved,MONDO:0005089,full string,,sarcoma,no,8,4
+Schistosomiasis,schistosomiasis,resolved,MONDO:0015254,full string,,schistosomiasis,no,3,3
+Schizophrenia,schizophrenia,resolved,MONDO:0005090,full string,,schizophrenia,no,85,19
+Schwannoma,schwannoma,resolved,MONDO:0002546,full string,,schwannoma,no,4,2
+Scleroderma renal crisis,scleroderma renal crisis,no_match,,,,,no,50,10
+Second-degree burn injury,second degree burn injury,no_match,,,,,no,15,6
+Secondary hyperparathyroidism,secondary hyperparathyroidism,resolved,MONDO:0006964,full string,,secondary hyperparathyroidism,no,29,5
+Seizures,seizures,no_match,,,,,no,2,1
+Seminoma,seminoma,resolved,MONDO:0003001,full string,,seminoma,no,27,10
+Sepsis,sepsis,no_match,,,,,no,81,40
+Sepsis-associated encephalopathy,sepsis associated encephalopathy,no_match,,,,,no,6,3
+"Sepsis-induced persistent inflammation, immunosuppression, and catabolism syndrome",sepsis induced persistent inflammation immunosuppression and catabolism syndrome,no_match,,,,,no,27,10
+Septic shock,septic shock,no_match,,,,,no,2,2
+Serous ovarian cancer,serous ovarian cancer,related_only,,full string,MONDO:0005211,,no,5,2
+Severe COVID-19,severe covid 19,no_match,,,,,no,2,1
+Severe acne,severe acne,no_match,,,,,no,5,4
+Severe alcohol-associated hepatitis,severe alcohol associated hepatitis,no_match,,,,,no,40,7
+Severe asthma,severe asthma,no_match,,,,,no,22,6
+Severe combined immunodeficiencies,severe combined immunodeficiencies,no_match,,,,,no,2,1
+Severe eosinophilic asthma,severe eosinophilic asthma,no_match,,,,,no,11,6
+Severe fever with thrombocytopenia syndrome,severe fever with thrombocytopenia syndrome,no_match,,,,,no,21,12
+Severe immune aplastic anemia,severe immune aplastic anemia,no_match,,,,,no,9,3
+Severe preeclampsia,severe preeclampsia,resolved,MONDO:0001641,full string,,severe pre-eclampsia,no,20,12
+Sicca syndrome,sicca syndrome,resolved,MONDO:0010030,full string,,Sjogren syndrome,no,1,1
+Sjogren's syndrome,sjogren syndrome,resolved,MONDO:0010030,full string,,Sjogren syndrome,no,10,7
+Sjögren's disease,sjögren disease,no_match,,,,,no,70,18
+Skeletal muscle aging,skeletal muscle aging,non_disease,,,,,no,2,2
+Skin aging,skin aging,non_disease,,,,,no,21,6
+Skin cutaneous melanoma,skin cutaneous melanoma,no_match,,,,,no,93,20
+Skin inflammation,skin inflammation,resolved,MONDO:0002406,full string,,dermatitis,no,19,5
+Skin scarring,skin scarring,no_match,,,,,no,16,2
+Skin squamous cell carcinoma,skin squamous cell carcinoma,resolved,MONDO:0002529,full string,,skin squamous cell carcinoma,no,12,2
+Slow transit constipation,slow transit constipation,no_match,,,,,no,15,10
+Small bowel adenocarcinoma,small bowel adenocarcinoma,resolved,MONDO:0003198,full string,,small intestine adenocarcinoma,no,4,2
+Small cell carcinoma of the bladder,small cell carcinoma of the bladder,resolved,MONDO:0004114,full string,,urinary bladder small cell neuroendocrine carcinoma,no,2,1
+Small cell lung cancer,small cell lung cancer,resolved,MONDO:0008433,full string,,small cell lung carcinoma,no,428,79
+Small intestine adenocarcinoma,small intestine adenocarcinoma,resolved,MONDO:0003198,full string,,small intestine adenocarcinoma,no,1,1
+Smoldering multiple myeloma,smoldering multiple myeloma,resolved,MONDO:0005235,full string,,smoldering plasma cell myeloma,no,3,1
+Soft-tissue sarcoma,soft tissue sarcoma,resolved,MONDO:0018078,full string,,soft tissue sarcoma,no,23,2
+Solid tumor,solid tumor,no_match,,,,,no,36,15
+Sonic hedgehog medulloblastoma,sonic hedgehog medulloblastoma,no_match,,,,,no,5,1
+Spinal cord injury,spinal cord injury,resolved,MONDO:0043797,full string,,spinal cord injury,no,36,13
+Spinal muscular atrophy,spinal muscular atrophy,resolved,MONDO:0001516,full string,,spinal muscular atrophy,no,12,5
+Spindle cell oncocytoma,spindle cell oncocytoma,resolved,MONDO:0858960,full string,,spindle cell oncocytoma,no,1,1
+Spitz nevi,spitz nevi,related_only,,full string,MONDO:0044793,,no,4,1
+Splenic marginal zone lymphoma,splenic marginal zone lymphoma,resolved,MONDO:0019462,full string,,splenic marginal zone lymphoma,no,16,8
+Spongioblastoma,spongioblastoma,no_match,,,,,no,6,3
+Spontaneous HIV-1 controller,spontaneous hiv 1 controller,non_disease,,,,,no,14,1
+Sporadic amyotrophic,sporadic amyotrophic,no_match,,,,,no,19,6
+Squamous cell carcinoma,squamous cell carcinoma,resolved,MONDO:0005096,full string,,squamous cell carcinoma,no,496,64
+Stage I HPV-positive head and neck squamous cell carcinoma,stage i hpv positive head and neck squamous cell carcinoma,no_match,,,,,no,3,1
+Staphylococcus aureus sepsis,staphylococcus aureus sepsis,no_match,,,,,no,6,2
+Steatotic liver disease,steatotic liver disease,no_match,,,,,no,13,9
+Sterile intra-amniotic inflammation,sterile intra amniotic inflammation,no_match,,,,,no,3,3
+Stevens-Johnson syndrome,stevens johnson syndrome,resolved,MONDO:0018229,full string,,Stevens-Johnson syndrome,no,16,5
+Stevens-Johnson syndrome/Toxic epidermal necrolysis,stevens johnson syndrome toxic epidermal necrolysis,no_match,,,,,no,31,8
+Stomach adenocarcinoma,stomach adenocarcinoma,resolved,MONDO:0005036,full string,,gastric adenocarcinoma,no,61,15
+Stomach cancer,stomach cancer,resolved,MONDO:0001056,full string,,gastric cancer,no,22,6
+Stomach carcinoma,stomach carcinoma,resolved,MONDO:0004950,full string,,gastric carcinoma,no,103,18
+Stroke,stroke,resolved,MONDO:0005098,full string,,stroke disorder,no,20,6
+Sturge-Weber syndrome,sturge weber syndrome,resolved,MONDO:0008501,full string,,Sturge-Weber syndrome,no,20,9
+Subarachnoid hemorrhage,subarachnoid hemorrhage,resolved,MONDO:0005099,full string,,subarachnoid hemorrhage,no,38,14
+Subarachnoid neurocysticercosis,subarachnoid neurocysticercosis,no_match,,,,,no,3,1
+Sudden infant death syndrome,sudden infant death syndrome,resolved,MONDO:1010116,full string,,sudden unexpected infant death,no,22,6
+Super longevity,super longevity,no_match,,,,,no,17,6
+Supratentorial ependymoma,supratentorial ependymoma,resolved,MONDO:0850340,full string,,supratentorial ependymoma,no,12,7
+Sweet's syndrome,sweet syndrome,resolved,MONDO:0011959,full string,,sweet syndrome,no,45,15
+Synovial sarcoma,synovial sarcoma,resolved,MONDO:0010434,full string,,synovial sarcoma,no,24,3
+Systemic juvenile idiopathic arthritis,systemic juvenile idiopathic arthritis,related_only,,full string,MONDO:0019434,,no,8628,27
+Systemic lupus erythematosus,systemic lupus erythematosus,resolved,MONDO:0007915,full string,,systemic lupus erythematosus,no,576,70
+Systemic mastocytosis,systemic mastocytosis,resolved,MONDO:0016586,full string,,systemic mastocytosis,no,12,1
+Systemic sclerosis,systemic sclerosis,resolved,MONDO:0005100,full string,,systemic sclerosis,no,13049,51
+Systemic sclerosis-associated interstitial lung disease,systemic sclerosis associated interstitial lung disease,no_match,,,,,no,5,2
+Sézary syndrome,sézary syndrome,resolved,MONDO:0017844,full string,,Sezary syndrome,no,8,2
+T cell acute lymphoblastic leukemia,t cell acute lymphoblastic leukemia,resolved,MONDO:0004963,full string,,T-cell acute lymphoblastic leukemia,no,48,12
+T cell large granular lymphocytic leukemia,t cell large granular lymphocytic leukemia,resolved,MONDO:0019469,full string,,T-cell large granular lymphocyte leukemia,no,5,1
+T cell leukemia,t cell leukemia,resolved,MONDO:0005525,full string,,T-cell leukemia,no,5,2
+T cell lymphoblastic lymphoma,t cell lymphoblastic lymphoma,no_match,,,,,no,5,1
+T cell lymphoma,t cell lymphoma,resolved,MONDO:0015760,full string,,T-cell non-Hodgkin lymphoma,no,6,2
+T cell/histiocyte-rich large B-cell lymphoma,t cell histiocyte rich large b cell lymphoma,resolved,MONDO:0017597,full string,,T-cell/histiocyte rich large B cell lymphoma,no,2,2
+T large granular lymphocyte leukemia,t large granular lymphocyte leukemia,no_match,,,,,no,220,17
+TRPM4-deficiency immune dysregulation,trpm4 deficiency immune dysregulation,no_match,,,,,no,14,7
+Takayasu's arteritis,takayasu arteritis,resolved,MONDO:0017991,full string,,Takayasu arteritis,no,13,5
+Tendinopathy,tendinopathy,resolved,MONDO:0100010,full string,,disease of the tendon,no,1,1
+Tendon adhesion,tendon adhesion,no_match,,,,,no,27,12
+Tenosynovial giant cell tumor,tenosynovial giant cell tumor,resolved,MONDO:0002522,full string,,tenosynovial giant cell tumor,no,5,2
+Teratocarcinoma,teratocarcinoma,resolved,MONDO:0002599,full string,,teratocarcinoma,no,1,1
+Testicular germ cell tumor,testicular germ cell tumor,resolved,MONDO:0010108,full string,,testicular germ cell tumor,no,6,3
+Thin endometrium,thin endometrium,no_match,,,,,no,11,5
+Thoracic aortic aneurysm,thoracic aortic aneurysm,resolved,MONDO:0005396,full string,,thoracic aortic aneurysm,no,4,2
+Thoracic aortic aneurysm and dissection,thoracic aortic aneurysm and dissection,no_match,,,,,no,2,1
+Thymic epithelial tumor,thymic epithelial tumor,resolved,MONDO:0018079,full string,,thymic epithelial neoplasm,no,9,4
+Thymic hypoplasia,thymic hypoplasia,no_match,,,,,no,1,1
+Thyroid cancer,thyroid cancer,resolved,MONDO:0002108,full string,,thyroid cancer,no,84,16
+Thyroid carcinogenesis,thyroid carcinogenesis,no_match,,,,,no,58,16
+Thyroid carcinoma,thyroid carcinoma,resolved,MONDO:0015075,full string,,thyroid gland carcinoma,no,2662,48
+Tongue cancer,tongue cancer,resolved,MONDO:0004631,full string,,tongue cancer,no,2,1
+Tongue squamous cell carcinoma,tongue squamous cell carcinoma,resolved,MONDO:0000500,full string,,tongue squamous cell carcinoma,no,6,2
+Total parenteral nutrition-associated infection,total parenteral nutrition associated infection,no_match,,,,,no,1,1
+Transplant rejection,transplant rejection,resolved,MONDO:1010185,full string,,transplant rejection,no,24,5
+Traumatic brain injury,traumatic brain injury,resolved,MONDO:0858950,full string,,traumatic brain injury,no,73,24
+Traumatic subglottic stenosis,traumatic subglottic stenosis,no_match,,,,,no,2,1
+Triple-Negative breast cancer,triple negative breast cancer,resolved,MONDO:0005494,full string,,triple-negative breast carcinoma,no,434,66
+Tuberculosis,tuberculosis,resolved,MONDO:0018076,full string,,tuberculosis,no,175,41
+Tuberculosis and HIV co-infection,tuberculosis and hiv co infection,no_match,,,,,no,10,7
+Tuberculosis disease,tuberculosis disease,resolved,MONDO:0018076,full string,,tuberculosis,no,21,8
+Tuberculosis lung,tuberculosis lung,no_match,,,,,no,54,12
+Tumor vessels,tumor vessels,no_match,,,,,no,1,1
+Type 1 autoimmune pancreatitis,type 1 autoimmune pancreatitis,no_match,,,,,no,12,7
+Type 1 diabetes,type 1 diabetes,resolved,MONDO:0005147,full string,,type 1 diabetes mellitus,no,127,38
+Type 2 diabetes,type 2 diabetes,resolved,MONDO:0005148,full string,,type 2 diabetes mellitus,no,149,60
+Type 2 diabetes mellitus,type 2 diabetes mellitus,resolved,MONDO:0005148,full string,,type 2 diabetes mellitus,no,13,1
+Ulcerative colitis,ulcerative colitis,resolved,MONDO:0005101,full string,,ulcerative colitis,no,282,40
+Undefined,undefined,non_disease,,,,,no,630,159
+Underlying hematologic malignancy,underlying hematologic malignancy,no_match,,,,,no,13,9
+Undifferentiated pleomorphic sarcoma,undifferentiated pleomorphic sarcoma,resolved,MONDO:0002142,full string,,undifferentiated pleomorphic sarcoma,no,22,10
+Unknown primary cancer,unknown primary cancer,no_match,,,,,no,8,1
+Unspecified epithelial ovarian cancer,unspecified epithelial ovarian cancer,no_match,,,,,no,7,2
+Urinary bladder cancer,urinary bladder cancer,resolved,MONDO:0001187,full string,,urinary bladder cancer,no,46,10
+Urothelial carcinoma,urothelial carcinoma,resolved,MONDO:0040679,full string,,urothelial carcinoma,no,183,47
+Urticaria,urticaria,resolved,MONDO:0005492,full string,,urticaria,no,8,4
+Uterine carcinosarcoma,uterine carcinosarcoma,resolved,MONDO:0006485,full string,,uterine carcinosarcoma,no,1,1
+Uterine corpus endometrial cancer,uterine corpus endometrial cancer,no_match,,,,,no,79,18
+Uterine corpus endometrial carcinoma,uterine corpus endometrial carcinoma,resolved,MONDO:0000553,full string,,uterine corpus endometrial carcinoma,no,2422,6
+Uterine diverticulum,uterine diverticulum,no_match,,,,,no,15,11
+Uterine fibroids,uterine fibroids,no_match,,,,,no,9,5
+Uterine leiomyoma,uterine leiomyoma,related_only,,full string,MONDO:0007886,,no,15,9
+Uterine sarcomas,uterine sarcomas,no_match,,,,,no,29,17
+Uuveitis,uuveitis,no_match,,,,,no,7330,18
+Uveal melanoma,uveal melanoma,resolved,MONDO:0006486,full string,,uveal melanoma,no,323,63
+VEXAS syndrome,vexas syndrome,resolved,MONDO:0026777,full string,,VEXAS syndrome,no,24,8
+Vascular ageing,vascular ageing,non_disease,,,,,no,5,2
+Vascular calcification,vascular calcification,no_match,,,,,no,4,1
+Vascular organoids,vascular organoids,no_match,,,,,no,6,3
+Vascular tumour,vascular tumor,resolved,MONDO:0024296,full string,,vascular neoplasm,no,1,1
+Vestibular schwannoma,vestibular schwannoma,resolved,MONDO:0001569,full string,,acoustic neuroma,no,57,12
+Viral hepatitis,viral hepatitis,resolved,MONDO:0006011,full string,,viral hepatitis,no,1,1
+Viral infection,viral infection,resolved,MONDO:0005108,full string,,viral infectious disease,no,1,1
+Viral infection susceptibility,viral infection susceptibility,non_disease,,,,,no,6,3
+Vitiligo,vitiligo,resolved,MONDO:0008661,full string,,vitiligo,no,10,2
+Vogt-Koyanagi-Harada disease,vogt koyanagi harada disease,resolved,MONDO:0018092,full string,,Vogt-Koyanagi-Harada disease,no,6,6
+Vulvar high-grade squamous intraepithelial lesion,vulvar high grade squamous intraepithelial lesion,no_match,,,,,no,8,7
+Vulvar squamous cell carcinoma,vulvar squamous cell carcinoma,resolved,MONDO:0024609,full string,,vulvar squamous cell carcinoma,no,5,3
+Waldenström macroglobulinemia,waldenström macroglobulinemia,resolved,MONDO:0100280,full string,,Waldenstrom macroglobulinemia,no,59,9
+Weight loss,weight loss,no_match,,,,,no,16,8
+Wheezing illness,wheezing illness,no_match,,,,,no,13,5
+Wilms tumor,wilms tumor,resolved,MONDO:0006058,full string,,Wilms tumor,no,18,7
+Wolfram syndrome,wolfram syndrome,resolved,MONDO:0018105,full string,,Wolfram syndrome,no,2,2
+XIAP deficiency,xiap deficiency,resolved,MONDO:0010385,full string,,X-linked lymphoproliferative disease due to XIAP deficiency,no,2,1
+Yellow fever,yellow fever,resolved,MONDO:0020502,full string,,yellow fever,no,3,3
+Zika virus infection,zika virus infection,resolved,MONDO:0018661,full string,,Zika virus infectious disease,no,5,3
+Zygotic cleavage failure,zygotic cleavage failure,no_match,,,,,no,2,1

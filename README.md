@@ -50,7 +50,7 @@ spatial-pathway-kg/
 ├── docs/                                # Step-by-step PDF methodological guides
 ├── Documentation/                       # Academic report (LaTeX) & KnowDive template
 ├── Phase 1 - Purpose Definition/        # Scenarios, personas, CQs, and informal ER models
-├── Phase 2 - Language Definition/       # Language Resource Table (LRT) & lexical alignments
+├── Phase 2 - Language Definition/       # Language Resource Table (LRT), language teleontology, data cleaning
 ├── Phase 3 - Knowledge Definition/      # Teleology ontology atoms & schema alignments
 ├── Phase 4 - Entity Definition/         # Data ingestion, entity mapping, and RDF generation
 ├── Evaluation/                          # Quantitative graph metrics & SPARQL CQ validation

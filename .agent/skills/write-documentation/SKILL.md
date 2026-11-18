@@ -79,7 +79,7 @@ Before writing any text, inspect the actual artifacts produced in the project re
 1. **Inputs & Identifiers**: Take the versions of MSigDB Hallmark (GMT), CellMarker (human markers), and HGNC (`hgnc_complete_set.txt`) from the Phase 1 input inspection summary or the technical handover. If a version is not recorded there, mark it TODO.
 2. **Phase Deliverables**:
    - `Phase 1 - Purpose Definition`: Informal purpose, scenarios, personas, competency questions (CQs), informal eTypes/properties, ER diagram.
-   - `Phase 2 - Language Definition`: Language Resource Table, Language Teleontology alignment (Universal Knowledge Core / WordNet), data cleaning notes.
+   - `Phase 2 - Language Definition`: user decisions (chosen LTLO, prefixes), Language Resource Table (`language_resource_table.csv`), language teleontology OWL file, data-quality summary per dataset.
    - `Phase 3 - Knowledge Definition`: Ontology fragments/atoms, Knowledge Teleontology alignment, data shape alignment.
    - `Phase 4 - Entity Definition`: Single-dataset and multi-dataset Karma/RDFLib mappings, deterministic URI policy, resolution audit (`gene_symbol_resolution.csv`).
    - `Evaluation`: Basic graph statistics (`graph_statistics.json`), validation checks (`validation_summary.json`), entity connectivity, SPARQL query results (Q1–Q4).
@@ -138,11 +138,13 @@ Replace the template guidelines in [Documentation/section/](../../../Documentati
   - Include the required evaluation tables: Scenarios (initial vs final), Personas (initial vs final), CQs (initial vs final), Dataset Transformations, and Remarks on LLM Usage. For every element that changed or was discarded, state old version, new version (if any) and the reason, as the example report does for its CQs.
 
 #### Section 4: Language Definition (`S4.tex`)
+Guide: `docs/2_language_definition.pdf` (worked examples: Oncovirus KG'25, slides 44–49; Territory KG, slides 51–57; the 2025 example report `docs/5_example.pdf` is the Territory one).
 - **Knowledge Layer**:
-  - *Fixing Language Terms*: Finalize terms for eTypes, object properties, and data properties.
-  - *Language Teleontology Alignment*: Align terms to parent lexical concepts in the Universal Knowledge Core (UKC) / WordNet. Explain purpose-specific extensions.
+  - *Fixing Language Terms*: Finalize terms for eTypes, object properties, and data properties; report renames, merges, removals and additions with their reason, as recorded in the Language Resource Table.
+  - *Language Teleontology Alignment*: Say which LTLO was chosen and how the search was done, as recorded in `Phase 2 - Language Definition/00_decisions.md` (e.g. UKC first, then OBO/BioPortal ontologies, then a custom ID). Never write that concept lookups were done by an AI or autonomously; LLM use is reported only in the LLM remarks and Appendix A, as the user states it. Per EType, follow the example report: "Alignment: ..." (concept ID / IRI, or "New class" with its parent) and "Attribute mapping: ..." (each data property → aligned concept or "new data property"). Explain why alignment failed where it did.
+  - Include the Language Resource Table (ConceptID, Word-en, Gloss-en; the Oncovirus example colours ETypes, attributes and relations differently) and a figure of the language teleontology hierarchy (Protégé screenshot supplied by the user, or a TikZ figure).
 - **Data Layer**:
-  - Dataset filtering, cleaning, and formatting (whitespace trimming, uppercase normalization, human-only filtering, HGNC approved status matching).
+  - Describe only the operations actually performed, as recorded in the Phase 2 data-quality summary: per dataset, source file(s), script used, filtering (columns kept/removed), cleaning and formatting (renamed columns, value formats, missing values), with counts. Do not list operations from memory.
 - **Qualitative Evaluation**:
   - Include tables for eTypes term alignment, object property alignment, data property alignment, teleontology enrichment, backtracking notes, and LLM remarks.
   - For each of eTypes, object properties and data properties, first give the three counts the template asks for (initially considered / finally considered / aligned to the teleontology), then the per-term table (term, initially?, finally?, alignment or "new").

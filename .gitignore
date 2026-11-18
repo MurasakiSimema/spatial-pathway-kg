@@ -15,3 +15,6 @@ Documentation/**/*.fdb_latexmk
 Documentation/**/*.fls
 Documentation/**/main.pdf
 EDIT*.md
+# Python
+__pycache__/
+*.pyc

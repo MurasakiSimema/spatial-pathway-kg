@@ -145,14 +145,11 @@ Establish lexical terms, words, and concepts for entity types, object properties
 ### Mandatory Content
 1. **Knowledge Layer**:
    - *Fixing Language Terms*: Finalize informal terms into controlled vocabulary terms.
-   - *Language Teleontology Alignment*: Align terms to parent lexical concepts in the Universal Knowledge Core (UKC) or WordNet (e.g., aligning `Gene` to biological entity, `Pathway` to biological process / biochemical pathway, `CellType` to cell class).
-   - Document any custom lexical terms enriched into the teleontology.
+   - *Language Teleontology Alignment*: State the chosen LTLO and the search order, as recorded in `Phase 2 - Language Definition/00_decisions.md`. For each term give the concept ID it is aligned to, or say that a new concept was defined and under which parent. Take every ID and gloss from the Language Resource Table; never suggest alignments that the table does not contain.
+   - Document any custom concepts enriched into the teleontology (custom IDs, parent, gloss written by the project).
+   - Language Resource Table (ConceptID / Word-en / Gloss-en) and a figure of the language teleontology hierarchy.
 2. **Data Layer**:
-   - Cleaning, filtering, and formatting operations applied to raw source text:
-     - Whitespace trimming.
-     - Uppercase normalization for gene symbols across all sources.
-     - Validation of Cell Ontology CURIE formats (`CL:0000000`).
-     - Validation of HGNC ID formatting (`HGNC:\d+`).
+   - Per dataset (source file(s), script, operations, counts), only the operations recorded in the Phase 2 data-quality summary: filtering (columns kept or removed), renamed columns, value-format standardization (e.g. CL IDs as `CL_nnnnnnn`, HGNC IDs as `HGNC:n`), missing values, duplicates, HGNC resolution and MONDO matching counts.
 3. **Qualitative Evaluation**:
    - For eTypes, object properties and data properties: first the three counts (initially considered / finally considered / aligned), then the per-term table.
    - Table: eType terms considered vs finalized vs aligned.
